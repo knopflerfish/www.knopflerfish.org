@@ -146,15 +146,11 @@
       <param name="CLASS_NAVIGATION_PERF" value="navigation_disabled"/>
     </antcall>
 
-   <loadfile property = "bundle_list"     
-             srcfile  = "bundles/bl.html"/>
-
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/bundles_main.html"/>
       <param name="tofile"   value="${installdir}/bundles.html"/>
       <param name="title"    value="Knopflerfish Bundles"/>
       <param name="desc"     value="Documentation from Knopflerfish bundles"/>
-      <param name="bundle_list"  value="${bundle_list}"/>
       <param name="CLASS_NAVIGATION_BUNDLES" value="navigation_disabled"/>
     </antcall>
 
@@ -260,7 +256,6 @@
 	<replacefilter token="$(USER)"      value="${env.USER}"/>
 	<replacefilter token="$(VERSION)"   value="${version}"/>
 	<replacefilter token="$(MESSAGE)"   value="${message}"/>
-	<replacefilter token="$(BUNDLE_LIST)"   value="${bundle_list}"/>
 	<replacefilter token="$(JAVADOC)"       value="${JAVADOC}"/>
 
         <replacefilter token="$(CLASS_NAVIGATION)" 
