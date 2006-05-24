@@ -324,7 +324,7 @@
   </target>
 
   <target name="clean">
-   <delete dir="releases"    />
+   <delete dir="install"    />
 
   </target>
 </project>
