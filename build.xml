@@ -22,6 +22,11 @@
     <property name     = "installdir" 
               location = "install"/>
 
+<!--
+    <copy file = "favicon.ico"
+        tofile = "${installdir}/favicon.ico"/>
+-->
+
     <antcall target="copydirs">
       <param name="dir" value="images"/>
     </antcall>
@@ -176,7 +181,7 @@
       <param name="tofile"   value="${installdir}/eclipse_plugin.html"/>
       <param name="title"    value="Knopflerfish Eclipse Plugin"/>
       <param name="desc"     value=""/>
-      <param name="CLASS_NAVIGATION_PROG" value="navigation_disabled"/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -184,7 +189,7 @@
       <param name="tofile"   value="${installdir}/eclipse_changelog.html"/>
       <param name="title"    value="Knopflerfish Eclipse Plugin Changelog"/>
       <param name="desc"     value=""/>
-      <param name="CLASS_NAVIGATION_PROG" value="navigation_disabled"/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -192,7 +197,7 @@
       <param name="tofile"   value="${installdir}/eclipse_install.html"/>
       <param name="title"    value="Installing the Knopflerfish Eclipse Plugin"/>
       <param name="desc"     value=""/>
-      <param name="CLASS_NAVIGATION_PROG" value="navigation_disabled"/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -200,7 +205,7 @@
       <param name="tofile"   value="${installdir}/eclipse_preferences.html"/>
       <param name="title"    value="Setting Preferences for Plugin"/>
       <param name="desc"     value=""/>
-      <param name="CLASS_NAVIGATION_PROG" value="navigation_disabled"/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -229,6 +234,7 @@
      <property name="CLASS_NAVIGATION_INDEX"     value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_NEWS"      value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_PROG"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_ECLIPSE"      value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_COMP"      value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_HISTORY"   value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_LICENSE"  value="navigation_enabled"/>
@@ -291,6 +297,9 @@
 
 	<replacefilter token="$(CLASS_NAVIGATION_PROG)" 
                        value="${CLASS_NAVIGATION_PROG}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_ECLIPSE)" 
+                       value="${CLASS_NAVIGATION_ECLIPSE}"/>
 
 	<replacefilter token="$(CLASS_NAVIGATION_DESKTOP)"
                        value="${CLASS_NAVIGATION_DESKTOP}"/>
