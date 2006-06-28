@@ -14,7 +14,7 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "unknown-version"/>
+              value    = "2.0.0"/>
 
     <property name     = "template.html" 
               location = "templates/template.html"/>
