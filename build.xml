@@ -39,7 +39,7 @@
       <param name="fromfile" value="html_src/index_main.html"/>
       <param name="tofile"   value="${installdir}/index.html"/>
       <param name="title"    value="Knopflerfish OSGi"/>
-      <param name="desc"     value="The Knopflerfish OSGi framework is a complete, open source, OSGi R3 framework"/>
+      <param name="desc"     value="The Knopflerfish OSGi is a complete, open source, OSGi R3 and OSGi R4 distribution"/>
       <param name="CLASS_NAVIGATION_INDEX" value="navigation_disabled"/>
     </antcall>
 
@@ -71,6 +71,13 @@
       <param name="tofile"   value="${installdir}/license.html"/>
       <param name="title"    value="Knopflerfish License"/>
       <param name="CLASS_NAVIGATION_LICENSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.1.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.1.html"/>
+      <param name="title"    value="Release Notes 2.0.1"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -238,6 +245,7 @@
      <property name="CLASS_NAVIGATION_COMP"      value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_HISTORY"   value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_LICENSE"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_1"  value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_DOWNLOAD"  value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_INSTALL"   value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_RUNNING"   value="navigation_enabled"/>
@@ -284,6 +292,9 @@
 
 	<replacefilter token="$(CLASS_NAVIGATION_LICENSE)" 
                        value="${CLASS_NAVIGATION_LICENSE}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_1)" 
+                       value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_1}"/>
 
 	<replacefilter token="$(CLASS_NAVIGATION_DOWNLOAD)" 
                        value="${CLASS_NAVIGATION_DOWNLOAD}"/>
