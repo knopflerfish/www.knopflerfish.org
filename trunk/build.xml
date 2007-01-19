@@ -22,6 +22,15 @@
     <property name     = "installdir" 
               location = "install"/>
 
+    <property name     = "installdir_jp" 
+              location = "install/jp"/>
+
+    <property name     = "encoding"
+	      value    = "ISO-8859-1"/>
+
+    <property name     = "outputencoding"
+	      value    = "ISO-8859-1"/>
+
 <!--
     <copy file = "favicon.ico"
         tofile = "${installdir}/favicon.ico"/>
@@ -223,17 +232,30 @@
       <param name="CLASS_NAVIGATION_KF2" value="navigation_disabled"/>
     </antcall>
 
+    <antcall target="makehtml">
+      <param name="fromfile"	value="html_src_jp/index_jp.html"/>
+      <param name="tofile"	value="${installdir}/index_jp.html"/>
+      <param name="title"	value="Knopflerfish OSGi"/>
+      <param name="desc"	value=""/>
+      <param name="template.html"	value="templates/template_jp.html"/>
+      <param name="endcoding"		value="UTF-8"/>
+      <param name="outputendcoding"	value="UTF-8"/>
+      <param name="CLASS_NAVIGATION_INDEX" value="navigation_disabled"/>
+    </antcall>
+
   </target>
 
 
   <target name="makehtml">
     <loadfile property = "main" 
+	      encoding = "${encoding}"
               srcfile  = "${fromfile}"/>
 
     <echo message="create ${tofile}"/>
     <copy file      = "${template.html}" 
           tofile    = "${tofile}" 
-          overwrite = "true"/>
+          overwrite = "true"
+	  outputencoding = "${outputencoding}"/>
 
      <property name="JAVADOC"  
                value="http://www.knopflerfish.org/releases/${version}/javadoc"/>
@@ -259,7 +281,7 @@
      <property name="CLASS_NAVIGATION_PERF"      value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_KF2"	 value="navigation_enabled"/>
 
-    <replace file="${tofile}">
+    <replace file="${tofile}" encoding="${encoding}">
       <replacefilter token="$(TITLE)"
 	             value="${title}"/>
 	<replacefilter token="$(DESC)"
