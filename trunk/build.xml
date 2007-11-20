@@ -90,6 +90,13 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.2.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.2.html"/>
+      <param name="title"    value="Release Notes 2.0.2"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/install.html"/>
       <param name="tofile"   value="${installdir}/install.html"/>
       <param name="title"    value="Installing Knopflerfish"/>
@@ -268,6 +275,7 @@
      <property name="CLASS_NAVIGATION_HISTORY"   value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_LICENSE"  value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_1"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_2"  value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_DOWNLOAD"  value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_INSTALL"   value="navigation_enabled"/>
      <property name="CLASS_NAVIGATION_RUNNING"   value="navigation_enabled"/>
@@ -317,6 +325,9 @@
 
 	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_1)" 
                        value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_1}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_2)" 
+                       value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_2}"/>
 
 	<replacefilter token="$(CLASS_NAVIGATION_DOWNLOAD)" 
                        value="${CLASS_NAVIGATION_DOWNLOAD}"/>
