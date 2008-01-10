@@ -4,10 +4,10 @@
 
 You can download either a complete installation, a binary installation or just the core framework.
 <p>
-See <a href="license.html">License</a> section on how KF is licensed.
+  See <a href="license.html">License</a> section on how KF is licensed.
 </p>
 <p>
-<a href="snapshots/trunk">Nightly builds</a> from the latest source are also available.
+  <a href="snapshots/trunk">Nightly builds</a> from the latest source are also available.
 </p>
 
 <h3>Available versions</h3>
@@ -19,11 +19,11 @@ See <a href="license.html">License</a> section on how KF is licensed.
     <th>Description</th>
   </tr>
 
- <tr> <td bgcolor="#cccccc" colspan="4"><b>Current versions</b></td></tr>
+  <tr> <td bgcolor="#cccccc" colspan="4"><b>Current versions</b></td></tr>
 
   <tr>
-    <td><a href="#2.0.2">2.0.2</a></td>
-    <td>2007-11-20</td>
+    <td><a href="#2.0.3">2.0.3</a></td>
+    <td>2008-01-10</td>
     <td>OSGi R4</td>
     <td>Current stable OSGi R4 for production</td>
   </tr>
@@ -35,8 +35,15 @@ See <a href="license.html">License</a> section on how KF is licensed.
     <td>Current stable OSGi R3 for production</td>
   </tr>
 
- <tr> <td bgcolor="#cccccc" colspan="4"><b>Older versions</b></td></tr>
+  <tr> <td bgcolor="#cccccc" colspan="4"><b>Older versions</b></td></tr>
   <tr>
+
+  <tr>
+    <td><a href="#2.0.2">2.0.2</a></td>
+    <td>2007-11-20</td>
+    <td>OSGi R4</td>
+    <td>Previous stable OSGi R4 for production</td>
+  </tr>
 
   <tr>
     <td><a href="#2.0.1">2.0.1</a></td>
@@ -52,247 +59,327 @@ See <a href="license.html">License</a> section on how KF is licensed.
     <td>First stable OSGi R4 for production</td>
 
   </tr>
-    <td><a href="#1.3.4">1.3.4</a></td>
-    <td>2005-10-14</td>
-    <td>OSGi R3</td>
-    <td>Stable OSGi R3 for production</td>
+  <td><a href="#1.3.4">1.3.4</a></td>
+  <td>2005-10-14</td>
+  <td>OSGi R3</td>
+  <td>Stable OSGi R3 for production</td>
   </tr>
- </tr>
+</tr>
 
 </table>
+<!-- sasa -->
 
+<!--********** 		2.0.3		**********-->
 
-<!-------------- 		2.0.2		------------->
+<a name="2.0.3">
+  <h3>Current release OSGi R4 - Knopflerfish 2.0.3</h3>
+</a>
+Released: 2008-01-10
+<a href="release_notes_2.0.3.html">Release Notes</a>
+<p>
+  <table cellpadding="2">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Description</th>
+    </tr>
+
+    <tr>
+      <td>
+	<a href="releases/2.0.3/knopflerfish_osgi_2.0.3.jar">knopflerfish_osgi_2.0.3.jar</a>
+      </td>
+      <td>
+	8.6M
+      </td>
+      <td>
+	Complete framework, including source code and docs. Self-extracting.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<a href="releases/2.0.3/knopflerfish_fullbin_osgi_2.0.3.jar">knopflerfish_fullbin_osgi_2.0.3.jar</a>
+      </td>
+      <td>
+	2.8M
+      </td>
+      <td>
+	Full binary framework and bundles. No source or docs. Self-extracting.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<a href="releases/2.0.3/knopflerfish_bin_osgi_2.0.3.jar">knopflerfish_bin_osgi_2.0.3.jar</a><br>
+      </td> 
+      <td>
+	2.1M
+      </td>
+      <td>
+	Core binary framework and some bundles. No source or docs. Self-extracting. 
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<a href="releases/2.0.3/knopflerfish_opt_2.0.3.jar">knopflerfish_opt_2.0.3.jar</a><br> 
+      </td>
+      <td>
+	6.9M
+      </td>
+      <td>
+	A set of optional bundles, including SOAP support for any OSGi service. See
+	<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+	<a href="releases/2.0.3/knopflerfish_osgi_tiny_2.0.3.zip">knopflerfish_osgi_tiny_2.0.3.zip</a><br> 
+      </td>
+      <td>
+	300K
+      </td>
+      <td>
+	Remotely loading framework, no source, no docs, just framework.jar 
+	and config files for loading all bundles from the web.
+      </td>
+    </tr>
+
+  </table>
+
+<!--********** 		2.0.2		**********-->
+
 <a name="2.0.2">
-<h3>Current release OSGi R4 - Knopflerfish 2.0.2</h3>
+  <h3>Knopflerfish 2.0.2 - OSGi R4</h3>
 </a>
 Released: 2007-11-20 
 <a href="release_notes_2.0.2.html">Release Notes</a>
 <p>
-<table cellpadding="2">
- <tr>
-  <th>Name</th>
-  <th>Size</th>
-  <th>Description</th>
- </tr>
+  <table cellpadding="2">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Description</th>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.2/knopflerfish_osgi_2.0.2.jar">knopflerfish_osgi_2.0.2.jar</a>
-  </td>
-  <td>
-  11M
-  </td>
-  <td>
-  Complete framework, including source code and docs. Self-extracting.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.2/knopflerfish_osgi_2.0.2.jar">knopflerfish_osgi_2.0.2.jar</a>
+      </td>
+      <td>
+	11M
+      </td>
+      <td>
+	Complete framework, including source code and docs. Self-extracting.
+      </td>
+    </tr>
 
- <tr>
-  <td>
-   <a href="releases/2.0.2/knopflerfish_fullbin_osgi_2.0.2.jar">knopflerfish_fullbin_osgi_2.0.2.jar</a>
-  </td>
-  <td>
-  5.1M
-  </td>
-  <td>
-  Full binary framework and bundles. No source or docs. Self-extracting.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.2/knopflerfish_fullbin_osgi_2.0.2.jar">knopflerfish_fullbin_osgi_2.0.2.jar</a>
+      </td>
+      <td>
+	5.1M
+      </td>
+      <td>
+	Full binary framework and bundles. No source or docs. Self-extracting.
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.2/knopflerfish_bin_osgi_2.0.2.jar">knopflerfish_bin_osgi_2.0.2.jar</a><br>
-  </td> 
-  <td>
-  2.1M
-  </td>
- <td>
-  Core binary framework and some bundles. No source or docs. Self-extracting. 
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.2/knopflerfish_bin_osgi_2.0.2.jar">knopflerfish_bin_osgi_2.0.2.jar</a><br>
+      </td> 
+      <td>
+	2.1M
+      </td>
+      <td>
+	Core binary framework and some bundles. No source or docs. Self-extracting. 
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.2/knopflerfish_opt_2.0.2.jar">knopflerfish_opt_2.0.2.jar</a><br> 
-  </td>
-  <td>
-  7.0M
-  </td>
-  <td>
-A set of optional bundles, including SOAP support for any OSGi service. See
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.2/knopflerfish_opt_2.0.2.jar">knopflerfish_opt_2.0.2.jar</a><br> 
+      </td>
+      <td>
+	7.0M
+      </td>
+      <td>
+	A set of optional bundles, including SOAP support for any OSGi service. See
+	<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.2/knopflerfish_osgi_tiny_2.0.2.zip">knopflerfish_osgi_tiny_2.0.2.zip</a><br> 
-  </td>
-  <td>
-  299K
-  </td>
-  <td>
-  Remotely loading framework, no source, no docs, just framework.jar 
-    and config files for loading all bundles from the web.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.2/knopflerfish_osgi_tiny_2.0.2.zip">knopflerfish_osgi_tiny_2.0.2.zip</a><br> 
+      </td>
+      <td>
+	299K
+      </td>
+      <td>
+	Remotely loading framework, no source, no docs, just framework.jar 
+	and config files for loading all bundles from the web.
+      </td>
+    </tr>
 
-</table>
-
-
-<!-------------- 		2.0.1		------------->
+  </table>
+</p>
+  
+<!-- ------------ 		2.0.1		---------    -->
 <a name="2.0.1">
-<h3>Knopflerfish 2.0.1 - OSGi R4</h3>
+  <h3>Knopflerfish 2.0.1 - OSGi R4</h3>
 </a>
 Released: 2006-06-28, 
 <a href="release_notes_2.0.1.html">Release Notes</a>
 <p>
-<table cellpadding="2">
- <tr>
-  <th>Name</th>
-  <th>Size</th>
-  <th>Description</th>
- </tr>
+  <table cellpadding="2">
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Description</th>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.1/knopflerfish_osgi_2.0.1.jar">knopflerfish_osgi_2.0.1.jar</a>
-  </td>
-  <td>
-  11M
-  </td>
-  <td>
-  Complete framework, including source code and docs. Self-extracting.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.1/knopflerfish_osgi_2.0.1.jar">knopflerfish_osgi_2.0.1.jar</a>
+      </td>
+      <td>
+	11M
+      </td>
+      <td>
+	Complete framework, including source code and docs. Self-extracting.
+      </td>
+    </tr>
 
- <tr>
-  <td>
-   <a href="releases/2.0.1/knopflerfish_fullbin_osgi_2.0.1.jar">knopflerfish_fullbin_osgi_2.0.1.jar</a>
-  </td>
-  <td>
-  5.3M
-  </td>
-  <td>
-  Full binary framework and bundles. No source or docs. Self-extracting.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.1/knopflerfish_fullbin_osgi_2.0.1.jar">knopflerfish_fullbin_osgi_2.0.1.jar</a>
+      </td>
+      <td>
+	5.3M
+      </td>
+      <td>
+	Full binary framework and bundles. No source or docs. Self-extracting.
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.1/knopflerfish_bin_osgi_2.0.1.jar">knopflerfish_bin_osgi_2.0.1.jar</a><br>
-  </td> 
-  <td>
-  2.3M
-  </td>
- <td>
-  Core binary framework and some bundles. No source or docs. Self-extracting. 
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.1/knopflerfish_bin_osgi_2.0.1.jar">knopflerfish_bin_osgi_2.0.1.jar</a><br>
+      </td> 
+      <td>
+	2.3M
+      </td>
+      <td>
+	Core binary framework and some bundles. No source or docs. Self-extracting. 
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.1/knopflerfish_opt_2.0.1.jar">knopflerfish_opt_2.0.1.jar</a><br> 
-  </td>
-  <td>
-  7.0M
-  </td>
-  <td>
-A set of optional bundles, including SOAP support for any OSGi service. See
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.1/knopflerfish_opt_2.0.1.jar">knopflerfish_opt_2.0.1.jar</a><br> 
+      </td>
+      <td>
+	7.0M
+      </td>
+      <td>
+	A set of optional bundles, including SOAP support for any OSGi service. See
+	<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+      </td>
+    </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.1/knopflerfish_osgi_tiny_2.0.1.zip">knopflerfish_osgi_tiny_2.0.1.zip</a><br> 
-  </td>
-  <td>
-  277K
-  </td>
-  <td>
-  Remotely loading framework, no source, no docs, just framework.jar 
-      and config files for loading all bundles from the web.
-  </td>
- </tr>
+    <tr>
+      <td>
+	<a href="releases/2.0.1/knopflerfish_osgi_tiny_2.0.1.zip">knopflerfish_osgi_tiny_2.0.1.zip</a><br> 
+      </td>
+      <td>
+	277K
+      </td>
+      <td>
+	Remotely loading framework, no source, no docs, just framework.jar 
+	and config files for loading all bundles from the web.
+      </td>
+    </tr>
 
-</table>
+  </table>
+</p>
 
-
-<!-------------- 		2.0.0		------------->
+<!-------------- 		2.0.0		------------------>
 <a name="2.0.0">
-<h3>Knopflerfish 2.0.0 - OSGi R4</h3>
+  <h3>Knopflerfish 2.0.0 - OSGi R4</h3>
 </a>
 Released: 2006-06-28
 <table cellpadding="2">
- <tr>
-  <th>Name</th>
-  <th>Size</th>
-  <th>Description</th>
- </tr>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Description</th>
+  </tr>
+  
+  <tr>
+    <td>
+      <a href="releases/2.0.0/knopflerfish_osgi_2.0.0.jar">knopflerfish_osgi_2.0.0.jar</a>
+    </td>
+    <td>
+      10M
+    </td>
+    <td>
+      Complete framework, including source code and docs. Self-extracting.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <a href="releases/2.0.0/knopflerfish_fullbin_osgi_2.0.0.jar">knopflerfish_fullbin_osgi_2.0.0.jar</a>
+    </td>
+    <td>
+      5.2M
+    </td>
+    <td>
+      Full binary framework and bundles. No source or docs. Self-extracting.
+    </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.0/knopflerfish_osgi_2.0.0.jar">knopflerfish_osgi_2.0.0.jar</a>
-  </td>
-  <td>
-  10M
-  </td>
-  <td>
-  Complete framework, including source code and docs. Self-extracting.
-  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/2.0.0/knopflerfish_bin_osgi_2.0.0.jar">knopflerfish_bin_osgi_2.0.0.jar</a><br>
+    </td> 
+    <td>
+      2.6M
+    </td>
+    <td>
+      Core binary framework and some bundles. No source or docs. Self-extracting. 
+    </td>
+  </tr>
 
- <tr>
-  <td>
-   <a href="releases/2.0.0/knopflerfish_fullbin_osgi_2.0.0.jar">knopflerfish_fullbin_osgi_2.0.0.jar</a>
-  </td>
-  <td>
-  5.2M
-  </td>
-  <td>
-  Full binary framework and bundles. No source or docs. Self-extracting.
-  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/2.0.0/knopflerfish_opt_2.0.0.jar">knopflerfish_opt_2.0.0.jar</a><br> 
+    </td>
+    <td>
+      6.9M
+    </td>
+    <td>
+      A set of optional bundles, including SOAP support for any OSGi service. See
+      <a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+    </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/2.0.0/knopflerfish_bin_osgi_2.0.0.jar">knopflerfish_bin_osgi_2.0.0.jar</a><br>
-  </td> 
-  <td>
-  2.6M
-  </td>
- <td>
-  Core binary framework and some bundles. No source or docs. Self-extracting. 
-  </td>
- </tr>
-
- <tr>
-  <td>
-  <a href="releases/2.0.0/knopflerfish_opt_2.0.0.jar">knopflerfish_opt_2.0.0.jar</a><br> 
-  </td>
-  <td>
-  6.9M
-  </td>
-  <td>
-A set of optional bundles, including SOAP support for any OSGi service. See
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
-  </td>
- </tr>
-
- <tr>
-  <td>
-  <a href="releases/2.0.0/knopflerfish_osgi_tiny_2.0.0.zip">knopflerfish_osgi_tiny_2.0.0.zip</a><br> 
-  </td>
-  <td>
-  278K
-  </td>
-  <td>
-  Remotely loading framework, no source, no docs, just framework.jar 
+  <tr>
+    <td>
+      <a href="releases/2.0.0/knopflerfish_osgi_tiny_2.0.0.zip">knopflerfish_osgi_tiny_2.0.0.zip</a><br> 
+    </td>
+    <td>
+      278K
+    </td>
+    <td>
+      Remotely loading framework, no source, no docs, just framework.jar 
       and config files for loading all bundles from the web.
-  </td>
- </tr>
+    </td>
+  </tr>
 
 
 </table>
@@ -300,124 +387,124 @@ A set of optional bundles, including SOAP support for any OSGi service. See
 
 <!--------------------		1.3.5		-------------------->
 <a name="1.3.5">
-<h3>Current release OSGi R3 -  Knopflerfish 1.3.5</h3>
+  <h3>Current release OSGi R3 -  Knopflerfish 1.3.5</h3>
 </a>
 Released: 2006-06-27
 
 <table cellpadding="2">
- <tr>
-  <th>Name</th>
-  <th>Size</th>
-  <th>Description</th>
- </tr>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Description</th>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.5/knopflerfish_osgi_1.3.5.jar">knopflerfish_osgi_1.3.5.jar</a><br>
-  </td> 
-  <td>6.8M</td>
-  <td>  Complete framework, including source code and docs. Self-extracting. </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.5/knopflerfish_osgi_1.3.5.jar">knopflerfish_osgi_1.3.5.jar</a><br>
+    </td> 
+    <td>6.8M</td>
+    <td>  Complete framework, including source code and docs. Self-extracting. </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <a href="releases/1.3.5/knopflerfish_fullbin_osgi_1.3.5.jar">knopflerfish_fullbin_osgi_1.3.5.jar</a><br>
+    </td>
+    <td>2.6M</td>
+    <td>  Full binary framework and bundles. No source or docs. Self-extracting.  </td>
+  </tr>
+  
+  
+  <tr>
+    <td>
+      <a href="releases/1.3.5/knopflerfish_bin_osgi_1.3.5.jar">knopflerfish_bin_osgi_1.3.5.jar</a><br>
+    </td>  
+    <td>2.4M</td>
+    <td>  Core binary framework and some bundles. No source or docs. Self-extracting.  </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.5/knopflerfish_fullbin_osgi_1.3.5.jar">knopflerfish_fullbin_osgi_1.3.5.jar</a><br>
-  </td>
-  <td>2.6M</td>
-  <td>  Full binary framework and bundles. No source or docs. Self-extracting.  </td>
- </tr>
-
-
- <tr>
-  <td>
-  <a href="releases/1.3.5/knopflerfish_bin_osgi_1.3.5.jar">knopflerfish_bin_osgi_1.3.5.jar</a><br>
-  </td>  
-  <td>2.4M</td>
-  <td>  Core binary framework and some bundles. No source or docs. Self-extracting.  </td>
- </tr>
-
- <tr>
-  <td>
-  <a href="releases/1.3.5/knopflerfish_osgi_tiny_1.3.5.zip">knopflerfish_osgi_tiny_1.3.5.zip</a><br> 
-  </td>
-  <td>196K</td>
-  <td>
-  Remotely loading framework, no source, no docs, just framework.jar 
+  <tr>
+    <td>
+      <a href="releases/1.3.5/knopflerfish_osgi_tiny_1.3.5.zip">knopflerfish_osgi_tiny_1.3.5.zip</a><br> 
+    </td>
+    <td>196K</td>
+    <td>
+      Remotely loading framework, no source, no docs, just framework.jar 
       and config files for loading all bundles from the web.
-  </td>
- </tr>
+    </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.5/knopflerfish_opt_1.3.5.jar">knopflerfish_opt_1.3.5.jar</a><br> (approx 6.5 MB, including Apache Axis SOAP libraries)
-  </td>
-  <td>6.8M</td>
-  <td>
-A set of optional bundles, including SOAP support for any OSGi service. See
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
-  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.5/knopflerfish_opt_1.3.5.jar">knopflerfish_opt_1.3.5.jar</a><br> (approx 6.5 MB, including Apache Axis SOAP libraries)
+    </td>
+    <td>6.8M</td>
+    <td>
+      A set of optional bundles, including SOAP support for any OSGi service. See
+      <a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+    </td>
+  </tr>
 
 </table>
 
 <!--------------------		1.3.4		-------------------->
 <a name="1.3.4">
-<h3>Current release, Knopflerfish 1.3.4</h3>
+  <h3>Current release, Knopflerfish 1.3.4</h3>
 </a>
 Released: 2005-10-14
 
 <table cellpadding="2">
- <tr>
-  <th>Name</th>
-  <th>Size</th>
-  <th>Description</th>
- </tr>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Description</th>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.4/knopflerfish_osgi_1.3.4.jar">knopflerfish_osgi_1.3.4.jar</a><br>
-  </td> 
-  <td>6.8M</td>
-  <td>  Complete framework, including source code and docs. Self-extracting. </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.4/knopflerfish_osgi_1.3.4.jar">knopflerfish_osgi_1.3.4.jar</a><br>
+    </td> 
+    <td>6.8M</td>
+    <td>  Complete framework, including source code and docs. Self-extracting. </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.4/knopflerfish_fullbin_osgi_1.3.4.jar">knopflerfish_fullbin_osgi_1.3.4.jar</a><br>
-  </td>
-  <td>2.6M</td>
-  <td>  Full binary framework and bundles. No source or docs. Self-extracting.  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.4/knopflerfish_fullbin_osgi_1.3.4.jar">knopflerfish_fullbin_osgi_1.3.4.jar</a><br>
+    </td>
+    <td>2.6M</td>
+    <td>  Full binary framework and bundles. No source or docs. Self-extracting.  </td>
+  </tr>
 
 
- <tr>
-  <td>
-  <a href="releases/1.3.4/knopflerfish_bin_osgi_1.3.4.jar">knopflerfish_bin_osgi_1.3.4.jar</a><br>
-  </td>  
-  <td>2.4M</td>
-  <td>  Core binary framework and some bundles. No source or docs. Self-extracting.  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.4/knopflerfish_bin_osgi_1.3.4.jar">knopflerfish_bin_osgi_1.3.4.jar</a><br>
+    </td>  
+    <td>2.4M</td>
+    <td>  Core binary framework and some bundles. No source or docs. Self-extracting.  </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.4/knopflerfish_osgi_tiny_1.3.4.zip">knopflerfish_osgi_tiny_1.3.4.zip</a><br> 
-  </td>
-  <td>196K</td>
-  <td>
-  Remotely loading framework, no source, no docs, just framework.jar 
+  <tr>
+    <td>
+      <a href="releases/1.3.4/knopflerfish_osgi_tiny_1.3.4.zip">knopflerfish_osgi_tiny_1.3.4.zip</a><br> 
+    </td>
+    <td>196K</td>
+    <td>
+      Remotely loading framework, no source, no docs, just framework.jar 
       and config files for loading all bundles from the web.
-  </td>
- </tr>
+    </td>
+  </tr>
 
- <tr>
-  <td>
-  <a href="releases/1.3.4/knopflerfish_opt_1.3.4.jar">knopflerfish_opt_1.3.4.jar</a><br> (approx 6.5 MB, including Apache Axis SOAP libraries)
-  </td>
-  <td>6.8M</td>
-  <td>
-A set of optional bundles, including SOAP support for any OSGi service. See
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
-  </td>
- </tr>
+  <tr>
+    <td>
+      <a href="releases/1.3.4/knopflerfish_opt_1.3.4.jar">knopflerfish_opt_1.3.4.jar</a><br> (approx 6.5 MB, including Apache Axis SOAP libraries)
+    </td>
+    <td>6.8M</td>
+    <td>
+      A set of optional bundles, including SOAP support for any OSGi service. See
+      <a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/osgi/bundles_opt/soap/readme.html">SOAP readme</a> for details. Also includes support for OSGi <a href="http://www.knopflerfish.org/XMLMetatype">Metatype</a> data and a desktop UI for CM. This download should be installed on top of a previous installation. Self-extracting. 
+    </td>
+  </tr>
 
 </table>
