@@ -56,6 +56,8 @@
       <param name="fromfile" value="html_src/news.html"/>
       <param name="tofile"   value="${installdir}/news.html"/>
       <param name="title"    value="Knopflerfish News"/>
+      <param name="desc"     
+	     value="News and announcements about the Knopflerfish OSGi Service Platform"/>
       <param name="CLASS_NAVIGATION_NEWS" value="navigation_disabled"/>
     </antcall>
 
@@ -79,6 +81,7 @@
       <param name="fromfile" value="html_src/license.html"/>
       <param name="tofile"   value="${installdir}/license.html"/>
       <param name="title"    value="Knopflerfish License"/>
+      <param name="desc"     value="Information on the Knopflerfish License, including full BSD style license text."/>
       <param name="CLASS_NAVIGATION_LICENSE" value="navigation_disabled"/>
     </antcall>
 
@@ -86,6 +89,7 @@
       <param name="fromfile" value="html_src/release_notes_2.0.1.html"/>
       <param name="tofile"   value="${installdir}/release_notes_2.0.1.html"/>
       <param name="title"    value="Release Notes 2.0.1"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.1"/>
       <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
     </antcall>
 
@@ -93,6 +97,7 @@
       <param name="fromfile" value="html_src/release_notes_2.0.2.html"/>
       <param name="tofile"   value="${installdir}/release_notes_2.0.2.html"/>
       <param name="title"    value="Release Notes 2.0.2"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.2"/>
       <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
     </antcall>
 
@@ -100,6 +105,7 @@
       <param name="fromfile" value="html_src/release_notes_2.0.3.html"/>
       <param name="tofile"   value="${installdir}/release_notes_2.0.3.html"/>
       <param name="title"    value="Release Notes 2.0.3"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.3"/>
       <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
     </antcall>
 
@@ -107,6 +113,7 @@
       <param name="fromfile" value="html_src/install.html"/>
       <param name="tofile"   value="${installdir}/install.html"/>
       <param name="title"    value="Installing Knopflerfish"/>
+      <param name="desc"     value="Information on how to install and start the Knopflerfish OSGi"/>
       <param name="CLASS_NAVIGATION_INSTALL" value="navigation_disabled"/>
     </antcall>
 
@@ -114,6 +121,7 @@
       <param name="fromfile" value="html_src/running.html"/>
       <param name="tofile"   value="${installdir}/running.html"/>
       <param name="title"    value="Running Knopflerfish"/>
+      <param name="desc"     value="Information on how to run and configure Knoplferfish OSGi"/>
       <param name="CLASS_NAVIGATION_RUNNING" value="navigation_disabled"/>
     </antcall>
 
@@ -121,7 +129,7 @@
       <param name="fromfile" value="html_src/download_main.html"/>
       <param name="tofile"   value="${installdir}/download.html"/>
       <param name="title"    value="Download Knopflerfish OSGi"/>
-      <param name="desc"     value=""/>
+      <param name="desc"     value="Information on how to download Knopflerfish OSGi"/>
       <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
     </antcall>
 
