@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+
+<project name="htdocs" default="all">
+
+  <target name="all" 
+	  description="Create html pages from templates">
+
+    <property environment = "env"/>
+
+    <tstamp>
+      <format property = "timestamp" 
+              pattern  = "EE MMMM d yyyy, HH:mm:ss"
+              locale   = "en"/>
+    </tstamp>	     
+
+    <property name     = "version"
+              value    = "2.0.4"/>
+
+    <property name     = "template.html" 
+              location = "templates/template.html"/>
+
+    <property name     = "installdir" 
+              location = "install"/>
+
+    <property name     = "installdir_jp" 
+              location = "install/jp"/>
+
+    <property name     = "encoding"
+	      value    = "ISO-8859-1"/>
+
+    <property name     = "outputencoding"
+	      value    = "ISO-8859-1"/>
+
+<!--
+    <copy file = "favicon.ico"
+        tofile = "${installdir}/favicon.ico"/>
+-->
+
+    <antcall target="copydirs">
+      <param name="dir" value="images"/>
+    </antcall>
+
+    <antcall target="copydirs">
+      <param name="dir" value="css"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/index_main.html"/>
+      <param name="tofile"   value="${installdir}/index.html"/>
+      <param name="title"    value="Knopflerfish OSGi"/>
+      <param name="desc"     value="The Knopflerfish OSGi is a complete, open source, OSGi R3 and OSGi R4 distribution"/>
+      <param name="CLASS_NAVIGATION_INDEX" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/news.html"/>
+      <param name="tofile"   value="${installdir}/news.html"/>
+      <param name="title"    value="Knopflerfish News"/>
+      <param name="desc"     
+	     value="News and announcements about the Knopflerfish OSGi Service Platform"/>
+      <param name="CLASS_NAVIGATION_NEWS" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/programming_main.html"/>
+      <param name="tofile"   value="${installdir}/programming.html"/>
+      <param name="title"    value="Knopflerfish: Develop OSGi bundles"/>
+      <param name="desc"     value="Information, tips and recommendations for developing OSGi bundles"/>
+      <param name="CLASS_NAVIGATION_PROG" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/desktop_main.html"/>
+      <param name="tofile"   value="${installdir}/desktop.html"/>
+      <param name="title"    value="The Knopflerfish OSGi Desktop"/>
+      <param name="desc"     value="The Knopflerfish Desktop displays a graphic view of a running OSGi framework where bundles can be installed/started/stopped etc."/>
+      <param name="CLASS_NAVIGATION_DESKTOP" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/license.html"/>
+      <param name="tofile"   value="${installdir}/license.html"/>
+      <param name="title"    value="Knopflerfish License"/>
+      <param name="desc"     value="Information on the Knopflerfish License, including full BSD style license text."/>
+      <param name="CLASS_NAVIGATION_LICENSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.1.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.1.html"/>
+      <param name="title"    value="Release Notes 2.0.1"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.1"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.2.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.2.html"/>
+      <param name="title"    value="Release Notes 2.0.2"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.2"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.3.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.3.html"/>
+      <param name="title"    value="Release Notes 2.0.3"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.3"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.0.4.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.0.4.html"/>
+      <param name="title"    value="Release Notes 2.0.4"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.4"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/install.html"/>
+      <param name="tofile"   value="${installdir}/install.html"/>
+      <param name="title"    value="Installing Knopflerfish"/>
+      <param name="desc"     value="Information on how to install and start the Knopflerfish OSGi"/>
+      <param name="CLASS_NAVIGATION_INSTALL" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/running.html"/>
+      <param name="tofile"   value="${installdir}/running.html"/>
+      <param name="title"    value="Running Knopflerfish"/>
+      <param name="desc"     value="Information on how to run and configure Knoplferfish OSGi"/>
+      <param name="CLASS_NAVIGATION_RUNNING" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/download_main.html"/>
+      <param name="tofile"   value="${installdir}/download.html"/>
+      <param name="title"    value="Download Knopflerfish OSGi"/>
+      <param name="desc"     value="Information on how to download Knopflerfish OSGi"/>
+      <param name="CLASS_NAVIGATION_DOWNLOAD" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/links_main.html"/>
+      <param name="tofile"   value="${installdir}/osgi-links.html"/>
+      <param name="title"    value="Knopflerfish links"/>
+      <param name="desc"     value="Links to OSGi related pages"/>
+      <param name="CLASS_NAVIGATION_LINKS" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/charter_se_main.html"/>
+      <param name="tofile"   value="${installdir}/charter_se.html"/>
+      <param name="title"    value="Stadgar Knopflerfish"/>
+      <param name="desc"     value="Stadgar Knopflerfish"/>
+      <param name="CLASS_NAVIGATION_CHAPTER" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/history_main.html"/>
+      <param name="tofile"   value="${installdir}/history.html"/>
+      <param name="title"    value="Knopflerfish history"/>
+      <param name="desc"     value="Take your pick of reasons behind the Knopflerfish project"/>
+      <param name="CLASS_NAVIGATION_HISTORY" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/components_main.html"/>
+      <param name="tofile"   value="${installdir}/components.html"/>
+      <param name="title"    value="Knopflerfish contents"/>
+      <param name="desc"     value="The contents of the Knopflerfish distribution"/>
+      <param name="CLASS_NAVIGATION_COMP" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/contacts_main.html"/>
+      <param name="tofile"   value="${installdir}/contacts.html"/>
+      <param name="title"    value="Knopflerfish contacts"/>
+      <param name="desc"     value="Contact information for the Knopflerfish project"/>
+      <param name="CLASS_NAVIGATION_CONTACTS" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/svn_main.html"/>
+      <param name="tofile"   value="${installdir}/svn_info.html"/>
+      <param name="title"    value="Knopflerfish Subversion repository"/>
+      <param name="desc"     value="Using the Knopflerfish Subversion repository"/>
+      <param name="CLASS_NAVIGATION_SVN" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/perf.html"/>
+      <param name="tofile"   value="${installdir}/perf.html"/>
+      <param name="title"    value="Knopflerfish performance test"/>
+      <param name="desc"     value="Approximate time/memory usage for Knopflerfish startup"/>
+      <param name="CLASS_NAVIGATION_PERF" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/bundles_main.html"/>
+      <param name="tofile"   value="${installdir}/bundles.html"/>
+      <param name="title"    value="Knopflerfish Bundles"/>
+      <param name="desc"     value="Documentation from Knopflerfish bundles"/>
+      <param name="CLASS_NAVIGATION_BUNDLES" value="navigation_disabled"/>
+    </antcall>
+
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/osgi_service_tutorial.html"/>
+      <param name="tofile"   value="${installdir}/osgi_service_tutorial.html"/>
+      <param name="title"    value="OSGi Service tutorial"/>
+      <param name="desc"     value="Survival guide for handling OSGi services"/>
+      <param name="CLASS_NAVIGATION_SERVICES" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/remote_howto.html"/>
+      <param name="tofile"   value="${installdir}/remote_howto.html"/>
+      <param name="title"    value="The Remote Knopflerfish OSGi Desktop"/>
+      <param name="desc"     value="How to Activate the 'Remote framework...' Menu Item in the Knopflerfish Desktop."/>
+      <param name="CLASS_NAVIGATION_DESKTOP" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/eclipse_plugin_main.html"/>
+      <param name="tofile"   value="${installdir}/eclipse_plugin.html"/>
+      <param name="title"    value="Knopflerfish Eclipse Plugin"/>
+      <param name="desc"     value=""/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/eclipse_changelog.html"/>
+      <param name="tofile"   value="${installdir}/eclipse_changelog.html"/>
+      <param name="title"    value="Knopflerfish Eclipse Plugin Changelog"/>
+      <param name="desc"     value=""/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/eclipse_install.html"/>
+      <param name="tofile"   value="${installdir}/eclipse_install.html"/>
+      <param name="title"    value="Installing the Knopflerfish Eclipse Plugin"/>
+      <param name="desc"     value=""/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/eclipse_preferences.html"/>
+      <param name="tofile"   value="${installdir}/eclipse_preferences.html"/>
+      <param name="title"    value="Setting Preferences for Plugin"/>
+      <param name="desc"     value=""/>
+      <param name="CLASS_NAVIGATION_ECLIPSE" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/kf2_main.html"/>
+      <param name="tofile"   value="${installdir}/kf2.html"/>
+      <param name="title"    value="Knopflerfish 2"/>
+      <param name="desc"     value=""/>
+      <param name="CLASS_NAVIGATION_KF2" value="navigation_disabled"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile"	value="html_src_jp/index_jp.html"/>
+      <param name="tofile"	value="${installdir}/index_jp.html"/>
+      <param name="title"	value="Knopflerfish OSGi"/>
+      <param name="desc"	value=""/>
+      <param name="template.html"	value="templates/template_jp.html"/>
+      <param name="endcoding"		value="UTF-8"/>
+      <param name="outputendcoding"	value="UTF-8"/>
+      <param name="CLASS_NAVIGATION_INDEX" value="navigation_disabled"/>
+    </antcall>
+
+  </target>
+
+
+  <target name="makehtml">
+    <loadfile property = "main" 
+	      encoding = "${encoding}"
+              srcfile  = "${fromfile}"/>
+
+    <echo message="create ${tofile}"/>
+    <copy file      = "${template.html}" 
+          tofile    = "${tofile}" 
+          overwrite = "true"
+	  outputencoding = "${outputencoding}"/>
+
+     <property name="JAVADOC"  
+               value="http://www.knopflerfish.org/releases/${version}/javadoc"/>
+
+     <property name="CLASS_NAVIGATION_INDEX"     value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_NEWS"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_PROG"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_ECLIPSE"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_COMP"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_HISTORY"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_LICENSE"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_1"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_2"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RELEASE_NOTES_2_0_3"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_DOWNLOAD"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_INSTALL"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_RUNNING"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_LINKS"     value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_DESKTOP"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_HISTORY"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_CHANGELOG" value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_CONTACTS"  value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_SVN"       value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_BUNDLES"   value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_PERF"      value="navigation_enabled"/>
+     <property name="CLASS_NAVIGATION_KF2"	 value="navigation_enabled"/>
+
+    <replace file="${tofile}" encoding="${encoding}">
+      <replacefilter token="$(TITLE)"
+	             value="${title}"/>
+	<replacefilter token="$(DESC)"
+	               value="${desc}"/>
+	<replacefilter token="$(MAIN)"
+		       value="${main}"/>		       
+	<replacefilter token="$(TSTAMP)"    value="${timestamp}"/>
+	<replacefilter token="$(USER)"      value="${env.USER}"/>
+	<replacefilter token="$(VERSION)"   value="${version}"/>
+	<replacefilter token="$(MESSAGE)"   value="${message}"/>
+	<replacefilter token="$(JAVADOC)"       value="${JAVADOC}"/>
+
+        <replacefilter token="$(CLASS_NAVIGATION)" 
+                       value="navigation_enabled"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_INDEX)" 
+                       value="${CLASS_NAVIGATION_INDEX}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_NEWS)" 
+                       value="${CLASS_NAVIGATION_NEWS}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_COMP)" 
+                       value="${CLASS_NAVIGATION_COMP}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_CHANGELOG)" 
+                       value="${CLASS_NAVIGATION_CHANGELOG}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_CONTACTS)" 
+                       value="${CLASS_NAVIGATION_CONTACTS}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_LICENSE)" 
+                       value="${CLASS_NAVIGATION_LICENSE}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_1)" 
+                       value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_1}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_2)" 
+                       value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_2}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RELEASE_NOTES_2_0_3)" 
+                       value="${CLASS_NAVIGATION_RELEASE_NOTES_2_0_3}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_DOWNLOAD)" 
+                       value="${CLASS_NAVIGATION_DOWNLOAD}"/>
+
+
+	<replacefilter token="$(CLASS_NAVIGATION_INSTALL)" 
+                       value="${CLASS_NAVIGATION_INSTALL}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_RUNNING)" 
+                       value="${CLASS_NAVIGATION_RUNNING}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_PROG)" 
+                       value="${CLASS_NAVIGATION_PROG}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_ECLIPSE)" 
+                       value="${CLASS_NAVIGATION_ECLIPSE}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_DESKTOP)"
+                       value="${CLASS_NAVIGATION_DESKTOP}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_LINKS)" 
+                       value="${CLASS_NAVIGATION_LINKS}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_HISTORY)" 
+                       value="${CLASS_NAVIGATION_HISTORY}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_SVN)" 
+                       value="${CLASS_NAVIGATION_SVN}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_BUNDLES)" 
+                       value="${CLASS_NAVIGATION_BUNDLES}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_PERF)" 
+                       value="${CLASS_NAVIGATION_PERF}"/>
+
+	<replacefilter token="$(CLASS_NAVIGATION_KF2)" 
+                       value="${CLASS_NAVIGATION_KF2}"/>
+
+    </replace>	       
+  </target>
+
+  <target name="copydirs">
+     <echo message="Copying ${dir}"/>
+     <copy todir = "${installdir}/${dir}">
+       <fileset dir = "${dir}"/>
+     </copy>
+  </target>
+
+  <target name="clean">
+   <delete dir="install"    />
+
+  </target>
+</project>
+
+
