@@ -19,84 +19,114 @@
 
 <title>$(TITLE)</title>
 
-<link href="css/knopflerfish2.css" rel="stylesheet" type="text/css"/>
-<link rel="shortcut icon" href="images/favicon.ico"/>
+<link href="css/knopflerfish.css"  type="text/css" rel="stylesheet"/>
+<link rel="shortcut icon"                          href="images/favicon.ico"/>
+
+<script type="text/javascript" src="scripts/menu.js"></script>
 
 </head>
 
-
 <body>
+
 <a name="top"></a>
-	  <div class="pageheader">
-		<table border=0 cellpadding=0 cellspacing=0 width="100%">
-		  <tr>
-			<td width="50%" >
-			  <a href="index.html"><img src="images/kf2.gif" border="0"/></a><br/>
-			  <a class="titletext" href="index.html">Knopflerfish Open Source OSGi framework</a>
-			</td>
-			<td>
-			  <!-- SiteSearch Google -->
-			  <form class="searchform" method="GET" action="http://www.google.com/search">
-				<input type="hidden" name="ie"         value="UTF-8"/>
-				<input type="hidden" name="oe"         value="UTF-8"/>
-				<input type="hidden" name="domains"    value="www.knopflerfish.org"/>
-				<input type="hidden" name="sitesearch" value="www.knopflerfish.org"/>
-				<input TYPE="text"   name="q" size="20" maxlength="255" value="" style="font-size: 11px;"/>
-				<input type="submit" name="btnG" VALUE="Search KF" style="font-size: 11px;"/>
-			  </form>
-			   <!-- /SiteSearch Google -->
-			 </td>
-		   </tr>
-		 </table>
-	 </div>
 
-<table border="0" cellpadding="0" cellspacing="8">
+<div class="pageheader">
+  <div style="background-color: #FB0B0C">
+   <a href="index.html"><img src="images/kf400.png" border="0"/></a><br/>
+  </div>
+  <a class="titletext" href="index.html">Knopflerfish Open Source OSGi</a>
+    <a class="button_$(DOWNLOAD_STATE)" href="download.html">Download</a>
+    <a class="button_$(HOWTO_STATE)" href="devel.html">Development</a>
+    <a class="button_$(DOCS_STATE)" href="docs.html">Documentation</a>
+    <a class="button_$(COMMUNITY_STATE)" href="osgi-links.html">Community</a>
+  <div class="pagebuttons">
+  </div>
+
+</div>
+
+<table border="0" cellpadding="0" cellspacing="8" class="maintable">
   <tr>
-	<td valign="top" class="leftmenu" width="15%">
-<!--
-	  <div class="nrow"><a class="$(CLASS_NAVIGATION_INDEX)" href="index.html">Home</a></div>
--->
-	  <div class="nrow"><a class="$(CLASS_NAVIGATION_NEWS)" href="news.html">News</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_COMP)" href="components.html">Contents</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_DOWNLOAD)" href="download.html">Download</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_KF2)" href="kf2.html">KF2  OSGi / R4</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_INSTALL)" href="install.html">Installing</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_RUNNING)" href="running.html">Running</a></div>
+     <td valign="top" class="leftpanel" width="15%">
 
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_PROG)" href="programming.html">Programming</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_ECLIPSE)" href="eclipse_plugin.html">Eclipse plugin</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_DESKTOP)" href="desktop.html#1">Desktop</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_SVN)"   href="svn_info.html">Subversion</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_LINKS)" href="osgi-links.html">Links</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_HISTORY)" href="history.html">History</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_CONTACTS)" href="contacts.html">Contacts</a></div>
+      <div class="leftmenu">
 
-	  <br/>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION)" href="releases/$(VERSION)/javadoc/index.html">API docs</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION)" href="releases/$(VERSION)/jars/index.html">Bundle jar docs</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION)" href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum</a></div>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION)" href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker</a></div>
+  <form style="padding-left: 0px;" class="searchform" method="GET" action="http://www.google.com/search">
+		<input type="hidden" name="ie"         value="UTF-8"/>
+		<input type="hidden" name="oe"         value="UTF-8"/>
+		<input type="hidden" name="domains"    value="www.knopflerfish.org"/>
+		<input type="hidden" name="sitesearch" value="www.knopflerfish.org"/>
+		<input TYPE="text"   value="Search site" name="q" size="20" maxlength="255" value="" 
+			   onFocus="clearText(this)" onBlur="clearText(this)"
+			   class="searchfield"
+	  </form>
 
-      <div class="nrow"><a class="$(CLASS_NAVIGATION)" href="http://www.knopflerfish.org/repo/index.html">Bundle repository</a></div>
+      <div id="menu_download"><div class="nrow"><img src="images/arrow_$(DOWNLOAD_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOWNLOAD_STATE)" href="download.html">Download</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="snapshots/">Nightly builds</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="kf2.html">KF2  OSGi / R4</a></div>
+      </div>
 
-	  <br/>
-      <div class="nrow"><a class="$(CLASS_NAVIGATION_LICENSE)" href="license.html">License</a></div>
 
+      <div id="menu_howto"><div class="nrow"><img src="images/arrow_$(HOWTO_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(HOWTO_STATE)" href="devel.html">Development</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="devel.html">Installing</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="running.html">Running</a></div>
+
+      <div class="nrow1_$(HOWTO_STATE)"><a href="programming.html">Programming</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="osgi_service_tutorial.html">OSGi Service Tutorial</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="eclipse_plugin.html">Eclipse plugin</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="desktop.html#1">Desktop</a></div>
+      <div class="nrow1_$(HOWTO_STATE)"><a href="svn_info.html">Subversion</a></div>
+      </div>
+
+
+      <div id="menu_docs"><div class="nrow"><img src="images/arrow_$(DOCS_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOCS_STATE)" href="docs.html">Documentation</a></div>
+      <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/javadoc/index.html">API docs</a></div>
+      <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/jars/index.html">Bundle jar docs</a></div>
+
+      </div>
+
+      <div id="menu_community"><div class="nrow"><img src="images/arrow_$(COMMUNITY_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(COMMUNITY_STATE)" href="osgi-links.html">Community</a></div>
+      <div class="nrow1_$(COMMUNITY_STATE)"><a href="osgi-links.html">Links</a></div>
+      <div class="nrow1_$(COMMUNITY_STATE)"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum</a></div>
+      <div class="nrow1_$(COMMUNITY_STATE)"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker</a></div>
+
+      <div class="nrow1_$(COMMUNITY_STATE)"><a href="http://www.knopflerfish.org/repo/index.html">Bundle repository</a></div>
+
+      </div>
+
+      <div id="menu_about"><div class="nrow"><img src="images/arrow_$(ABOUT_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(ABOUT_STATE)" href="components.html">About</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="history.html">History</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="contacts.html">Contacts</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="license.html">License</a></div>
+      </div>
+
+      <div class="nrow"><a href="news.html">News</a></div>
+
+      </div>
+
+
+
+
+
+      <div>
       <div class="makewave">
 		Maintained by<br/>
-		<a class="$(CLASS_NAVIGATION)" href="http://www.makewave.com"><img src="images/makewave_logo_126x16.gif" border="0"/></a><br/>
-		<a class="$(CLASS_NAVIGATION)" href="http://www.makewave.com/site.en/products/knopflerfish_pro_osgi.shtml">Knopflerfish Pro</a><br/>
-		<a class="$(CLASS_NAVIGATION)" href="http://www.makewave.com/site.en/products/osgi_expert.shtml">Professional Services</a><br/>
-		<a class="$(CLASS_NAVIGATION)" href="http://www.makewave.com/site.en/products/osgi_training.shtml">Training</a><br/>
+		<a href="http://www.makewave.com"><img src="images/makewave_logo_126x16.gif" border="0"/></a><br/>
+		<a  href="http://www.makewave.com/site.en/products/knopflerfish_pro_osgi.shtml">Knopflerfish Pro</a><br/>
+		<a  href="http://www.makewave.com/site.en/products/osgi_expert.shtml">Professional Services</a><br/>
+		<a href="http://www.makewave.com/site.en/products/osgi_training.shtml">Training</a><br/>
 
 		Services for the OSGi Business User
 	  </div>
+      </div>
+
 	</td>
 	
 	<td width="*" cellpadding="0" cellspacing="0">	 
 	  <div id="mainblock">
 		$(MAIN)
+		<p>
 		<a class="top" href="#top">top</a>
+		</p>
 	  </div>
    </td>
 
