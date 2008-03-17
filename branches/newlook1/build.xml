@@ -14,7 +14,7 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "2.0.3"/>
+              value    = "2.0.4"/>
 
     <property name     = "template.html" 
               location = "templates/template.html"/>
@@ -54,6 +54,8 @@
       <param name="tofile"   value="${installdir}/index.html"/>
       <param name="title"    value="Knopflerfish OSGi"/>
       <param name="desc"     value="The Knopflerfish OSGi is a complete, open source, OSGi R3 and OSGi R4 distribution"/>
+      <param name="MENU_ID" value="menu_home"/>
+      <param name="HOME_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -314,6 +316,15 @@
       <param name="DOCS_STATE" value="open"/>
     </antcall>
 
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/tutorials.html"/>
+      <param name="tofile"   value="${installdir}/tutorials.html"/>
+      <param name="title"    value="Tutorials"/>
+      <param name="desc"     value=""/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
 
     <antcall target="makehtml">
       <param name="fromfile"	value="html_src_jp/index_jp.html"/>
@@ -344,6 +355,7 @@
 
      <property name="MENU_ID"         value="menu_id"/>
 
+     <property name="HOME_STATE"      value="closed"/>
      <property name="DOWNLOAD_STATE"  value="closed"/>
      <property name="ABOUT_STATE"     value="closed"/>
      <property name="DOCS_STATE"      value="closed"/>
@@ -366,6 +378,7 @@
         <replacefilter token="$(MENU_ID)" 
                        value="${MENU_ID}"/>
 
+	<replacefilter token="$(HOME_STATE)"  value="${HOME_STATE}"/>
 	<replacefilter token="$(DOWNLOAD_STATE)"  value="${DOWNLOAD_STATE}"/>
 	<replacefilter token="$(HOWTO_STATE)"     value="${HOWTO_STATE}"/>
 	<replacefilter token="$(DOCS_STATE)"      value="${DOCS_STATE}"/>
