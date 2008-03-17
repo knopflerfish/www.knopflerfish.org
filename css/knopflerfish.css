@@ -234,6 +234,10 @@ TD.menu {
  horizontal-align:    middle;
 }
 
+.hfclass {
+ background-color: #EEF2F3; 
+}
+
 .leftheader {
 background: transparent url(../images/corner-box/grey-fade.jpg) repeat-y scroll left top;
  color:               #000000;
