@@ -64,7 +64,7 @@ A:hover {
  border-style:        solid;
  border-left-width:   1px;
  border-right-width:  1px;
- border-top-width:    1px;
+ border-top-width:    0px;
  border-bottom-width: 1px;
 }
 
@@ -369,6 +369,7 @@ div#mainblock {
  border-top-width:    1px;
  border-bottom-width: 1px;
  padding-left:         15px;
+ padding-right:        15px;
 }
 
 .navigation_enabled
