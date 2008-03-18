@@ -120,7 +120,7 @@
       <param name="title"    value="Knopflerfish License"/>
       <param name="desc"     value="Information on the Knopflerfish License, including full BSD style license text."/>
       <param name="MENU_ID" value="menu_about"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="ABOUT_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
