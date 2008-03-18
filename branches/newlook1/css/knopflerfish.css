@@ -400,3 +400,59 @@ A.navigation_disabled:hover {
  text-decoration:  underline;
 }
 
+.userdoc_hdr_left {
+  font-weight: bold;		   
+  float:left;
+}
+
+
+.userdoc_hdr_right {
+  font-weight: bold;		   
+  text-align: right;
+}
+
+.abstract {
+  font-style: italic;
+}
+
+.manpage {
+
+}
+
+H1.man {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size:24px;
+ font-weight:bold;
+ margin-left: 0;
+}
+
+H2.man {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size:18px;
+ font-weight:bold;
+ background:          #535353;  
+ color:		      #ffffff;
+ border-style:        solid;
+ border-style: solid;
+ border-color: #000000;
+ border-width: 1px;
+ padding-top:         2px;
+ padding-bottom:      2px;
+ padding-left:        8px;
+}
+
+H3.man  {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size:13px;
+ font-weight:bold;
+ background:          #838383;  
+ color:		      #ffffff;
+ border-style:        solid;
+ border-style: solid;
+ border-color: #000000;
+ border-width: 1px;
+ padding-top:         2px;
+ padding-bottom:      2px;
+ padding-left:        8px;
+}
+
