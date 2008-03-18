@@ -62,7 +62,7 @@ A:hover {
  border-bottom-color: #eaeaF2;
  border-right-color:  #eaeaF2;
  border-style:        solid;
- border-left-width:   1px;
+ border-left-width:   0px;
  border-right-width:  1px;
  border-top-width:    0px;
  border-bottom-width: 1px;
