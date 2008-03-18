@@ -170,6 +170,12 @@ td.newsdate {
  white-space:nowrap;
 }
 
+td.newstext {
+ padding-bottom:5px;
+ padding-left:10px;
+}
+
+
 TD  {
  font-family: Verdana, Arial, Helvetica, sans-serif;
  text-align:left;
