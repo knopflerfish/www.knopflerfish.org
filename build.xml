@@ -201,8 +201,17 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/components_main.html"/>
       <param name="tofile"   value="${installdir}/components.html"/>
-      <param name="title"    value="Knopflerfish contents"/>
+      <param name="title"    value="About the Knopflerfish distribution"/>
       <param name="desc"     value="The contents of the Knopflerfish distribution"/>
+      <param name="MENU_ID" value="menu_about"/>
+      <param name="ABOUT_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/about_main.html"/>
+      <param name="tofile"   value="${installdir}/about.html"/>
+      <param name="title"    value="About Knopflerfish"/>
+      <param name="desc"     value="About Knopflerfish"/>
       <param name="MENU_ID" value="menu_about"/>
       <param name="ABOUT_STATE" value="open"/>
     </antcall>
