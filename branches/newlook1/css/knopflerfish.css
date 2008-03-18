@@ -166,6 +166,10 @@ H4  {
  font-size:12px;
 }
 
+td.newsdate {
+ white-space:nowrap;
+}
+
 TD  {
  font-family: Verdana, Arial, Helvetica, sans-serif;
  text-align:left;
@@ -352,12 +356,13 @@ border-left-width:    1px;
 
 }
 
-.mainblock {
+div#mainblock {
  background:          #ffffff;
  border-left-width:   1px;
  border-right-width:  1px;
  border-top-width:    1px;
  border-bottom-width: 1px;
+ padding-left:         15px;
 }
 
 .navigation_enabled

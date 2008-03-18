@@ -321,8 +321,8 @@
       <param name="tofile"   value="${installdir}/tutorials.html"/>
       <param name="title"    value="Tutorials"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_docs"/>
-      <param name="DOCS_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_howto"/>
+      <param name="HOWTO_STATE" value="open"/>
     </antcall>
 
 
