@@ -425,6 +425,7 @@ H1.man {
  font-size:24px;
  font-weight:bold;
  margin-left: 0;
+ padding-right:        15px;
 }
 
 H2.man {
@@ -440,6 +441,7 @@ H2.man {
  padding-top:         2px;
  padding-bottom:      2px;
  padding-left:        8px;
+ padding-right:        15px;
 }
 
 H3.man  {
@@ -455,5 +457,6 @@ H3.man  {
  padding-top:         2px;
  padding-bottom:      2px;
  padding-left:        8px;
+ padding-right:        15px;
 }
 
