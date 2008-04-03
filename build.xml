@@ -61,8 +61,8 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/empty.html"/>
       <param name="tofile"   value="${installdir}/empty.html"/>
-      <param name="title"    value="__TITLE__"/>
-      <param name="desc"     value="__DESC__"/>
+      <param name="title"    value="Knopflerfish OSGi - @VERSION@ @BUILD_KIND@"/>
+      <param name="desc"     value="@DESC@"/>
     </antcall>
 
     <antcall target="makehtml">
