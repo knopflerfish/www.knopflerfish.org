@@ -1,0 +1,41 @@
+<h2>Release Notes Knopflerfish 1.3.6</h2>
+
+The Release Notes are also included in the KF distributions.
+<p>
+
+<pre>
+Release Notes Knopflerfish 1.3.6
+--------------------------------
+
+  Maintenance release of Knopflerfish 1.3 (OSGi R3)
+
+  Here follows a breakdown of the most important changes since the 
+  last release.
+
+=== Framework (Core) ===
+
+  A number of changes to enable bundles with few permissions to work
+  correctly when security is enabled.
+
+  All permission checks are now performed via the active Security
+  Manager to enable interception of such checks by a custom Security
+  Manager implementation.
+
+  The security policy implementation used by the framework now
+  delegates permission derivation to the original policy
+  implementation, thus allowing specification of permissions for
+  non-bundle packages via the default policy file.
+
+
+=== Services (Compendium) ===
+      
+  No changes.
+
+
+=== Misc (KF specific, start scripts, build system etc ===
+
+  Some build system changes have been back-ported from the
+  Knopflerfish 2.0 series. E.g., usage of a local bcel.jar in ant/lib,
+  new release note page and a change log based on svn comments, ...
+
+</pre>
