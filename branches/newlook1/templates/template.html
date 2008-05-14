@@ -20,7 +20,7 @@
 <title>$(TITLE)</title>
 
 <link href="css/knopflerfish.css"  type="text/css" rel="stylesheet"/>
-<link rel="shortcut icon"                          href="images/favicon.ico"/>
+<link rel="shortcut icon"                          href="images/bones_16.png"/>
 
 <script type="text/javascript" src="scripts/menu.js"></script>
 
@@ -31,15 +31,15 @@
 <a name="top"></a>
 
 <div>
-  <div class="hfclass" style="padding-top: 5px;">
-   <a href="index.html"><img src="images/kf400r2.png" border="0" alt="knopflerfish logo"/></a>
+  <div class="hfclass" style="padding-left: 5px; padding-top: 0px; background-color: #0B2229;">
+   <a href="index.html"><img src="images/kf300_black.png" border="0" alt="knopflerfish logo"/></a>
   </div>
-  <div style="background-color: #EEF2F3; padding-left: 50px; padding-top: 3px; height: 1.5em;">
+  <div style="height: 10px; background: #EEF2F3 url(images/fade1.png) repeat-x scroll left top;"></div>
+  <div style="background-color: #EEF2F3; padding-left: 5px; padding-top: 3px; height: 1.5em;">
     <a class="button_$(HOME_STATE)" href="index.html">Home</a>
+    <a class="button_$(NEWS_STATE)" href="news.html">News</a>
     <a class="button_$(DOWNLOAD_STATE)" href="download.html">Download</a>
-    <a class="button_$(HOWTO_STATE)" href="devel.html">Development</a>
     <a class="button_$(DOCS_STATE)" href="docs.html">Documentation</a>
-    <a class="button_$(COMMUNITY_STATE)" href="osgi-links.html">Community</a>
  </div>
  <div style="height: 10px; background: white url(images/gw10x10.png) repeat-x scroll left top;"></div>
 
@@ -61,48 +61,51 @@
 			   class="searchfield"
 	  </form>
 
+      <div id="menu_news"><div class="nrow"><img src="images/arrow_$(NEWS_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(NEWS_STATE)" href="news.html">News</a></div>
+        <div class="nrow1_$(NEWS_STATE)"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
+        <div class="nrow1_$(NEWS_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists</a></div>
+      </div>
+
       <div id="menu_download"><div class="nrow"><img src="images/arrow_$(DOWNLOAD_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOWNLOAD_STATE)" href="download.html">Download</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="license.html">License</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="download.html">Latest</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="snapshots/current_trunk/junit_grunt/index.xml">Latest test results</a></div>
        <div class="nrow1_$(DOWNLOAD_STATE)"><a href="snapshots/">Nightly builds</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="repo/repository.xml">Bundle repository</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="svn_info.html">Subversion</a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
+       <div class="nrow1_$(DOWNLOAD_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists <img border="0" src="images/extlink.gif"/></a></div>
       </div>
 
 
-      <div id="menu_howto"><div class="nrow"><img src="images/arrow_$(HOWTO_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(HOWTO_STATE)" href="devel.html">Development</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="devel.html">Installing</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="running.html">Running</a></div>
-
-      <div class="nrow1_$(HOWTO_STATE)"><a href="programming.html">Programming</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="tutorials.html">Tutorials</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="eclipse_plugin.html">Eclipse plugin</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="desktop.html#1">Desktop</a></div>
-      <div class="nrow1_$(HOWTO_STATE)"><a href="svn_info.html">Subversion</a></div>
+      <div id="menu_docs"><div class="nrow"><img src="images/arrow_$(DOCS_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOCS_STATE)" href="documentation.html">Documention</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="running.html">Install/run</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="programming.html">Programming</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="tutorials.html">Tutorials</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="desktop.html#1">Desktop</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="eclipse_plugin.html">Eclipse plugin</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/javadoc/index.html">Java docs</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/bundledoc/index.html">Bundle User docs</a></div>
+       <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/jars/index.html">Bundle jar docs</a></div>
       </div>
 
 
-      <div id="menu_docs"><div class="nrow"><img src="images/arrow_$(DOCS_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOCS_STATE)" href="docs.html">Documentation</a></div>
-      <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/javadoc/index.html">Java docs</a></div>
-      <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/bundledoc/index.html">Bundle User docs</a></div>
-      <div class="nrow1_$(DOCS_STATE)"><a href="releases/$(VERSION)/jars/index.html">Bundle jar docs</a></div>
-      </div>
-
-      <div id="menu_community"><div class="nrow"><img src="images/arrow_$(COMMUNITY_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(COMMUNITY_STATE)" href="osgi-links.html">Community</a></div>
-      <div class="nrow1_$(COMMUNITY_STATE)"><a href="osgi-links.html">Links</a></div>
-      <div class="nrow1_$(COMMUNITY_STATE)"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
-      <div class="nrow1_$(COMMUNITY_STATE)"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
-
-      <div class="nrow1_$(COMMUNITY_STATE)"><a href="repo/repository.xml">Bundle repository</a></div>
-
-      </div>
-
-      <div id="menu_about"><div class="nrow"><img src="images/arrow_$(ABOUT_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(ABOUT_STATE)" href="about.html"cense>About</a></div>
-	<div class="nrow1_$(ABOUT_STATE)"><a href="components.html">Components</a></div>
+      <div id="menu_about"><div class="nrow"><img src="images/arrow_$(ABOUT_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(ABOUT_STATE)" href="about.html">About</a></div>
 	<div class="nrow1_$(ABOUT_STATE)"><a href="history.html">History</a></div>
 	<div class="nrow1_$(ABOUT_STATE)"><a href="contacts.html">Contacts</a></div>
-	<div class="nrow1_$(ABOUT_STATE)"><a href="license.html">License</a></div>
+        <div class="nrow1_$(ABOUT_STATE)"><a href="osgi-links.html">Links</a></div>
       </div>
 
-      <div class="nrow"><a href="news.html">News</a></div>
+
+      <div class="nrow">&nbsp;</div>
+      <div class="nrow"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
+      <div class="nrow"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
+      <div class="nrow"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
+       <div class="nrow"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists <img border="0" src="images/extlink.gif"/></a></div>
 
       </div>
+
 
 
 
