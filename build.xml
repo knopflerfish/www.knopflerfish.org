@@ -101,8 +101,8 @@
       <param name="tofile"   value="${installdir}/programming.html"/>
       <param name="title"    value="Knopflerfish: Develop OSGi bundles"/>
       <param name="desc"     value="Information, tips and recommendations for developing OSGi bundles"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -110,8 +110,8 @@
       <param name="tofile"   value="${installdir}/desktop.html"/>
       <param name="title"    value="The Knopflerfish OSGi Desktop"/>
       <param name="desc"     value="The Knopflerfish Desktop displays a graphic view of a running OSGi framework where bundles can be installed/started/stopped etc."/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -119,8 +119,8 @@
       <param name="tofile"   value="${installdir}/license.html"/>
       <param name="title"    value="Knopflerfish License"/>
       <param name="desc"     value="Information on the Knopflerfish License, including full BSD style license text."/>
-      <param name="MENU_ID" value="menu_about"/>
-      <param name="ABOUT_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_download"/>
+      <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -144,22 +144,14 @@
       <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.0.3"/>
     </antcall>
 
-    <antcall target="makehtml">
-      <param name="fromfile" value="html_src/devel.html"/>
-      <param name="tofile"   value="${installdir}/devel.html"/>
-      <param name="title"    value="Installing Knopflerfish"/>
-      <param name="desc"     value="Information on how to install and start the Knopflerfish OSGi"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
-    </antcall>
 
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/running.html"/>
       <param name="tofile"   value="${installdir}/running.html"/>
-      <param name="title"    value="Running Knopflerfish"/>
-      <param name="desc"     value="Information on how to run and configure Knoplferfish OSGi"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="title"    value="Install/run Knopflerfish"/>
+      <param name="desc"     value="How to install, run and configure Knopflerfish OSGi"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -176,8 +168,8 @@
       <param name="tofile"   value="${installdir}/osgi-links.html"/>
       <param name="title"    value="Knopflerfish links"/>
       <param name="desc"     value="Links to OSGi related pages"/>
-      <param name="MENU_ID" value="menu_community"/>
-      <param name="COMMUNITY_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_about"/>
+      <param name="ABOUT_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -199,12 +191,12 @@
     </antcall>
 
     <antcall target="makehtml">
-      <param name="fromfile" value="html_src/components_main.html"/>
-      <param name="tofile"   value="${installdir}/components.html"/>
-      <param name="title"    value="About the Knopflerfish distribution"/>
-      <param name="desc"     value="The contents of the Knopflerfish distribution"/>
-      <param name="MENU_ID" value="menu_about"/>
-      <param name="ABOUT_STATE" value="open"/>
+      <param name="fromfile" value="html_src/documentation_main.html"/>
+      <param name="tofile"   value="${installdir}/documentation.html"/>
+      <param name="title"    value="Documentation"/>
+      <param name="desc"     value="Knopflerfish documentations"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -230,8 +222,8 @@
       <param name="tofile"   value="${installdir}/svn_info.html"/>
       <param name="title"    value="Knopflerfish Subversion repository"/>
       <param name="desc"     value="Using the Knopflerfish Subversion repository"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_download"/>
+      <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -239,8 +231,8 @@
       <param name="tofile"   value="${installdir}/perf.html"/>
       <param name="title"    value="Knopflerfish performance test"/>
       <param name="desc"     value="Approximate time/memory usage for Knopflerfish startup"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -248,8 +240,8 @@
       <param name="tofile"   value="${installdir}/bundles.html"/>
       <param name="title"    value="Knopflerfish Bundles"/>
       <param name="desc"     value="Documentation from Knopflerfish bundles"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
 
@@ -258,8 +250,8 @@
       <param name="tofile"   value="${installdir}/osgi_service_tutorial.html"/>
       <param name="title"    value="OSGi Service tutorial"/>
       <param name="desc"     value="Survival guide for handling OSGi services"/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -267,8 +259,8 @@
       <param name="tofile"   value="${installdir}/remote_howto.html"/>
       <param name="title"    value="The Remote Knopflerfish OSGi Desktop"/>
       <param name="desc"     value="How to Activate the 'Remote framework...' Menu Item in the Knopflerfish Desktop."/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -276,8 +268,8 @@
       <param name="tofile"   value="${installdir}/eclipse_plugin.html"/>
       <param name="title"    value="Knopflerfish Eclipse Plugin"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -285,8 +277,8 @@
       <param name="tofile"   value="${installdir}/eclipse_changelog.html"/>
       <param name="title"    value="Knopflerfish Eclipse Plugin Changelog"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -294,8 +286,8 @@
       <param name="tofile"   value="${installdir}/eclipse_install.html"/>
       <param name="title"    value="Installing the Knopflerfish Eclipse Plugin"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -303,8 +295,8 @@
       <param name="tofile"   value="${installdir}/eclipse_preferences.html"/>
       <param name="title"    value="Setting Preferences for Plugin"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -330,8 +322,8 @@
       <param name="tofile"   value="${installdir}/tutorials.html"/>
       <param name="title"    value="Tutorials"/>
       <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_howto"/>
-      <param name="HOWTO_STATE" value="open"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
     </antcall>
 
 
@@ -368,8 +360,7 @@
      <property name="DOWNLOAD_STATE"  value="closed"/>
      <property name="ABOUT_STATE"     value="closed"/>
      <property name="DOCS_STATE"      value="closed"/>
-     <property name="COMMUNITY_STATE" value="closed"/>
-     <property name="HOWTO_STATE"     value="closed"/>
+     <property name="NEWS_STATE"      value="closed"/>
 
     <replace file="${tofile}" encoding="${encoding}">
       <replacefilter token="$(TITLE)"
@@ -391,7 +382,7 @@
 	<replacefilter token="$(DOWNLOAD_STATE)"  value="${DOWNLOAD_STATE}"/>
 	<replacefilter token="$(HOWTO_STATE)"     value="${HOWTO_STATE}"/>
 	<replacefilter token="$(DOCS_STATE)"      value="${DOCS_STATE}"/>
-	<replacefilter token="$(COMMUNITY_STATE)" value="${COMMUNITY_STATE}"/>
+	<replacefilter token="$(NEWS_STATE)"      value="${NEWS_STATE}"/>
 	<replacefilter token="$(ABOUT_STATE)"     value="${ABOUT_STATE}"/>
 
 
