@@ -31,10 +31,8 @@
     <property name     = "outputencoding"
 	      value    = "ISO-8859-1"/>
 
-<!--
-    <copy file = "favicon.ico"
+    <copy file = "images/favicon.ico"
         tofile = "${installdir}/favicon.ico"/>
--->
 
     <antcall target="copydirs">
       <param name="dir" value="images"/>
