@@ -209,8 +209,8 @@
     </antcall>
 
     <antcall target="makehtml">
-      <param name="fromfile" value="html_src/merchendise_main.html"/>
-      <param name="tofile"   value="${installdir}/merchendise.html"/>
+      <param name="fromfile" value="html_src/merchandise_main.html"/>
+      <param name="tofile"   value="${installdir}/merchandise.html"/>
       <param name="title"    value="T-shirts and stuff"/>
       <param name="desc"     value="T-shirts and stuff"/>
       <param name="MENU_ID" value="menu_about"/>
