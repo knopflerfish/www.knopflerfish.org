@@ -92,6 +92,8 @@
       <param name="title"    value="Knopflerfish News"/>
       <param name="desc"     
 	     value="News and announcements about the Knopflerfish OSGi Service Platform"/>
+      <param name="MENU_ID" value="menu_news"/>
+      <param name="NEWS_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
@@ -207,6 +209,15 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/merchendise_main.html"/>
+      <param name="tofile"   value="${installdir}/merchendise.html"/>
+      <param name="title"    value="T-shirts and stuff"/>
+      <param name="desc"     value="T-shirts and stuff"/>
+      <param name="MENU_ID" value="menu_about"/>
+      <param name="ABOUT_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/contacts_main.html"/>
       <param name="tofile"   value="${installdir}/contacts.html"/>
       <param name="title"    value="Knopflerfish contacts"/>
@@ -295,15 +306,6 @@
       <param name="desc"     value=""/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
-    </antcall>
-
-    <antcall target="makehtml">
-      <param name="fromfile" value="html_src/kf2_main.html"/>
-      <param name="tofile"   value="${installdir}/kf2.html"/>
-      <param name="title"    value="Knopflerfish 2"/>
-      <param name="desc"     value=""/>
-      <param name="MENU_ID" value="menu_download"/>
-      <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
 
     <antcall target="makehtml">
