@@ -166,7 +166,7 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/links_main.html"/>
       <param name="tofile"   value="${installdir}/osgi-links.html"/>
-      <param name="title"    value="Knopflerfish links"/>
+      <param name="title"    value="OSGi related links"/>
       <param name="desc"     value="Links to OSGi related pages"/>
       <param name="MENU_ID" value="menu_about"/>
       <param name="ABOUT_STATE" value="open"/>
