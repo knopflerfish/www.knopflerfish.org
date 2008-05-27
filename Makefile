@@ -18,6 +18,10 @@ install_html: prepare
 	@echo "Installing kf web pages at: ${INSTALLDIR}"
 	cd install; scp -r *.html jp ${INSTALLDEST}
 
+install_images: prepare
+	@echo "Installing kf web site images at: ${INSTALLDIR}"
+	cd install; scp -r images ${INSTALLDEST}
+
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
 	cd install; scp -r *.html jp/*.html images css ${INSTALLDEST}
