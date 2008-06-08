@@ -16,7 +16,7 @@ KF_RELEASE=${KF_DIR}/htdocs/releases/2.0.2
 
 install_html: prepare
 	@echo "Installing kf web pages at: ${INSTALLDIR}"
-	cd install; scp -r *.html jp ${INSTALLDEST}
+	cd install; scp -r *.html css ${INSTALLDEST}
 
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
