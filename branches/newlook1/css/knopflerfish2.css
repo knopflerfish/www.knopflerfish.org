@@ -327,3 +327,11 @@ A:hover {
  margin-top: 4px;
  background-color: transparent;
 }
+
+#release_notes dt {
+  font-weight: bold;
+}
+
+#release_notes dd {
+  margin-bottom: 10px;
+}

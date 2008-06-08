@@ -4,7 +4,7 @@
 ## Why not use ant for this? I know make better! [CL]
 ##
 
-INSTALLDIR=/home/wistrand/knopflerfish.org/www/tmp/k5/install
+INSTALLDIR=/home/wistrand/knopflerfish.org/www/
 INSTALLHOST=hinken.sparud.net
 INSTALLUSER=`whoami`
 INSTALLDEST = "${INSTALLUSER}@${INSTALLHOST}:${INSTALLDIR}"
