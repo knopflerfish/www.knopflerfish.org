@@ -39,6 +39,7 @@
 	  <a class="button_$(NEWS_STATE)" href="news.html">News</a>
 	  <a class="button_$(DOWNLOAD_STATE)" href="download.html">Download</a>
 	  <a class="button_$(DOCS_STATE)" href="docs.html">Documentation</a>
+	  <a class="button_$(DOCS_ABOUT)" href="about.html">About</a>
 	</div>
 	<!-- <div style="height: 10px; background: white url(images/gw10x10.png) repeat-x scroll left top;"></div> -->
       </div>
@@ -55,17 +56,21 @@
 		 </form>
 
 	<div id="menu_news"><div class="nrow"><img src="images/arrow_$(NEWS_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(NEWS_STATE)" href="news.html">News</a></div>
+	  <!--
 	  <div class="nrow1_$(NEWS_STATE)"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
+	  -->
 	  <div class="nrow1_$(NEWS_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists</a></div>
 	</div>
 
 	<div id="menu_download"><div class="nrow"><img src="images/arrow_$(DOWNLOAD_STATE).gif" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"/><a class="nrow_$(DOWNLOAD_STATE)" href="download.html">Download</a></div>
 	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="license.html">License</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="download.html">Latest</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/current_trunk/junit_grunt/index.xml">Latest test results</a></div>
+	  <!-- 
+          <div class="nrow1_$(DOWNLOAD_STATE)"><a href="download.html">Latest</a></div>
+	  -->
 	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/">Nightly builds</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="repo/repository.xml">Bundle repository</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="svn_info.html">Subversion</a></div>
+	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/current_trunk/junit_grunt/index.xml">Nightly tests</a></div>
+	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="releases/current/repository.xml">Bundle repository</a></div>
+	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="svn_info.html">Source Code (subversion)</a></div>
 	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
 	  <div class="nrow1_$(DOWNLOAD_STATE)"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
 	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists <img border="0" src="images/extlink.gif"/></a></div>
@@ -93,7 +98,9 @@
 
 
 	<div class="nrow">&nbsp;</div>
+	<!--
 	<div class="nrow"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
+	-->
 	<div class="nrow"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
 	<div class="nrow"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
 	<div class="nrow"><a href="http://www.knopflerfish.org/mailman/listinfo.cgi">Mailing lists <img border="0" src="images/extlink.gif"/></a></div>
