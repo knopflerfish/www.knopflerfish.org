@@ -4,7 +4,7 @@ BODY  {
 }
 
 #main {
-  width: 887; 
+  width: 900; 
   background: #fff;
   border:		1px solid #000;
 	/* 	padding: 10px 50px 10px 50px;  */
@@ -47,7 +47,8 @@ BODY  {
 /********** Left menu definitions **********/
 
 #leftmenu {
-  margin-left: 10px;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
   width: 160px;
   float:left;
   /*  background: #f4d6ea; */
@@ -65,7 +66,7 @@ BODY  {
  border-bottom-color: #eaeaF2;
  border-bottom-color: #F4D6EA;
  border-bottom-color: #A894A2;
- border-left-width:   1px;
+ border-left-width:   0px;
  border-right-width:  0px;
  border-top-width:    0px;
  border-bottom-width: 1px;
@@ -101,6 +102,7 @@ BODY  {
 #mainblock {
   margin-left: 180px; 
   padding-right: 15px;
+  padding-left: 15px;
 }
 
 /********** Footer **********/
@@ -186,7 +188,26 @@ TH  {
  padding-right: 10px;
 }
 
+TABLE.fancy {
+  border-collapse: collapse;
+}
 
+TR.fancy {
+  background: #C9C9C9;
+  border-bottom: 2px solid #A3A3A3;
+  border-top: 2px solid #A3A3A3;
+}
+
+TD.fancy_row {
+  background: #C9C9C9;
+  border-bottom: 2px solid #A3A3A3;
+  border-top: 2px solid #A3A3A3;
+}
+
+TD.fancy {
+  background: #f1f1f1;
+}
+	
 TD.newsdate {
  white-space:	nowrap;
 }  
@@ -297,6 +318,12 @@ A:hover {
 }
 
 .makewave {
- padding-top: 10px;
+ padding-top: 20px;
+ background-color: transparent;
+}
+
+.makewave_2 {
+ margin-left: 4px;
+ margin-top: 4px;
  background-color: transparent;
 }
