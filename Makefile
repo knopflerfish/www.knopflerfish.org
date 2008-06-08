@@ -4,7 +4,7 @@
 ## Why not use ant for this? I know make better! [CL]
 ##
 
-INSTALLDIR=/home/wistrand/knopflerfish.org/www/
+INSTALLDIR=/home/wistrand/knopflerfish.org/www/tmp/k5/install
 INSTALLHOST=hinken.sparud.net
 INSTALLUSER=`whoami`
 INSTALLDEST = "${INSTALLUSER}@${INSTALLHOST}:${INSTALLDIR}"
@@ -20,14 +20,14 @@ install_html: prepare
 
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
-	cd install; scp -r *.html jp/*.html images css ${INSTALLDEST}
+	cd install; scp -r *.html images css ${INSTALLDEST}
 
 install_release:
 	@echo "Installing KF release files at: ${INSTALLDIR}"
 	cd install; scp -r releases ${INSTALLDEST}
 
 prepare:
-	chmod -R 775 install/*.html install/css install/css install/images install/jp
+	chmod -R 775 install/*.html install/css install/images 
 
 prepare_release:
 	mkdir -p install/releases
