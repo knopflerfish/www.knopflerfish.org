@@ -1,0 +1,141 @@
+<h2>Release Notes Knopflerfish 2.1.0</h2>
+
+Minor release of Knopflerfish
+
+<h3> Framework</h3>
+
+<div id="release_notes">
+<dl>
+<dt> xargs files</dt>
+
+<dd>
+  Search for xargs files given with relative file names now first
+  tries to find the file in parent directory of the current framework
+  directory, then in the current working directory. Also ensured that
+  File.exists() are only used for file-objects based on an absolute path.
+  Reported in issue 1966119 (Support custom working directory
+  (FWDIR_PROP is not enough))
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1966119&group_id=82798&atid=567241
+</dd>
+<dd>
+  Added a new system property,
+  org.knopflerfish.framework.xargs.writesysprops, that controls
+  whether properties defined using -Dname=value in xargs files are to
+  be exported as system properties or not. Such properties will
+  always be available to bundles via BundleContext.getProperty(name).
+  See osgi/framework/readme.txt for details.
+
+  Fixed a bug when updating a required bundle. The require relation
+  was not refreshed when a package refresh was done after the update,
+  i.e., the requiring bundle continued to use the old, removed
+  packages.
+  Reported in issue 1960999 (Update of required bundle broken)
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1960999&group_id=82798&atid=567241
+</dd>
+<dt>Require bundle</dt>
+<dd>
+  Fixed a bug in the handling of the re-export directive in the
+  Require-Bundle manifest-header. 
+  Reported in issues 1957937 (Require-Bundle: visibility:=reexport broken)
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1957937&group_id=82798&atid=567241
+
+</dd>
+
+<dt>Bundle API fixes</dt>
+<dd>
+  Bundle.getResource(), Bundle.getResources() and the corresponding
+  methods in the bundle class loader now honors the OSGi specified
+  system property named "org.osgi.framework.bootdelegation". Note that
+  this change breaks the backwards compatibility with OSGi R3, since
+  Bundle.getResource() and Bundle.getResources() now returns resources
+  from the class space and not only the bundle-space as in R3.
+  Reported in issues 1955529 (Bundle.getResource does not delegate)
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1955529&group_id=82798&atid=567241
+</dd>
+<dd>
+  Bundle.getEntry() now looks in the correct place independt of the
+  specified bundle class path. 
+  Reported in issues 1829522 (Violation of Spec: Bundle.getEntry uses
+  Bundle-Classpath)
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1829522&group_id=82798&atid=567241
+</dd>
+
+<dt>URLCOnnection</dt>
+<dd>
+  Added a missing do privileged when opening an URL connection to a
+  bundle resource. Problem originally found in Knopflerfish 1.3.5 and
+  fixed on the kf_1_support branch.
+</dd>
+<dd>
+  The URLConnection.getLastModified() for bundle URLs now returns the
+  last modified of the bundle that the contents is fetched from.
+</dd>
+<dd>
+</dl>
+
+
+<h3>Services (Compendium)</h3>
+      
+<dl>
+<dt>Declarative Services</dt>
+<dd>
+  ComponentContext.locateServices(String) now returns the actual
+  service object. 
+  Reported in issues 1699277 ([SCR] locateServices(String) returns
+  ServiceReference[])
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1699277&group_id=82798&atid=567241
+</dd>
+</dl>
+
+<h3>Misc (KF specific, start scripts, build system etc </h3>
+
+<dl>
+<dt>  Axis2-OSGi</dt>
+<dd>
+  Now also works with security enabled.
+  If using this bundle you must also install and start the Xerces and
+  Xalan bundles mentioned below.
+</dd>
+
+<dt>  Desktop</dt>
+<dd>
+  The packages-tab now presents data about packages made available via
+  Require-Bundle manifest header (was listed amongst the imported
+  packages before). Packages pending removal are marked. All three
+  lists of packages are sorted on package name and version.
+</dd>
+<dd>
+  Manifest entries in the Manifest-tab are now sorted.
+</dd>
+<dd>
+
+  The desktop bundle now checks for new Knopflerfish releases when
+  started. If one is found a message dialog with the release note of
+  the new release will be displayed (once for each new release).
+</dd>
+
+<dt  Xerces and Xalan</dt>
+<dd>
+  New bundles wrapping Apache Xerces-J 2.91 and Xalan-J 2.7.1
+  providing XML functionality required by the Axis2-OSGi bundle.
+  The old low memory foot-print Crimson-bundle is not needed when
+  Xerces is present, but they can both be installed and started
+  without causing any conflicts.
+</dd>
+
+<dt>  Build System</dt>
+<dd>
+  The derivation of imported packages done by the bundle-info-task now
+  detects packages that are only referenced from invoke instructions in
+  the byte code. E.g., the package of a parameter in an invocation of a
+  super-class method.
+</dd>
+<dd>
+  Fixed issues 1949895 (missing template.xargs, won't build)
+  and 1953611 ("ant all" fails):
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1949895&group_id=82798&atid=567241
+  http://sourceforge.net/tracker/index.php?func=detail&aid=1953611&group_id=82798&atid=56724
+</dd>
+</dl>
+
+</div>
