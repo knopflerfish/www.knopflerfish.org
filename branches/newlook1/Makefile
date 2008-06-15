@@ -16,7 +16,7 @@ KF_RELEASE=${KF_DIR}/htdocs/releases/2.0.2
 
 install_html: prepare
 	@echo "Installing kf web pages at: ${INSTALLDIR}"
-	cd install; scp -r *.html css/knopflerfish2.css scripts ${INSTALLDEST}
+	cd install; scp -r *.html css scripts ${INSTALLDEST}
 
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
@@ -27,7 +27,7 @@ install_release:
 	cd install; scp -r releases ${INSTALLDEST}
 
 prepare:
-	chmod -R 775 install/*.html install/css install/images 
+	chmod -R 775 install/*.html install/css install/images install/scripts
 
 prepare_release:
 	mkdir -p install/releases
