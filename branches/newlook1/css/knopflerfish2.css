@@ -205,9 +205,13 @@ TD.fancy_row {
 }
 
 TD.fancy {
-  background: #f1f1f1;
+  padding: 2px 4px 2px 4px;
 }
 	
+TD.highlight {
+  background: #f1f1f1;
+}
+
 TD.newsdate {
  white-space:	nowrap;
 }  
