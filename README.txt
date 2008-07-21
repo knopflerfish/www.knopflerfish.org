@@ -17,18 +17,30 @@ o Structure
 
 o Building
   You build the website using ant,  build.xml is the build file
+  and the default target build the entire website.
 
-  Version and release must be specified to build the website, e.g. 
-  ant -Dversion=2.0.0 -Drelease=yes
 
 o Installing
-  Tar or zip the files in install. 
-  Copy the archive to hinken.sparud.net
-
+  The Knopflerfish web site is unrring on hinken.sparud.net
+  
   The KF www root is in:
   ~wistrand/knopflerfish.org/www/htdocs/
   (this will be updated in the near future, old leftover from the
   past)
+
+o Installing, alt 1
+  The Makefile in this dir contains targets to install the web site
+  
+  > make install_html	Installs all html pages, no images 
+
+  > make install_all	Installs the entire site
+
+  The target assumes you have the same uid on hinken.sparud.net
+  and uses scp to copy the files
+
+o Installing, alt 2
+  Tar or zip the files in install from the install dir.
+  Copy the archive to hinken.sparud.net
 
   Unpack the arcive in this dir.
   
