@@ -1,0 +1,150 @@
+<h2>Release Notes Knopflerfish 2.1.1</h2>
+
+Minor release of Knopflerfish
+
+<h3>  General (non-optional bundles) </h3>
+
+<div id="release_notes">
+  <dl>
+    <dt> System Properties</dt>
+    <dd>
+      Direct usage of System.getProperty() have been replaced with calls
+      to BundleContext.getProperty() to allow for making the framework
+      configuration local.
+      See the documentation of the framework property named
+      "org.knopflerfish.framework.xargs.writesysprops"
+    </dd>
+  </dl>
+</div>
+<h3> Framework (Core)</h3>
+
+<div id="release_notes">
+  <dl>
+    <dt>Bugfix: Relative Bundle URLs</dt>
+    <dd>
+      Fix an issue with normalization of relative bundle URLs reported in
+      http://sourceforge.net/tracker/index.php?func=detail&aid=2000856&group_id=82798&atid=567241
+    </dd>
+    <dt>Bugfix: file separator issue </dt>
+    <dd>
+      Fix file separator issue for unpacked bundle-jar files. Reported in
+      https://sourceforge.net/forum/forum.php?thread_id=2071337&forum_id=328005
+    </dd>
+    <dt>Bugfix: system prop. initialization</dt>
+    <dd>
+      Fixed an issue with system property initialization causing extension
+      bundles to be marked as unsupported, reported in
+      http://sourceforge.net/tracker/index.php?func=detail&aid=2042769&group_id=82798&atid=567241
+    </dd>
+    <dt>New: Bundle.getBundleContext</dt>
+    <dd>
+      Added the R4.1 method Bundle.getBundleContext() + support for 
+      creating matching AdminPermission.
+    </dd>
+    <dt>System bundle events</dt>
+    <dd>
+      The state of the system bundle is now moved from STARTING to ACTIVE
+      right before sending out the framework event STARTED. I.e., after
+      that the target run-level have been reached.
+    </dd>
+    <dt>Fragment bugfix</dt>
+    <dd>
+      Fixed a problem with fragment handling when updating a bundle with
+      attached fragments. Also fixed a problem where require bundle could
+      lead to a loop in the bundle class loader.
+    </dd>
+  </dl>
+</div>
+
+<h3>Misc (KF specific, start scripts, build system etc </h3>
+
+<div id="release_notes">
+
+  <dl>
+    <dt> Updated Desktop Bundle, v2.2.1 - </dt>
+    <dd>
+      A view for events handled by the OSGi event service have been added
+      to the desktop. The presentation part of the view can filtered
+      events both on topic and event details. It is also possible to
+      create and post new events or re-send old ones with or without
+      modification. When re-sending an old event a time stamp (with key
+      "timestamp.generated") is added to the event dictionary to make the
+      event unique.
+    </dd>
+    <dd>
+      Also, a view for OSGi and java.util preferences has been added. This
+      view can be used to edit both JVM preferences and bundle preferences.  
+    </dd>
+    <dd>
+      Bundles opened via the desktop's "Open" menu is no longer auto started.
+    </dd>
+    <dd>
+      Bundles having using Declarative Services are now displayed using
+      a special icon
+    </dd>
+    <dd>
+      Menu shortcuts now uses the system menu shortcut (looks better on
+      OS X).  
+    </dd>
+
+    <dt>Bundle Repository Bundle desktop plug-in</dt>
+    <dd>
+      The Desktop plug in provided by this bundle now presents the version
+      of all bundles in the tree on the left hand side. URLs for the
+      default repositories as well as the Knopflerfish repositories are
+      now included by default.
+    </dd>
+    <dt>  X10 Bundle bugfix</dt>
+    <dd>
+      Updated to use tjx10 v1.3, the closing serial ports when stopping.
+      Reported in:<br>
+      http://sourceforge.net/tracker/index.php?func=detail&aid=2080527&group_id=82798&atid=567241<br>
+      http://sourceforge.net/tracker/index.php?func=detail&aid=2080521&group_id=82798&atid=567241
+      </dd>
+    <dt> Console Bundle, v2.0.1</dt>
+    <dd>
+      Removed the built in alias "cd" (Oscar compatibility) since it hides
+      "cd" commands in other command groups causing huge confusion.
+    </dd>
+
+    <dt>Build System</dt>
+    <dd>
+      The task that generates the OSCAR Bundle Repository description now
+      supports references to external repositories. No import is
+      generated for packages with optional resolution.
+    </dd>
+    <dd>
+      To reduces the burden of updating all build files when bumping the
+      version of a bundle the build system have been extended with
+      expansion of bundle versions for items on the "bundle.path". E.g.,
+      if a non-existing path elements with location like
+      "log_api-N.N.N.jar" are present in the the "bundle.path" then it
+      will be replace by the bundle with matching name and highest version
+      amongst the bundles available in the directories ${topdir}/jars and
+      ${osgi.dir}/jars. The build will fail if no match was found.  All
+      build-files have been updated to take advantage of this feature.
+      All xargs-files are now generated from templates with bundle names
+      on the form @log_all-N.N.N.jar@ using a similar expansion method.
+    </dd>
+    <dd>
+      It is now possible to use bundlebuild_include.xml to build fragment
+      bundles. The recommended build file setting for fragment bundles is:
+      &lt;property name = "bundle.build.lib"   value = "false"/&gt;<br>
+      &lt;property name = "bundle.build.api"   value = "false"/&gt;<br>
+      &lt;property name = "bundle.build.impl"  value = "false"/&gt;<br>
+      &lt;property name = "bundle.build.all"   value = "true"/&gt;<br>
+      <p>
+	I.e., build it as an "all"-bundle.
+    </dd>
+    <dd>
+      Bundle manifest files with an empty "Export-Package" or
+      "Import-Package" attribute should no longer be generated.
+    </dd>
+    <dd>
+      The requirement on having a both a "src" and a "resources" directory
+      in each bundle directory (if they where missing they where created
+      during the build) have been removed.
+    </dd>
+  </dl>
+  
+</div>
