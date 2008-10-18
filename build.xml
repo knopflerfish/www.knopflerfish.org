@@ -122,6 +122,7 @@
       <param name="MENU_ID" value="menu_download"/>
       <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
+    
 
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/release_notes_2.0.1.html"/>
@@ -149,6 +150,13 @@
       <param name="tofile"   value="${installdir}/release_notes_2.1.0.html"/>
       <param name="title"    value="Release Notes Knopflerish 2.1.0"/>
       <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.1.0"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.1.1.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.1.1.html"/>
+      <param name="title"    value="Knopflerfish OSGi - Release Notes version 2.1.1"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.1.1"/>
     </antcall>
 
     <antcall target="makehtml">
