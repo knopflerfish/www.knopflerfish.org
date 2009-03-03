@@ -26,16 +26,19 @@ See <a href="eclipse_plugin.html">Knopflerfish Eclipse Plugin</a>.
 <h4>Prerequisites</h4>
 <ul>
   <li><i>JDK 1.3 or later</i>, available from <a href="http://java.sun.com">java.sun.com</a>
-  <li><i>Ant</i>,  available from <a href="http://ant.apache.org/">ant.apache.org</a>
+  <li><i>Ant 1.6.5 or later (1.7 is recommended)</i>,  available from <a href="http://ant.apache.org/">ant.apache.org</a>
   <li><i>BCEL</i>, available from <a href="http://jakarta.apache.org/bcel">jakarta.apache.org/bcel</a>
 </ul>
 
 
 <h4>Creating a new bundle</h4>
+
 New bundles can be created using the included ant build
-system. Naturally, you can create bundles manually, but this requires some knowledge about the OSGi manifest format.
+system. Naturally, you can create bundles manually, but this requires
+some knowledge about the OSGi manifest format.
 <p>
-  <tt><i>knopflerfish</i></tt> refers to the unpacked knopflerfish directory, typically <tt>knopflerfish.org</tt>
+<tt><i>knopflerfish</i></tt> refers to the unpacked knopflerfish
+directory, typically <tt>knopflerfish.org</tt>
 </p>
 
 <h4>Using the included ant build system to create a new bundle</h4>
@@ -66,11 +69,13 @@ system. Naturally, you can create bundles manually, but this requires some knowl
 	contains implementation and API code.
       </p>
       <p>
-	Depending on where you have put your new bundle, you might have to modify the <tt><b>bundlebuild_include</b></tt> and <tt><b>topdir</b></tt> references
-	in the <tt>build.xml</tt> file too.
-
+	Depending on where you have put your new bundle, you might
+	have to modify the import of <tt><b>bundlebuild.xml</b></tt>
+	and <tt><b>topdir</b></tt> references in the
+	<tt>build.xml</tt> file too.
       <p>
-	For details on bundle generation, see <tt><i>knopflerfish</i>/ant/bundlebuild_include.xml</tt>
+	For details on bundle generation, see
+        <tt><i>knopflerfish</i>/ant/bundlebuild_include.xml</tt>
       </p>
     </td>
     <td>
@@ -745,7 +750,12 @@ writing stable bundles, but feel free to use your own judgment.
   <a name="custom"></a>
   <h2>Details on the included ant build system</h2>
 
-  <b>Properties and elements used in <tt>bundlebuild_include.xml</tt></b>
+  <b>Properties and elements used in <tt>bundlebuild.xml</tt></b>
+
+  Please read comments in <tt>bundlebuild.xml</tt> to find out more
+  details than those presented here.
+
+
   <table>
 
     <tr>
@@ -758,212 +768,345 @@ writing stable bundles, but feel free to use your own judgment.
     </tr>
 
     <tr>
-      <td>topdir</td>
-      <td>Must be set to the top directory of build. This should be the same
-	directory where framework.jar is located.
+      <td>ant.dir</td>
+      <td>Directory containing the Knopflerfish ant build system.
+	  <br>Default is the directory where the file
+	      <tt>bundlebuild.xml</tt> is imported from. See last line of
+	      <tt>build_example.xml</tt>.
       </td>
     </tr>
 
     <tr>
-      <td>ant.dir</td>
-      <td>Directory containing ant build files.
-	<br>Default is "${topdir}/../ant"
+      <td>osgi.dir</td>
+      <td>Directory containing the Knopflerfish framework and the
+	  <tt>jars</tt>-directory with all Knopflerfish bundles.
+	  <br>Default is <tt>${ant.dir}/../osgi</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>proj.dir</td>
+      <td>Directory containing the bundle manifest template file, 
+	  <tt>bundle.manifest</tt>, if any. Also used as default value for
+	  the bundle manifest header <tt>Built-From</tt>.
+	  <br>Default is <tt>.</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>topdir</td>
+
+      <td>The default root of the temporary out directory for
+	  compilation output named <tt>out</tt> and also the default
+	  root for the bundle repository directory, named
+	  <tt>jars</tt> to place the resulting bundle in.
+
+	  <br>Default is <tt>${osgi.dir}</tt>
+
+	  <p>Setting this property to something different from the
+	  default makes it possible to maintain a local bundle
+	  repository any where you like in the file system while still
+	  compiling against the Knopflerfish bundles in the base
+	  repository <tt>${osgi.dir}/jars</tt>.</p>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>jars.dir</td>
+      <td>The root directory of the local bundle repository.
+	  <br>Default is <tt>${topdir}/jars</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>docs.dir</td>
+      <td>The root directory of the generated bundle documentation.
+	  <br>Default is <tt>${topdir}/out/doc</tt>
       </td>
     </tr>
 
     <tr>
       <td>src.dir</td>
       <td>Directory where all bundle source is located.
-	<br>Default is "src"
+	  <br>Default is <tt>src</tt>
       </td>
     </tr>
 
     <tr>
       <td>resources.dir</td>
-      <td>Directory where all bundle data is located. This directory will
-	be copied into the root of the bundle jar file, without the directory
-	name itself.
-	<br>Default is "resources"
+
+      <td>Directory where all bundle data is located. This directory
+	  will be copied into the root of the bundle jar file, without
+	  the directory name itself.
+	  <br>Default is <tt>resources</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>out.dir</td>
+      <td>Directory where all intermediate build products are placed.
+	  <br>Default is <tt>${topdir}/out/${ant.project.name}</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>jardir</td>
+      <td>The sub-directory of the local bundle repository to place
+	  the bundles of this project in.
+	  <br>Default is <tt>${jars.dir}/${ant.project.name}</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td>outdocdir</td>
+      <td>The sub-directory of the local bundle documentation
+	  directory to place the documentation for this bundle in.
+	  <br>Default is <tt>${docs.dir}/${ant.project.name}</tt>
       </td>
     </tr>
 
     <tr>
       <td>bundle.build.api</td>
-      <td>If "true", build ${jar.api} bundle jar.<br>Default is "true"</td>
+      <td>If "true", build API-variant of the bundle. This is a bundle
+	  that only contains classes matching the API-pattern and with
+	  name like <tt><em>name</em>_api-<em>version</em>.jar</tt>.
+	  <br>Default is <tt>true</tt>
+      </td>
     </tr>
 
     <tr>
       <td>bundle.build.lib</td>
-      <td>If "true", build ${jar.lib} bundle jar.<br>Default is "false"</td>
+      <td>If "true", build LIB-variant of the bundle. A LIB-bundle
+	  typically re-exports classes from a legacy jar-file. It may
+	  contain a bundle activator class but that is not
+	  required. The name of the resulting bundle will be on the
+	  form <tt><em>name</em>-<em>version</em>.jar</tt>.
+	  <br>Default is <tt>false</tt>
+      </td>
     </tr>
 
     <tr>
       <td>bundle.build.impl</td>
-      <td>If "true", build ${jar.impl} bundle jar.<br>Default is "true"</td>
+      <td>If "true", build IMPL-variant of the bundle. An IMPL-bundle
+	  will contain the classes matching the IMPL-pattern, it must
+	  contain a class implementing bundle activator or be a
+	  fragment or a declarative-service client bundle. The name of
+	  the resulting bundle will be on the form
+	  <tt><em>name</em>-<em>version</em>.jar</tt>.
+	  <br>Default is <tt>true</tt>
+      </td>
     </tr>
 
     <tr>
       <td>bundle.build.all</td>
-      <td>If "true", build ${jar.all} bundle jar.<br>Default is "true"</td>
-    </tr>
-
-    <tr>
-      <td>jar.all</td>
-      <td>Location and name of jar file containing both API and implementation code<br/>
-	Default is <tt>${jardir}/${ant.project.name}${all.suffix}.jar</tt>
+      <td>If "true", build ALL-variant of the bundle. An ALL-bundle
+	  will conatin classes matching both the API-pattern and the
+	  IMPL-pattern. it must contain a class implementing bundle
+	  activator or be a fragment or a declarative-service client
+	  bundle. The name of the resulting bundle will be on the form
+	  <tt><em>name</em>_all-<em>version</em>.jar</tt>.
+	  <br>Default is <tt>true</tt>
       </td>
     </tr>
 
     <tr>
-      <td>api.all</td>
-      <td>Location of jar file containing API code</td>
-    </tr>
-
-    <tr>
-      <td>impl.all</td>
-      <td>Location of jar file containing implementation code</td>
-    </tr>
-
-    <tr>
-      <td>all.suffix</td>
-      <td>Suffix string for the ${all.jar} output file<br/>
-	Default is <tt>_all-${bundle.version}</tt>
+      <td>bundle.build.doc</td>
+      <td>If "true", build bundle documentation for this project.
+	  <br>Default is <tt>false</tt>
       </td>
     </tr>
 
     <tr>
-      <td class="tableheader" colspan="2">Bundle manifest attributes</td>
-    </tr>
-
-
-    <tr>
-      <td>bundle.name</td>
-      <td>Name of bundle. Will be stored in manifest as "Bundle-Name".
-	<br>Default value is ${ant.project.name}
+      <td>all.jar</td>
+      <td>Location and name of the ALL-variant of the bundle jar
+	  file.
+	  <br>Default is <tt>${jardir}/${ant.project.name}${all.suffix}.jar</tt>
       </td>
     </tr>
 
     <tr>
-      <td>bundle.version</td>
-      <td>Version of bundle. Will be stored in manifest as "Bundle-Version".
-	<br>Default value is "current"
+      <td>api.jar</td>
+      <td>Location and name of the API-variant of the bundle jar file.
+	  <br>Default is <tt>${jardir}/${ant.project.name}${api.suffix}.jar</tt>
       </td>
     </tr>
 
     <tr>
-      <td>bundle.vendor</td>
-      <td>Vendor of bundle. Will be stored in manifest as "Bundle-Vendor".
-	<br>Default value is "Knopflerfish"
+      <td>impl.jar</td>
+      <td>Location and name of IMPL-variant of the bundle jar file.
+	  <br>Default is <tt>${jardir}/${ant.project.name}${impl.suffix}.jar</tt>
       </td>
     </tr>
 
     <tr>
-      <td>bundle.apivendor</td>
-      <td>Vendor of a bundle's API. Will be stored in manifest as "Bundle-APIVendor".
-	<br>Default value is "[bundle.emptystring]"
+      <td>lib.jar</td>
+      <td>Location and name of the LIB-variant of the bundle jar file.
+	  <br>Default is <tt>${jardir}/${ant.project.name}${lib.suffix}.jar</tt>
       </td>
     </tr>
 
     <tr>
-      <td>bundle.description</td>
-      <td>Description of bundle. Will be stored in manifest as "Bundle-Description"
-	<br>Default value is empty
-      </td>
-    </tr>
+      <td class="tableheader" colspan="2">
+      Bundle manifest attributes
 
+      <p>All project properties with a name that starts with
+      <tt>bmfa.</tt> will be used to create main section manifest
+      attributes. The name of the attirbute is the name of the project
+      property without the prefix, the value is the value of the
+      project propery. You may also specify manifest attributes using
+      a template manifest file, named <tt>bundle.manifest</tt>. This
+      file is loaded and project properties are created for each
+      main-section manifest attribute in it. The mainfest template
+      file must not obey the strict 72-charactes per line rule of a
+      proper manifest file.</p>
 
-    <tr>
-      <td>bundle.icon</td>
-      <td>Optional URL to bundle icon, used by the desktop. Will be stored
-	in manifest as "Application-Icon". <br>Default value is empty</td>
-    </tr>
-
-    <tr>
-      <td>bundle.classpath</td>
-      <td>Bundle classpath. Will be stored in manifest as "Bundle-Classpath".
-	<br>Default value is "."</td>
-    </tr>
-
-    <tr>
-      <td>bundle.docurl</td>
-      <td>Bundle doc URL. Will be stored in manifest as "Bundle-DocURL".
-	<br>Default value is "http://www.knopflerfish.org"
       </td>
     </tr>
 
     <tr>
-      <td>bundle.contactaddress</td>
-      <td>Bundle contact address. Will be stored in manifest as "Bundle-ContactAddress".
-	<br>Default value is "http://www.knopflerfish.org"
+      <td>bmfa.Bundle-ManifestVersion</td>
+      <td>The version that this bundle manifest follows. Must be "2"
+	  for bundles that uses OSGi R4 v4.0, v4.1 features.
+	  <br>Default is <tt>2</tt>
       </td>
     </tr>
 
     <tr>
-      <td>bundle.activator</td>
-      <td>Class name of bundle activator. Will be stored in manifest as "Bundle-Activator".
-	<br>Default value is automatically derived from bundle classes in impl code.
+      <td>bmfa.Bundle-SymbolicName</td>
+      <td>The bundle symbolic name. Mandatory when manifest
+	  version is "2".
+	  <br>Default is <tt>${domain.reverse}.bundle.${ant.project.name}</tt>
       </td>
     </tr>
 
     <tr>
-      <td>import.package</td>
-      <td>Comma-separated list of packages. Will be stored in manifest as "Import-Package".
-	<br>Default value is automatically derived from bundle classes in impl code
+      <td>bmfa.Bundle-Name</td>
+      <td>Presentation name of bundle.
+	  <br>Default value is ${ant.project.name}
       </td>
     </tr>
 
     <tr>
-      <td>export.package</td>
-      <td>Comma-separated list of packages. Will be stored in manifest as "Export-Package".
-	<br>Default value is automatically derived from bundle classes in API code
+      <td>bmfa.Bundle-Version</td>
+      <td>Version of bundle.
+	  <br>Default value is "0.0.0"
       </td>
     </tr>
 
     <tr>
-      <td>dynamicimport.package</td>
-      <td>Comma-separated list of dynamic import packages. Will be stored in
-	manifest as "DynamicImport-Package".
-	<br>Default value is empty
+      <td>bmfa.Bundle-Vendor</td>
+      <td>Vendor of bundle.
+	  <br>Default value is "Knopflerfish"
       </td>
     </tr>
 
     <tr>
-      <td>bundle.nativecode</td>
-      <td>Comma-separated list of native code specifications. Will be stored in
-	manifest as "Bundle-NativeCode".
-	<br>Default value is empty
+      <td>bmfa.Bundle-APIVendor</td>
+      <td>Vendor of a bundle's API.
+	  <br>Default value is empty.
       </td>
     </tr>
 
     <tr>
-      <td>import.service</td>
-      <td>Optional comma-separated list of service class names. Will be stored in manifest as "Import-Service".
+      <td>bmfa.Bundle-Description</td>
+      <td>Description of bundle.
+	  <br>Default value is empty
       </td>
     </tr>
 
     <tr>
-      <td>export.service</td>
-      <td>Optional comma-separated list of service class names. Will be stored in manifest as "Import-Package".
+      <td>bmfa.Bundle-Application-Icon</td>
+      <td>Optional URL to bundle icon, used by the desktop.
+	  <br>Default value is empty</td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Bundle-Classpath</td>
+      <td>Bundle classpath.
+	  <br>Default value is "."</td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Bundle-DocURL</td>
+      <td>Bundle doc URL.
+	  <br>Default value is "http://www.knopflerfish.org"
       </td>
     </tr>
 
     <tr>
-      <td>bundle.uuid</td>
-      <td>Optional "Universally Unique ID" for a bundle. Will be stored in manifest as "Bundle-UUID".<br/>
-	Default is <tt>org.knopflerfish:${bundle.name}:${bundle.version}</tt>
+      <td>bmfa.Bundle-ContactAddress</td>
+      <td>Bundle contact address.
+	  <br>Default value is "http://www.knopflerfish.org"
       </td>
     </tr>
 
     <tr>
-      <td>bundle.symbolicname</td>
-      <td>Optional ID used by the Eclipse OSGi framework. Will be stored in manifest as "Bundle-SymbolicName".<br/>
-	Default is <tt>${bundle.uuid}</tt>
+      <td>bmfa.Bundle-Activator</td>
+      <td>Class name of bundle activator.
+	  <br>Default value is automatically derived from bundle
+	  classes in impl code.
       </td>
+    </tr>
 
     <tr>
-      <td colspan=2><b>Note</b>: If any of the manifest attributes above are set to the
-	special value <tt>"[bundle.emptystring]"</tt>, that attribute will not
-	be present at all in the manifest, not even as a zero-length string.
+      <td>bmfa.Import-Package</td>
+      <td>Comma-separated list of packages.
+	  <br>Default value is automatically derived from bundle
+	  classes in impl code.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Export-Package</td>
+      <td>Comma-separated list of packages.
+	  <br>Default value is automatically derived from bundle
+	  classes in API code.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.DynamicImport-Package</td>
+      <td>Comma-separated list of dynamic import packages.
+	  <br>Default value is empty.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Bundle-NativeCode</td>
+      <td>Comma-separated list of native code specifications.
+	  <br>Default value is empty.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Import-Service</td>
+      <td>Deprecated, optional comma-separated list of service class names.
+	  <br>Default value is empty.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Export-Service</td>
+      <td>Deprecated, optional comma-separated list of service class names.
+	  <br>Default value is empty.
+      </td>
+    </tr>
+
+    <tr>
+      <td>bmfa.Bundle-UUID</td>
+      <td>Optional "Universally Unique ID" for a bundle. Will be stored in
+	  manifest as "Bundle-UUID".
+	  <br>Default is <tt>${domain.reverse}:${ant.project.name}:${bmfa.Bundle-Version}</tt>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan=2>
+        <b>Note</b>: If any of the manifest attributes above are set
+        to the special value <tt>"[bundle.emptystring]"</tt>, that
+        attribute will not be present at all in the manifest, not even
+        as a zero-length string.
       </td>
     </tr>
 
@@ -973,11 +1116,17 @@ writing stable bundles, but feel free to use your own judgment.
 
     <tr>
       <td>do.bundle.custom.pre</td>
-      <td>If set, run the target <tt>bundle.custom.pre</tt>. Default is unset</td>
+      <td>If set, run the target <tt>bundle.custom.pre</tt> before
+	  building the bundle project.
+	  <br>Default is unset
+      </td> 
     </tr>
     <tr>
       <td>do.bundle.custom.post</td>
-      <td>If set, run the target <tt>bundle.custom.post</tt>. Default is unset</td>
+      <td>If set, run the target <tt>bundle.custom.post</tt> after
+	  building the bundle project.
+	  <br>Default is unset
+      </td>
     </tr>
 
     <tr>
@@ -986,18 +1135,34 @@ writing stable bundles, but feel free to use your own judgment.
 
     <tr>
       <td>api.pattern</td>
-      <td>Path pattern string for all classes that define the bundle's API</td>
+      <td>Path pattern string for all classes that define the bundle's
+	  API. Classes matching this pattern are included in API, ALL
+	  and LIB bundle variants and will be exported.
+      </td> 
     </tr>
 
     <tr>
       <td>impl.pattern</td>
-      <td>Path pattern string for all classes that define the bundle's implementation</td>
+      <td>Path pattern string for all classes that define the bundle's
+	  implementation. Classes matching this pattern are included
+	  in IMPL and ALL bundle variants.
+      </td>
     </tr>
-    
+
+    <tr>
+      <td>impl-api.pattern</td>
+      <td>Path pattern string for all classes that define the bundle's
+	  internal API. Classes matching this pattern are included in
+	  IMPL and ALL bundle variants and will be exported by
+	  default.
+      </td>
+    </tr>
+
     <tr>
       <td>ee.check.foundation</td>
-      <td>If set, verify build with CLDC/Foundation standard OSGi profile.
-	<br>Default is unset.
+      <td>If set to <tt>true</tt>, verify build with CLDC/Foundation
+	  standard OSGi profile.
+	  <br>Default is <tt>false</tt>.
       </td>
     </tr>
     
@@ -1007,16 +1172,24 @@ writing stable bundles, but feel free to use your own judgment.
 
     <tr>
       <td>Path element <tt>bundle.compile.path</tt></td>
-      <td>Path elements defining the compile-time path for the bundle.
-	<br>Example - include log API when compiling
-	<pre>
-	  &lt;path id = "bundle.compile.path"&gt;
-	  &lt;pathelement location="${topdir}/jars/log/log_api-1.0.0.jar"/&gt;
-	  &lt;/path&gt;
-	</pre>
+      <td>Path elements defining the compile-time path for the
+	  bundle. The path element location may either be a full path
+	  or written on the form
+	  <tt><em>bundleName</em>-N.N.N.jar</tt>. In the latter case
+	  the build system will search the bundle repositories in
+	  "${jars.dir}" and "${osgi.dir}/jars" for a bundle with the
+	  given name. If the serach finds more than one version of the
+	  bundle the one with the highest version will be used.
+
+	  <br>Example - include log API when compiling
+<pre>
+ &lt;path id = "bundle.compile.path"&gt;
+   &lt;pathelement location="log_api-N.N.N.jar"/&gt;
+ &lt;/path&gt;
+</pre>
+
       </td>
     </tr>
-
 
     <tr>
       <td></td>
@@ -1043,22 +1216,17 @@ writing stable bundles, but feel free to use your own judgment.
     &lt;!-- set do.bundle.custom.pre to anything to trigger pre target --&gt;
     &lt;property name="do.bundle.custom.pre" value=""/&gt;
     &lt;target name="bundle.custom.pre"&gt;
-    &lt;copy file  = "myfile"  todir = "resources"/&gt;
+      &lt;copy file="myfile" todir="resources"/&gt;
     &lt;/target&gt;
   </pre>
 
-  <b>Example of post target - a custom manifest attribute</b>
+  <b>Example of post target - deleting a file</b>
   
   <pre>
     &lt;!-- set do.bundle.custom.post to anything to trigger post target --&gt;
     &lt;property name="do.bundle.custom.post" value=""/&gt;
-
     &lt;target name="bundle.custom.post"&gt;
-    &lt;jar jarfile  = "${impl.jar}"  update   = "true"&gt;
-    &lt;manifest&gt;
-    &lt;attribute name = "myattribyte"       value = "myvalue"/&gt;
-    &lt;/manifest&gt;
-    &lt;/jar&gt;
+      &lt;delete file="resources/myfile"&gt;
     &lt;/target&gt;
   </pre>
 
