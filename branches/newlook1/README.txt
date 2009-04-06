@@ -24,7 +24,7 @@ o Installing
   The Knopflerfish web site is unrring on hinken.sparud.net
   
   The KF www root is in:
-  ~wistrand/knopflerfish.org/www/htdocs/
+  ~knopflerfish/www/
   (this will be updated in the near future, old leftover from the
   past)
 

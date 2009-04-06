@@ -4,15 +4,15 @@
 ## Why not use ant for this? I know make better! [CL]
 ##
 
-INSTALLDIR=/home/wistrand/knopflerfish.org/www/
-INSTALLHOST=hinken.sparud.net
+INSTALLDIR=/home/knopflerfish/www
+INSTALLHOST=www.knopflerfish.org
 INSTALLUSER=`whoami`
 INSTALLDEST = "${INSTALLUSER}@${INSTALLHOST}:${INSTALLDIR}"
 
 ## To obtain the KF releases
 # Change to where knopflerfish.org is located
-KF_DIR=../knopflerfish.org
-KF_RELEASE=${KF_DIR}/htdocs/releases/2.0.2
+#KF_DIR=../knopflerfish.org
+#KF_RELEASE=${KF_DIR}/htdocs/releases/2.2.0
 
 install_html: prepare
 	@echo "Installing kf web pages at: ${INSTALLDIR}"
@@ -29,10 +29,10 @@ install_release:
 prepare:
 	chmod -R 775 install/*.html install/css install/images install/scripts
 
-prepare_release:
-	mkdir -p install/releases
-	cp -ru ${KF_RELEASE} install/releases
-	chmod -R 775 install/relases
+#prepare_release:
+#	mkdir -p install/releases
+#	cp -ru ${KF_RELEASE} install/releases
+#	chmod -R 775 install/relases
 
 clean:
 	rm -rf install
