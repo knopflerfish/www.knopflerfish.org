@@ -167,6 +167,13 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/release_notes_2.3.html"/>
+      <param name="tofile"   value="${installdir}/release_notes_2.3.html"/>
+      <param name="title"    value="Knopflerfish OSGi - Release Notes version 2.3"/>
+      <param name="desc"     value="Release Notes for Knopflerfish OSGi, version 2.3"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/install.html"/>
       <param name="tofile"   value="${installdir}/install.html"/>
       <param name="title"    value="Install Knopflerfish OSGi"/>
