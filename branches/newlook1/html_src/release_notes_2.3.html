@@ -1,0 +1,117 @@
+<h2>Release Notes Knopflerfish 2.3.0</h2>
+
+
+Minor release of Knopflerfish. Release 2009-04-16
+
+
+<h3> Framework (Core), updated to version 4.1.1</h3>
+
+<div id="release_notes">
+  <dl>
+    <dt> CPA - Conditional Permission Admin</dt>
+    <dd>
+      We now implement the things we were missing in the framework,
+      Conditional Permissions and certificates. There are some internal
+      things missing, logging of some faults, documentation of new features
+      and a connection to a keystore for validating certificates. This will
+      improve in the near future.
+      <p>
+	NOTE! You can not use SUN JDK 1.5.0_16 can not be used if you want to handle
+        certificates. There is a bug in the CodeSource API. 
+      </p>
+    </dd>
+    <dt>Bootdelegation</dt>
+    <dd>
+	Added support for handling cases where classes on the boot class path 
+	needs access to other boot classes, even when they're not exposed
+	directly via OSGi boot delegation.
+      <p>
+	Since this is the default, the property org.osgi.framework.bootdelegation 
+	is now unset in the included props.xargs
+      </p>
+      <p>
+	See the property org.knopflerfish.framework.strictbootclassloading
+	in the framework readme.txt for more info
+      </p>
+      </dd>
+    <dt> Android / Dalvik </dt>
+    <dd>
+      Also added support for "dexified" Android bundles, see 
+      http://knopflerfish.blogspot.com/2009/01/knopflerfish-on-androiddalvik-vm.html
+    </dd>
+  </dl>
+</div>
+
+<h3> Services (Compendium) </h3>
+<div id="release_notes">
+  <dl>
+    <dt>Preferences 2.0.3</dt>
+    <dd>
+      Remove preferences for a bundle when it is uninstalled.  Re-factored
+      parts of the code to make it reusable when implementing other kinds
+      of storage. The local, file based, implementation now throws
+      BackingStoreException when a file write operation fails.
+    </dd>
+
+    <dt>  Log 2.0.2</dt>
+    <dd>
+      Improved error handling when receiving broken configurations.
+    <dd>
+  </dl>
+</div>
+
+<h3> Knopflerfish Services</h3>
+
+<div id="release_notes">
+  <dl>
+    <dt>  Desktop Bundle 2.3.1</dt>
+    <dd>
+      The preferences tab now offers the sync and flush operations when
+      right clicking on a node in the preferences tree.
+    </dd>
+    
+    <dt>  Bundlerepository 2.0.3</dt>
+    <dd>
+      Blacklisted repository at update.cainenable.org
+    </dd>
+  </dl>
+</div>
+
+<h3>Misc, start scripts, build system etc </h3>    
+<div id="release_notes">
+  <dl>
+    <dt>Build System</dt>
+    <dd>
+      The ant include file "bundlebuild_include.xml" that all KF-ant build
+      files imported using an external entity is now replaced with a
+      proper include filen named "bundlebuild.xml" that can be included
+      using the ant 1.6+ command &lt;import file="bundlebuild.xml"&gt;
+      Upgrade instructions for users of the old
+      "bundlebuild_include.xml"-file are available in that file. I.e., in
+      "ant/bundlebuild_incldue.xml".
+      <p>
+	The ant task bundle_locator now accepts a comma separated list of
+	bundle names to locate. Also improved the logging and error handling.
+      </p>
+      <p>
+	The ant task bundle-info can now add "uses" directives to packages
+	in the Export-Packages manifest header. This is turned on by default
+	in bundlebuild.xml (to disable it set the ant property
+	"bundleinfo.uses" to false before importing bundlebuild.xml).
+      </p>
+      <p>
+
+	When bundle-info detects a missing import it will now trigger a
+	build exception (may be disabled by setting the ant property
+	"bundleinfo.failOnImports" to false before importing
+	bundlebuild.xml).
+      </p>
+      <p>
+	When bundle-info detects an export of package that is not provided
+	by the bundle it will now trigger a build exception (may be disabled
+	by setting the ant property "bundleinfo.failOnExports" to false
+	before importing bundlebuild.xml).
+      </p>
+    </dd>
+  </dl>
+</div>
