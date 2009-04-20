@@ -85,7 +85,7 @@ Minor release of Knopflerfish. Released 2009-04-16
       The ant include file "bundlebuild_include.xml" that all KF-ant build
       files imported using an external entity is now replaced with a
       proper include file named "bundlebuild.xml" that can be included
-      using the ant 1.7+ command &lt;import file="bundlebuild.xml"&gt;
+      using the ant 1.6+ command &lt;import file="bundlebuild.xml"&gt;
       Upgrade instructions for users of the old
       "bundlebuild_include.xml"-file are available in that file. I.e., in
       "ant/bundlebuild_incldue.xml".
@@ -111,6 +111,10 @@ Minor release of Knopflerfish. Released 2009-04-16
 	by the bundle it will now trigger a build exception (may be disabled
 	by setting the ant property "bundleinfo.failOnExports" to false
 	before importing bundlebuild.xml).
+      </p>
+      <p>
+        Ant version 1.7 or later is need if you want to build the test code,
+        otherwise only ant version 1.6 or later is required.
       </p>
     </dd>
   </dl>
