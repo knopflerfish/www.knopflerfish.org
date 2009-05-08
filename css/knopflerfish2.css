@@ -340,6 +340,14 @@ A:hover {
   margin-bottom: 10px;
 }
 
+.release_notes dt {
+  font-weight: bold;
+}
+
+.release_notes dd {
+  margin-bottom: 10px;
+}
+
 .inline_right {
   float: right;
   margin: 0 0 6px 10px;
