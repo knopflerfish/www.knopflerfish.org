@@ -1,0 +1,147 @@
+<h2>Release Notes Knopflerfish 2.3.2 (OSGi R4.0.1)</h2>
+
+Minor release of Knopflerfish. Released 2009-07-09
+
+<h3> Framework (Core), updated to version 4.1.3</h3>
+
+<div class="release_notes">
+  <dl>
+    <dt>  Framework 4.1.7 </dt>
+    <dd>
+      Added support for checking certificate chains against a Java Keystore or
+      if they are self signed. By default it checks against cacerts keystore
+      in Java runtime. Certificate checking requires Java 1.4 or later.
+      Documentation and testing needs and will be improved before next release.
+    </dd>
+    <dd>
+      Fixed bug when resolving bundles which didn't have export permissions for
+      all its exported packages.
+    </dd>
+    <dd>
+      Fixed bug with fragment bundleEvents sent to early during update.
+    </dd>
+    <dd>
+      Fixed bug with non-string valued system properties. Reported in
+      http://sourceforge.net/tracker/?func=detail&aid=2792210&group_id=82798&atid=567241
+    </dd>
+  </dl>
+</div>
+
+<h3> Compendium Services  </h3>
+<div id="release_notes">
+  <dl>
+    <dt>Http 2.1.3</dt>
+    <dd>
+      The thread handling timeout of HttpSessions is now destroyed when
+      the HttpService is stopped. Thanks to Paul French for detecting and
+      proposing this fix on the Knopflerfish-users mailing-list
+    </dd>
+    <dd>
+      HttpServlet.destroy() is now called when the HttpService is
+      stopped. Previously it was only called when the alias the servlet
+      was registered under was unregistered by calling
+      HttpService.unregister(alias).
+    </dd>
+    <dd>
+      Fixed the configuration description in metatype.xml so that it
+      is a valid XML document using the OSGi metatype schema.
+    </dd>
+
+    <dt>Event 2.0.4</dt>
+    <dd>
+      Fixed a dead lock that could occur when you stopped the event service.
+    </dd>
+  </dl>
+</div>
+
+<h3> Knopflerfish Services  </h3>
+<div id="release_notes">
+  <dl>
+    <dt>Desktop Bundle 2.3.7</dt>
+    <dd>
+      The stop()-method in the bundle activator did not check if it was
+      already executing on the EDT (AWT Event Dispatch Thread) before
+      scheduling execution on it using invokeAndWait(), causing a
+      potential dead-lock. This have now been fixed.
+    </dd>
+    <dd>
+      Enhanced MacOS X Application integration, the "About" entry in the
+      application menu now links to the desktops about dialog. Also fixed
+      a bug, the application listener is now removed when the desktop
+      bundle is stopped. Support new eawt classes distributed with
+      "Java for Mac OS X 10.5 Update 4".
+    </dd>
+    <dd>
+      Fixed NullPointerException that occurred when updating bundles with
+      fragments.
+    </dd>
+    <dd>
+      Fixed ArrayIndexOutOfBoundsException that occurred when uninstalling
+      fragment bundles.
+    </dd>
+    <dd>
+      The number of events hold in memory by an event view is now
+      limited. The default value is 342. It may be changed by setting the
+      property named
+      "org.knopflerfish.bundle.desktop.event.EventTableModel.capacity" to
+      whatever value you want. Negative values means no limit (other than
+      the currently available memory) on the number of events kept.
+    </dd>
+
+    <dt>TTY Console 2.0.1</dt>
+    <dd>
+      Fixed the configuration description in metatype.xml so that it
+      is a valid XML document using the OSGi metatype schema.
+    </dd>
+
+    <dt>KF Metatype 2.0.3</dt>
+    <dd>
+      Fixed bug with metatype information not being updated when bundle changes.
+    </dd>
+
+    <dt>JUnit 2.1.0</dt>
+    <dd>Added support for using JUnit test listeners to monitor test case
+      execution.
+      <p>
+	http://sourceforge.net/tracker/?func=detail&aid=2803570&group_id=82798&atid=567241
+    </dd>
+    
+    <dt>JUnit Runner 2.1.0</dt>
+    <dd>
+      Added a test listener that prints all test events to System.out.
+    </dd>
+
+  </dl>
+</div>
+
+<h3>Misc, start scripts, build system etc </h3>    
+<div id="release_notes">
+  <dl>
+    <dt>Build System</dt>
+    <dd>
+      The obsolete build system used by test bundles in the directory
+      "osgi/bundles_test/regression_test" have been removed. All those
+      test bundles are now built using the same build system as all other
+      bundles.
+    </dd>
+    <dd>
+      Test target bundles (bundles installed and manipulated by a
+      test-suite) have been moved from the
+      "osgi/bundles_test/regression_tests" directory into a subdirectory
+      named "test_target_bundles" under the test-suite bundle that uses
+      the test target bundle. This makes the relation between test target
+      bundles and the test-suite it belongs to visible, and it also
+      simplifies the build process when building a particular test-suite.
+    </dd>
+    <dd>
+      Some minor changes have been made to the bundle-info task. It is
+      now possible to turn of the build error triggered by a missing
+      bundle activator by setting the ant property
+      "bundleinfo.failOnActivator" to false before importing
+      bundlebuild.xml. White space is now allowed around the comma in the
+      value of the ant properties "bundle.stdimports" and
+      "bundle.extraimports".
+    </dd>
+  </dl>
+</div>
+
