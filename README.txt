@@ -21,12 +21,11 @@ o Building
 
 
 o Installing
-  The Knopflerfish web site is unrring on hinken.sparud.net
+  The Knopflerfish web site is running on www.knopflerfish.org
   
   The KF www root is in:
   ~knopflerfish/www/
-  (this will be updated in the near future, old leftover from the
-  past)
+
 
 o Installing, alt 1
   The Makefile in this dir contains targets to install the web site
@@ -35,12 +34,12 @@ o Installing, alt 1
 
   > make install_all	Installs the entire site
 
-  The target assumes you have the same uid on hinken.sparud.net
+  The target assumes you have the same uid on www.knopflerfish.org
   and uses scp to copy the files
 
 o Installing, alt 2
   Tar or zip the files in install from the install dir.
-  Copy the archive to hinken.sparud.net
+  Copy the archive to www.knopflerfish.org
 
   Unpack the arcive in this dir.
   
