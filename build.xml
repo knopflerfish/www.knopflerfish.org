@@ -204,6 +204,15 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/kf3_osgi_r4_v4.2.html"/>
+      <param name="tofile"   value="${installdir}/kf3_osgi_r4_v4.2.html"/>
+      <param name="title"    value="Knopflerfish 3 - OSGi R4 v4.2"/>
+      <param name="desc"     value="Knopflerfish 3 - OSGi R4 v4.2 - the next major release of Knopflerfish"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/running.html"/>
       <param name="tofile"   value="${installdir}/running.html"/>
       <param name="title"    value="Running Knopflerfish OSGi"/>

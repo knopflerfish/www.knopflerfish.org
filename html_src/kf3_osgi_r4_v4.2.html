@@ -1,0 +1,251 @@
+<h2>Knopflerfish 3,  OSGi R4 v4.2</h2>
+
+<h3>Knopflerfish 3, The next Major Release of Knopflerfish</h3>
+
+This is work in progress on KF3, the next major release of
+Knopflerifish. The objective is to implement the 
+<a href="http://www.osgi.org/osgi_technology/download_specs.asp?section=2">
+  OSGi R4 V4.2 specifications</a>
+fully. This includes the:
+<ul>
+  <li>Core Specification
+  <li>Service Compendium
+</ul>
+
+<h3>Downloading KF3</h3>
+<p>
+  A first version has been released and is available for 
+  <a href="download.html">download</a>.</p>
+<p>
+  Furthermore daily snapshot builds made on the kf3-branch are now available at
+  <a href="http://www.knopflerfish.org/snapshots_branches_kf3/">
+    http://www.knopflerfish.org/snapshots_branches_kf3/</a>
+</p>
+
+<h3>Status KF3 Development</h3>
+
+The KF3, framework is close to be feature complete for all mandatory
+parts. Of the optional parts security remains to be made 4.2 compliant.
+The compendium services are almost complete as well.
+<p>
+  The desktop and framework commands have been updated in a number of 
+  ways to reflect new features in R4 V4.2
+</p>
+
+<p>
+  The table below describes what parts have been implemented and what parts
+  are still pending in the KF3 development releass.
+<p>
+  <table border="0" cellpadding="4" cellspacing="2">
+    <tr> <td bgcolor="#cccccc" colspan="4"><b>Core Specification - OSGi framework</b></td></tr>
+    <tr>
+      <td><b>Section</b></td>
+      <td><b>Status</b></td>  
+      <td><b>R4V4.2</b></td>  
+      <td><b>Comment</b></td>
+    </tr>
+    <tr>
+      <td class="nowrap">2. Security </td>
+      <td class="nowrap">NYI  </td>
+      <td class="nowrap">NYI  </td>
+      <td class="nowrap"> Security features will not be available before
+	the first Beta release </td>
+    </tr>
+    <tr>
+      <td class="nowrap">3. Module Layer</td>
+      <td> In Progress </td>
+      <td> Partly </td>
+      <td>
+	All features except multi-host fragments supported.
+      </td>
+    </tr>
+   
+    <tr>
+      <td>3. Life Cycle Layer </td>
+      <td> Done </td>
+      <td> Full </td>
+      <td> With 4.2 launcer KF is started in differently compared to KF2</td>
+    </tr>
+
+    <tr>
+      <td> 4. Service Layer </td>
+      <td> Done </td>
+      <td> Full </td>
+      <td> &nbsp;</td>
+    </tr>
+
+    <tr> <td bgcolor="#cccccc" colspan="4"><b>Core Specification -
+	  Framework Services</b></td></tr>
+    <tr>
+      <td class="nowrap"> 7. Package Admin </td>
+      <td class="nowrap"> NYI </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td class="nowrap"> 8. Start Levl </td>
+      <td class="nowrap"> Done </td>
+      <td> Full </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td class="nowrap"> 9. Conditional Package Admin </td>
+      <td class="nowrap"> NYI </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td class="nowrap"> 10. Permission Admin </td>
+      <td class="nowrap"> NYI </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td class="nowrap"> 11. URL Handler </td>
+      <td class="nowrap"> Done </td>
+      <td> Full </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td class="nowrap"> 12. Service Hooks </td>
+      <td class="nowrap"> In Progress </td>
+      <td> Partly </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td colspan="4" bgcolor="#cccccc"> <b>Service Compendium</b> </td>
+    </tr>
+
+    <tr>
+      <td><b>Specification</b></td>
+      <td><b>Status</b></td>  
+      <td class="nowrap"><b>R4 v4.2</b></td>  
+      <td><b>Comment</b></td>
+    </tr>
+
+    <tr>
+      <td> 101. Log </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td> 102. HTTP </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> </td>
+    </tr>
+
+    <tr>
+      <td> 103. Device Access </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> </td>
+    </tr>
+    
+    <tr>
+      <td class="nowrap"> 104. Configuration Admin </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> </td>
+    </tr>
+    
+    <tr>
+      <td> 105. Meta Type </td>
+      <td> Done</td>
+      <td> Full</td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td> 106. Preferences </td>
+      <td> Done</td>
+      <td> Full</td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td> 107. User Admin </td>
+      <td> Done</td>
+      <td> Full</td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td> 109. IO Connector </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> &nbsp; </td>
+    </tr>
+
+
+    <tr>
+      <td> 112. Declarative Services </td>
+      <td> In Progress </td>
+      <td> &nbsp; </td>
+      <td> &nbsp; </td>
+    </tr>
+
+    <tr>
+      <td> 113. Event Admin </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> New in R4</td>
+    </tr>
+
+    <tr>
+      <td> 701. Service Tracker </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> &nbsp;</td>
+    </tr>
+
+    <tr>
+      <td> 702. XML Parser Service </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> &nbsp;</td>
+    </tr>
+    <tr>
+      <td> 703. Position </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> &nbsp;</td>
+    </tr>
+
+    <tr>
+      <td> 704. Measurement and State </td>
+      <td> Done </td>
+      <td> Full</td>
+      <td> &nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td colspan="4" bgcolor="#cccccc"> <b>Knopflerfish Extras</b> </td>
+    </tr>
+
+    <tr>
+      <td> Console, Framework Commands </td>
+      <td> In Progress </td>
+      <td> NA</td>
+      <td> New commands for 4.1 and 4.2 features, e.g. lazy activation. </td>
+    </tr>
+
+    <tr>
+      <td> KF Desktop </td>
+      <td> Done </td>
+      <td> NA</td>
+      <td> 
+	Support for OSGi 4.1 features added
+      </td>
+    </tr>
+  </table>
+</p>
+
