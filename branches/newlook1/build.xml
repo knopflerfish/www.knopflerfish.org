@@ -14,7 +14,7 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "2.0.5"/>
+              value    = "2.3.2"/>
 
     <property name     = "template.html" 
               location = "templates/template2.html"/>
@@ -419,7 +419,7 @@
 	  outputencoding = "${outputencoding}"/>
 
      <property name="JAVADOC"  
-               value="http://www.knopflerfish.org/releases/${version}/javadoc"/>
+               value="http://www.knopflerfish.org/releases/current/docs/javadoc"/>
 
      <property name="MENU_ID"         value="menu_id"/>
 
