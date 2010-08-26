@@ -222,6 +222,24 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/building.html"/>
+      <param name="tofile"   value="${installdir}/building.html"/>
+      <param name="title"    value="Building Knopflerfish OSGi"/>
+      <param name="desc"     value="How to build Knopflerfish OSGi"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/testing.html"/>
+      <param name="tofile"   value="${installdir}/testing.html"/>
+      <param name="title"    value="Testing Knopflerfish OSGi using the Knopflerfish Test Suite"/>
+      <param name="desc"     value="How to run the Knopflerfish Test Suite"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/download_main.html"/>
       <param name="tofile"   value="${installdir}/download.html"/>
       <param name="title"    value="Download Knopflerfish OSGi"/>

@@ -14,7 +14,23 @@ distribution file, or by the command:
     &gt; java -jar knopflerfish_osgi_<i>&lt;version&gt;</i>.jar
 </pre>
 
-This will open an installation wizard for selection installation directory. Follow the on-screen instructions.
+This will open an installation wizard for selection installation directory and which components to install.
+<div class="kf">
+ <dl>
+   <dt>OSGi framework runtime files</dt>
+   <dd>The execution environment, including the Knopflerfish OSGi framework and bundles</dd>
+   <dt>Java sources and build environment</dt>
+   <dd>
+     Installs all java source code files and a 
+     <a href="building.html">
+       build system</a> for rebuilding Knopflerfish locally form the supplied source files.
+   </dd>
+   <dt>Knopflerfish Documentation</dt>
+   <dd>The Knopflerfish user and developer documentation.</dd>
+ </dl>
+</div>
+<img src="images/install_options.png">
+
 <p>
 If you don't need the wizard, installation can also be done in batch mode, by entering the command:
 
@@ -25,16 +41,11 @@ If you don't need the wizard, installation can also be done in batch mode, by en
 ...or by simply unpacking the jar file manually.
 
 (WinZip is also capable of unpacking .jar files)
-<p>
-The framework can then be started either by double-clicking on the
-<tt>framework.jar</tt> executable jar file in the
-<tt>knopflerfish.org/osgi</tt> directory, or by entering the
-commands
 
-<pre>
-    &gt; cd knopflerfish.org/osgi
-    &gt; java -jar framework.jar
-</pre>
+<p>
+After successfully installing Knopflerfish you may move on to 
+<a href="running.html">
+  starting the framework.</a>
 
 <a name="download"></a>
 <h3>Installation instructions for the tiny, remotely loading framework</h3>
