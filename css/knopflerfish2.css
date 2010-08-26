@@ -348,6 +348,15 @@ A:hover {
   margin-bottom: 10px;
 }
 
+.kf dt {
+  font-weight: bold;
+}
+
+.kf dd {
+  margin-bottom: 10px;
+}
+
+
 .inline_right {
   float: right;
   margin: 0 0 6px 10px;
