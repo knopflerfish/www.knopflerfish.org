@@ -376,6 +376,15 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/eclipse_plugin_upgrade_1_0_19.html"/>
+      <param name="tofile"   value="${installdir}/eclipse_plugin_upgrade_1_0_19.html"/>
+      <param name="title"    value="Updating to Knopflerfish Eclipse Plugin v 1.0.19"/>
+      <param name="desc"     value=""/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/eclipse_install.html"/>
       <param name="tofile"   value="${installdir}/eclipse_install.html"/>
       <param name="title"    value="Installing the Knopflerfish Eclipse Plugin"/>

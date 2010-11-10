@@ -1,0 +1,21 @@
+<h2>Upgrading to Eclipse plug-in 1.0.19</h2>
+
+
+If you have an earlier version of the plugin and try to update 10 1.0.19  you will probably get an error saying there 
+is a conflict with the earlier version. In this case you will need to uninstall the earlier version, but 
+BEFORE you do this make sure you save the KF plugin settings. The KF plugin stores data in 
+two places, as preferences and as launch configurations. Preferences holds information about 
+which frameworks, environments and repositories that have been configured. Launch 
+configurations is all your debug/run configurations. 
+<p>
+  To save the preferences select File/Export..., in the dialog shown select General-Preferences and 
+  select next. Check the knopflerfish preferences, specify where to save it and finish. This file can 
+  later be imported to restore these preferences. This is also described here 
+  <a href="http://www.knopflerfish.org/eclipse_preferences.html">
+    http://www.knopflerfish.org/eclipse_preferences.html</a>
+</p>
+<p>
+  To save launch configurations select File/Export..., in the dialog shown select Run/Debug-Launch 
+  Configurations and select next. Check the knopflerfish launch configurations, specify directory to 
+  save to and finish. These launch configurations can later be imported. 
+</p>
