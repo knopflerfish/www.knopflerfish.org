@@ -1,144 +1,105 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- This is a generated file. Do not edit. Built by $(USER) on $(TSTAMP) -->
 <html lang="en">
-
-  <head>
-    <meta http-equiv = "Content-Type"
-	  content    = "text/html; charset=ISO-8859-1">
-    
-    <meta http-equiv = "CACHE-CONTROL"
-	  content    = "NO-CACHE">
-
-    <meta name       = "description"
-	  content    = "$(DESC)">
-
-    <meta name       = "title"
-	  content    = "$(TITLE)">
-
-    <title>$(TITLE)</title>
-
-    <link href="css/knopflerfish2.css"  type="text/css" rel="stylesheet">
-    <link rel="shortcut icon"                          href="images/favicon.png">
-
-    <script type="text/javascript" src="scripts/menu.js"></script>
-
-  </head>
-
-  <body>
-
-    <div id="main">
-      <a name="top"></a>
-      <div id="header">
-	<div id="header_logo">
-	  <a href="index.html"><img src="images/kf300_black.png" border="0" alt="knopflerfish logo"></a>
-	</div>
-	<div id="header_menu">
-	  <a class="button_$(HOME_STATE)" href="index.html">Home</a>
-	  <a class="button_$(NEWS_STATE)" href="news.html">News</a>
-	  <a class="button_$(DOWNLOAD_STATE)" href="download.html">Download</a>
-	  <a class="button_$(DOCS_STATE)" href="documentation.html">Documentation</a>
-	  <a class="button_$(DOCS_ABOUT)" href="about.html">About</a>
-	</div>
-	<!-- <div style="height: 10px; background: white url(images/gw10x10.png) repeat-x scroll left top;"></div> -->
+<head>
+  <meta http-equiv = "Content-Type"
+	content    = "text/html; charset=ISO-8859-1">
+  <meta name       = "description"
+	content    = "$(DESC)">
+  <meta name       = "title"
+	content    = "$(TITLE)">
+  <title>$(TITLE)</title>
+  <link href="css/knopflerfish2.css"  type="text/css" rel="stylesheet">
+  <link rel="shortcut icon"                          href="images/favicon.png">
+  <script type="text/javascript" src="scripts/menu.js"></script>
+</head>
+<body>
+  <div id="main">
+    <a name="top"></a>
+    <div id="header">
+      <div id="header_logo">
+	<a href="index.html"><img src="images/kf300_black.png" border="0" alt="knopflerfish logo"></a>
       </div>
-
-      <div id="leftmenu">
-	<form style="padding-left: 0px;" class="searchform" method="GET" action="http://www.google.com/search">
-	  <input type="hidden" name="ie"         value="UTF-8">
-	  <input type="hidden" name="oe"         value="UTF-8">
-	  <input type="hidden" name="domains"    value="www.knopflerfish.org">
-	  <input type="hidden" name="sitesearch" value="www.knopflerfish.org">
-	  <input TYPE="text"   value="Search site" name="q" size="20" maxlength="255"
-		 onFocus="clearText(this)" onBlur="clearText(this)"
-		 class="searchfield">
-	</form>
-
-	<div id="menu_news"><div class="nrow">
-	    <img src="images/arrow_$(NEWS_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')">
-	    <a class="nrow_$(NEWS_STATE)" href="news.html">News</a></div>
-	  <!--
-	  <div class="nrow1_$(NEWS_STATE)"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
-	  -->
-	  <div class="nrow1_$(NEWS_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo">Mailing lists</a></div>
-	</div>
-
-	<div id="menu_download"><div class="nrow"><img src="images/arrow_$(DOWNLOAD_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(DOWNLOAD_STATE)" href="download.html">Download</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="license.html">License</a></div>
-	  <!-- 
-          <div class="nrow1_$(DOWNLOAD_STATE)"><a href="download.html">Latest</a></div>
-	  -->
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/">Nightly builds</a></div>
-
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/current_trunk/junit_grunt/index.xml">Nightly tests</a></div>
-
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="/releases/current/repository.xml">Bundle repository</a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="svn_info.html">Source code (svn)</a></div>
-	  <!--
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">Forum <img border="0" src="images/extlink.gif"/></a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a  href="http://sourceforge.net/tracker/?atid=567241&group_id=82798&func=browse">Bug tracker <img border="0" src="images/extlink.gif"/></a></div>
-	  <div class="nrow1_$(DOWNLOAD_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo">Mailing lists <img border="0" src="images/extlink.gif"/></a></div>
-	  -->
-	</div>
-
-
-	<div id="menu_docs"><div class="nrow"><img src="images/arrow_$(DOCS_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(DOCS_STATE)" href="documentation.html">Documentation</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="install.html">Installing</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="running.html">Running</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="building.html">Building</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="testing.html">Testing</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/programming.html">Programming</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/tutorials.html">Tutorials</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/bundledoc/index.html?docpage=desktop/index.html">Desktop</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="eclipse_plugin.html">Eclipse plugin</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/javadoc/index.html">Java docs</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/bundledoc/index.html">Bundle user docs</a></div>
-	  <div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/jars/index.html">Bundle jar docs</a></div>
-	</div>
-
-
-	<div id="menu_about"><div class="nrow"><img src="images/arrow_$(ABOUT_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(ABOUT_STATE)" href="about.html">About</a></div>
-	  <div class="nrow1_$(ABOUT_STATE)"><a href="history.html">History</a></div>
-	  <div class="nrow1_$(ABOUT_STATE)"><a href="contacts.html">Contacts</a></div>
-	  <div class="nrow1_$(ABOUT_STATE)"><a href="osgi-links.html">OSGi related links</a></div>
-	  <div class="nrow1_$(ABOUT_STATE)"><a href="merchandise.html">T-shirt and stuff</a></div>
-	</div>
-
-
-	<div class="nrow">&nbsp;</div>
-	<!--
-	<div class="nrow"><a href="http://knopflerfish.blogspot.com">Blog <img border="0" src="images/extlink.gif"/></a></div>
-	-->
-	<div class="nrow"><a href="http://www.knopflerfish.org/mailman/listinfo">Mailing lists </a></div>
-	<div class="nrow"><a  href="http://sourceforge.net/tracker/?atid=567241&amp;group_id=82798&amp;func=browse">Bug tracker <img border="0" alt="" src="images/extlink.gif"></a></div>
-	<div class="nrow"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">
-	    Forum <img border="0" src="images/extlink.gif"alt="">
-	</a></div>
-	<div class="nrow"><a href="http://knopflerfish.blogspot.com/">
-	    Knopflerfish Blog <img border="0" src="images/extlink.gif"alt="">
-	</a></div>
-	
-	<div class="makewave">
-	  Maintained by<br>
-	  <a href="http://www.makewave.com"><img src="images/makewave_logo_126x16.gif" alt="Makewave" border="0"></a><br>
-	  <div class="makewave_2">
-	    <a href="http://www.makewave.com/site.en/products/knopflerfish_pro_osgi.shtml">
-	      Knopflerfish Pro<img border="0" alt="" src="images/extlink.gif"></a><br>
-	    <a href="http://www.makewave.com/site.en/products/osgi_training.shtml">
-	      OSGi Training<img border="0" alt="" src="images/extlink.gif"></a><br>
-	    <a href="http://www.makewave.com/site.en/products/osgi_expert.shtml">
-	      Professional Services<img border="0" alt="" src="images/extlink.gif"></a><br>
-	  </div>
-	</div>
+      <div id="header_menu">
+	<a class="button_$(HOME_STATE)" href="index.html">Home</a>
+	<a class="button_$(NEWS_STATE)" href="news.html">News</a>
+	<a class="button_$(DOWNLOAD_STATE)" href="download.html">Download</a>
+	<a class="button_$(DOCS_STATE)" href="documentation.html">Documentation</a>
+	<a class="button_$(DOCS_ABOUT)" href="about.html">About</a>
       </div>
-
-      <div id="mainblock">
-	$(MAIN)
+    </div>
+    <div id="leftmenu">
+      <form style="padding-left: 0px;" class="searchform" method="GET" action="http://www.google.com/search">
+	<input type="hidden" name="ie"         value="UTF-8">
+	<input type="hidden" name="oe"         value="UTF-8">
+	<input type="hidden" name="domains"    value="www.knopflerfish.org">
+	<input type="hidden" name="sitesearch" value="www.knopflerfish.org">
+	<input TYPE="text"   value="Search site" name="q" size="20" maxlength="255"
+	       onFocus="clearText(this)" onBlur="clearText(this)"
+	       class="searchfield">
+      </form>
+      <div id="menu_news"><div class="nrow">
+	  <img src="images/arrow_$(NEWS_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')">
+	  <a class="nrow_$(NEWS_STATE)" href="news.html">News</a></div>
+	<div class="nrow1_$(NEWS_STATE)"><a href="http://www.knopflerfish.org/mailman/listinfo">Mailing lists</a></div>
       </div>
-      <div id="footer">
-	<div id="copyright">
-	  Copyright &copy; 2008-2010 The Knopflerfish Project. All rights reserved.
+      
+      <div id="menu_download"><div class="nrow"><img src="images/arrow_$(DOWNLOAD_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(DOWNLOAD_STATE)" href="download.html">Download</a></div>
+	<div class="nrow1_$(DOWNLOAD_STATE)"><a href="license.html">License</a></div>
+	<div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/">Nightly builds</a></div>
+	<div class="nrow1_$(DOWNLOAD_STATE)"><a href="/snapshots/current_trunk/junit_grunt/index.xml">Nightly tests</a></div>
+	<div class="nrow1_$(DOWNLOAD_STATE)"><a href="/releases/current/repository.xml">Bundle repository</a></div>
+	<div class="nrow1_$(DOWNLOAD_STATE)"><a href="svn_info.html">Source code (svn)</a></div>
+      </div>
+      <div id="menu_docs"><div class="nrow"><img src="images/arrow_$(DOCS_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(DOCS_STATE)" href="documentation.html">Documentation</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="install.html">Installing</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="running.html">Running</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="building.html">Building</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="testing.html">Testing</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/programming.html">Programming</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/tutorials.html">Tutorials</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/bundledoc/index.html?docpage=desktop/index.html">Desktop</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="eclipse_plugin.html">Eclipse plugin</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/javadoc/index.html">Java docs</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/bundledoc/index.html">Bundle user docs</a></div>
+	<div class="nrow1_$(DOCS_STATE)"><a href="/releases/current/docs/jars/index.html">Bundle jar docs</a></div>
+      </div>
+      <div id="menu_about"><div class="nrow"><img src="images/arrow_$(ABOUT_STATE).gif" alt="" onclick="setMenuById(this.parentNode.parentNode.id, 'toggle')"><a class="nrow_$(ABOUT_STATE)" href="about.html">About</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="history.html">History</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="contacts.html">Contacts</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="osgi-links.html">OSGi related links</a></div>
+	<div class="nrow1_$(ABOUT_STATE)"><a href="merchandise.html">T-shirt and stuff</a></div>
+      </div>
+      <div class="nrow">&nbsp;</div>
+      <div class="nrow"><a href="http://www.knopflerfish.org/mailman/listinfo">Mailing lists </a></div>
+      <div class="nrow"><a  href="http://sourceforge.net/tracker/?atid=567241&amp;group_id=82798&amp;func=browse">Bug tracker <img border="0" alt="" src="images/extlink.gif"></a></div>
+      <div class="nrow"><a href="https://sourceforge.net/forum/forum.php?forum_id=328005">
+	  Forum <img border="0" src="images/extlink.gif"alt="">
+      </a></div>
+      <div class="nrow"><a href="http://knopflerfish.blogspot.com/">
+	  Knopflerfish Blog <img border="0" src="images/extlink.gif"alt="">
+      </a></div>
+      <div class="makewave">
+	Maintained by<br>
+	<a href="http://www.makewave.com"><img src="images/makewave_logo_126x16.gif" alt="Makewave" border="0"></a><br>
+	<div class="makewave_2">
+	  <a href="http://www.makewave.com/site.en/products/knopflerfish_pro_osgi.shtml">
+	    Knopflerfish Pro<img border="0" alt="" src="images/extlink.gif"></a><br>
+	  <a href="http://www.makewave.com/site.en/products/osgi_training.shtml">
+	    OSGi Training<img border="0" alt="" src="images/extlink.gif"></a><br>
+	  <a href="http://www.makewave.com/site.en/products/osgi_expert.shtml">
+	    Professional Services<img border="0" alt="" src="images/extlink.gif"></a><br>
 	</div>
       </div>
     </div>
-  </body>
+    <div id="mainblock">
+      $(MAIN)
+    </div>
+    <div id="footer">
+      <div id="copyright">
+	Copyright &copy; 2008-2010 The Knopflerfish Project. All rights reserved.
+      </div>
+    </div>
+  </div>
+</body>
 </html>

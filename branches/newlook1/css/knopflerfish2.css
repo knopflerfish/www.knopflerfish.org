@@ -5,11 +5,9 @@ BODY  {
 
 #main {
   width: 900; 
-  background: #fff;
-  border:		1px solid #000;
-	/* 	padding: 10px 50px 10px 50px;  */
+  background:	#fff;
+  border:	1px solid #000;
   margin: 0px auto;
-  /*   position: relative;	 */
   font-family: Helvetica, sans-serif;
   font-size: 12px;
   padding: 0px 0px 0px 0px;
@@ -51,7 +49,6 @@ BODY  {
   padding: 0px;
   width: 160px;
   float:left;
-  /*  background: #f4d6ea; */
 }
 
 .nrow, .nrow_open, .nrow_closed, .nrow1, nrowexp, .menu, .nrow1_open, nrow1_closed
@@ -88,7 +85,6 @@ BODY  {
 .nrowexp {
  border-bottom-color: transparent;
 }
-
 
 .erow {
  display: block;
@@ -139,7 +135,6 @@ H3  {
  background:          #805362;  
  color:		      #ffffff;
  border-style:        solid;
- border-style: solid;
  border-color: #000000;
  border-width: 1px;
  padding-top:         2px;
@@ -157,8 +152,7 @@ H3.home, .home_top  {
  border-color:	#ccc #fff #ccc #fff;
  border-width:	2px;
  padding-bottom:      2px;
- background-image: url('../images/shortfadeout_20px.jpg');
- /*  margin-top: 0px; */
+ background-image: url('../images/shortfadeout_20px.png');
 }
 
 H3.home_top  {
@@ -228,7 +222,6 @@ TD.newstext {
 DIV.home_main {
   width: 400px;
   float:left;
-  /*  background: #f4d6ea; */
 }
 
 DIV.home_side {
