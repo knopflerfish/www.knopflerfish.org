@@ -51,7 +51,7 @@ BODY  {
   float:left;
 }
 
-.nrow, .nrow_open, .nrow_closed, .nrow1, nrowexp, .menu, .nrow1_open, nrow1_closed
+.nrow, .nrow_open, .nrow_closed, .nrow1, nrowexp, .menu, .nrow1_open, nrow1_closed, .nrow1_label_open, .nrow1_label_closed, .nrow1_indent_open, .nrow1_indent_closed
 {
  background-color:    #f4efd5;
  background-color:    #fcfcfc;
@@ -78,7 +78,19 @@ BODY  {
  padding-left:   14px;
  font-size:      12px;
 }
-.nrow1_closed {
+.nrow1_label_open {
+    font-weight: bold;
+    color: #bbb;
+    display:        block;
+    padding-left:   14px;
+    font-size:      12px;
+}
+.nrow1_indent_open {
+    display:        block;
+    padding-left:   24px;
+    font-size:      12px;
+}
+.nrow1_closed, .nrow1_label_closed, .nrow1_indent_closed {
  display:        none;
 }
 
@@ -117,6 +129,30 @@ BODY  {
   text-align: right;
   padding: 5px 10px 0px 0px;
 }	  
+
+H1.kf {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size:18px;
+  font-weight:bold;
+  border-style: solid;
+  border-color: #802060;
+  border-width: 0px 0px 2px 0px;
+  padding-bottom: 2px;
+}
+
+H2.kf  {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    background:   #805362;  
+    color:	  #ffffff;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px;
+    padding-top:         2px;
+    padding-bottom:      2px;
+    padding-left:        8px;
+}
 
 H2 {
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -182,7 +218,7 @@ TH  {
  padding-right: 10px;
 }
 
-TABLE.fancy {
+table.fancy {
   border-collapse: collapse;
 }
 
@@ -198,7 +234,7 @@ TD.fancy_row {
   border-top: 2px solid #A3A3A3;
 }
 
-TD.fancy {
+table.fancy td {
   padding: 2px 4px 2px 4px;
 }
 	
@@ -218,6 +254,42 @@ TD.newstext {
  padding-left: 10;
  padding-bottom: 5;
 }
+
+tablekf {
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-style: solid;
+}
+
+tablekf th {
+    font-weight: bold;
+    font-size:12px;
+    border-width: 1px;
+    padding: 6px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #bbbbbb;
+}
+
+
+tablekf td {
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    border-color: #cccccc;
+    background-color: #fafafa;
+}
+
+tablek td.subhead {
+    border-width: 1px;
+    padding: 5px;
+    border-color: #cccccc;
+    background-color: #dddddd;
+    font-weight: bold;
+}
+
 
 DIV.home_main {
   width: 400px;
