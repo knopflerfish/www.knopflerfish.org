@@ -20,7 +20,7 @@ install_html: prepare
 
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
-	cd install; scp -r *.html images css scripts ${INSTALLDEST}
+	cd install; scp -r *.html images css scripts tutorials ${INSTALLDEST}
 
 install_release:
 	@echo "Installing KF release files at: ${INSTALLDIR}"

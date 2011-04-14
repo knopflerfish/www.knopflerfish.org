@@ -46,6 +46,9 @@
       <param name="dir" value="scripts"/>
     </antcall>
 
+    <antcall target="copydirs">
+      <param name="dir" value="tutorials"/>
+    </antcall>
 
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/index_main.html"/>
@@ -255,6 +258,24 @@
       <param name="tofile"   value="${installdir}/documentation.html"/>
       <param name="title"    value="Knopflerfish OSGi Documentation"/>
       <param name="desc"     value="Documentation on Knopflerfish OSGi including javadoc, bundle documentation, readme's and tutorials."/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/tutorials.html"/>
+      <param name="tofile"   value="${installdir}/tutorials.html"/>
+      <param name="title"    value="Knopflerfish OSGi Tutorials"/>
+      <param name="desc"     value="Tutorials on Knopflerfish OSGi"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/kf_pax_web_tutorial.html"/>
+      <param name="tofile"   value="${installdir}/kf_pax_web_tutorial.html"/>
+      <param name="title"    value="Knopflerfish Pax Web Tutorial"/>
+      <param name="desc"     value="Tutorials - Using Pax Web in Knopflerfish for JSPs and WAR-files"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
