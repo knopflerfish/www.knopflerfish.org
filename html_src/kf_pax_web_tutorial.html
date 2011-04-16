@@ -1,0 +1,110 @@
+<h1 class="kf">Using Pax Web in Knopflerfish for JSPs and WAR-files</h1>
+
+Short tutorial on how to use Pax Web in Knopflerfish for WARs and JSPs.
+
+
+<h2 class="kf">Replacing the KF HTTP server with Pax Web / Jetty</h2>
+<p>
+  The default HTTP server in KF is Knopflerfish's own small foot-print
+  HTTP server intended for embedded use. The KF HTTP server does not
+  support WARs nor JSP. To run WARs in KF
+  you therefore need to replace the KF HTTP server with something more
+  appropriate for enterprise use, e.g. Pax Web.
+<p>
+  As an embedded vs. enterprise comparison the KF HTTP server is 95K in size. Jetty, which
+  PaxWeb is based on, is 2.3M and the JSP support is 2.8M. 
+</p>
+ 
+<h3 class="kf">Uninstall the KF HTTP bundles</h3>
+The first step is to stop the HTTP root bundle and uninstall the JSDK and HTTP-server bundles
+as PaxWeb will take over this function. Normally you will most
+likely also want to uninstall the HTTP-root-bundle, but for this
+tutorial we will leave it installed. Make sure to do a refresh
+packages before going to the next step. <em>Command/Ctrl R</em> in the desktop.
+
+<h3 class="kf">Install PaxWeb</h3>
+The second step is install and start the following bundles from PaxWeb.
+<ul>
+  <li>pax-web-jsp-1.0.2.jar (install)</li>
+  <li>pax-web-jetty-bundle-1.0.2.jar (install &amp; start)</li>
+  <li>pax-web-extender-war-0.8.0.jar(install &amp; start)</li>
+</ul>
+
+They can also be installed from a maven repository. The URLs below
+can be used to install from directly, either from the KF desktop's
+"Open Bundle Location" command, or from the install command in the
+KF framework console.
+<ul>
+  <li><a href="http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-jsp/1.0.2/pax-web-jsp-1.0.2.jar">
+      http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-jsp/1.0.2/pax-web-jsp-1.0.2.jar
+  </a></li>
+  <li><a href="http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-jetty-bundle/1.0.2/pax-web-jetty-bundle-1.0.2.jar">
+      http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-jetty-bundle/1.0.2/pax-web-jetty-bundle-1.0.2.jar
+  </a></li>
+  <li><a href="http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-extender-war/0.8.0/pax-web-extender-war-0.8.0.jar">
+      http://repo1.maven.org/maven2/org/ops4j/pax/web/pax-web-extender-war/0.8.0/pax-web-extender-war-0.8.0.jar
+  </a></li>
+</ul>
+<p>
+  If you now start the HTTP root bundle again it will be using Jetty
+  instead of the KF HTTP server. This can be verified by surfing
+  into:
+  <pre>http://localhost:8080/servlet/knopflerfish-info</pre>
+  This will list the web server properties and should look something
+  like this:
+</p>
+<p>
+  <img src="tutorials/kf_pax_web/http_server_props.png" border="0"
+       alt="HTTP Server Properties">
+</p>
+<p>
+  This means you are now running Jetty successfully in Knopflerfish.
+</p>
+
+<h2 class="kf">Preparing a WAR for OSGi</h2>
+To prepare the WAR for OSGi an OSGi manifest must be created. Below is
+an example of such a manifest taken from a simple 
+<a href="tutorials/kf_pax_web/HelloWeb.war">HelloWeb.war</a> example. 
+<pre>
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hello Web
+Bundle-SymbolicName: org.knopflerfish.demo.hello_web
+Bundle-Version: 1.0
+Bundle-ClassPath: .,WEB-INF/classes
+Bundle-Vendor: Knopflerfish Project
+Bundle-ContactAddress: http://www.knopflerfish.org
+Bundle-Description: Simple demo WAR with a JSP and an HTML page
+Webapp-Context: helloweb
+</pre>
+
+<h2 class="kf">Deploy the WAR into Knopflerfish</h2>
+The final step is to deploy the WAR into Knopflerfish. Pax Web will
+take the bundle and deploy it into Jetty. You deploy the WAR just like
+any other bundle. Using the desktop you can install directly from this
+URL:
+<a href="tutorials/kf_pax_web/WelloWeb.war">
+  http://www.knopflerfish.org/tutorials/kf_pax_web/HelloWeb.war
+</a>
+<p>
+After successfully installing HelloWeb the WARs web content is available under the Webapp-Context
+path defined in the manifest as described above, i.e.:
+<pre>http://localhost:8080/helloweb/</pre>
+<p>
+  Opening this URL in a browser should result in the following page:
+</p>
+<p>
+  <img src="tutorials/kf_pax_web/helloweb.png" borde="0">
+</p>
+<p>
+  Exactly the same webapp that might be deployed in Tomcat (or other
+  web containers) can be used without change in OSGi. 
+  The only work needed is addition of an OSGi bundle manifest as
+  described above.
+</p>
+
+<h2 class="kf">Credits</h2>
+
+This tutorial is based on Ken Turner's post on the KF Forum on this
+subject. Also big thanks Achim Nierbecker who helped out a lot with
+the Pax Web parts.
