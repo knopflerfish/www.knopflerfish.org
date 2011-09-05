@@ -5,6 +5,56 @@
 <table class="newstable">
 
 <tr>
+  <td class="newsdate">5 Sep 2011</td>
+  <td class="newstext">
+    Build system fix. API versions of several bundles updated.<br>
+    A fix has been made in the KF build system for issue 
+    <a href="http://sourceforge.net/tracker/?func=detail&aid=3402741&group_id=82798&atid=567241">
+      3402741 </a> 
+    by adding implicit imports to the API version of the bundle of all
+    packages exported  by the same bundle. The implicit import
+    will get a version range starting with the exported version up to
+    the next major version (excluded). This default setting is per
+    recommendation of the OSGi Specification. 
+    <p>
+      This fix affects primarily the API version of certain bundles which exports multiple
+      packages, and previously did not explicitly import their own exported packages. 
+      The bundles listed below are all such API bundles. They have been
+      updated to a new bug fix version (x.x.N) and are now corrected to
+      have an implicit import of their respective exported
+      packages. 
+      <ul>
+	<li>Blueprint (API) 1.0.1</li>
+	<li>Deployment Admin (API) 1.0.2</li>
+	<li>DMTree 1.0.2 </li>
+	<li>HTTP-Server 3.0.6  </li>
+	<li>IO (API) 3.0.1 </li>
+	<li>Log Service 3.0.6 </li>
+	<li>User Admin 3.0.2</li>
+	<li>Desktop 3.1.7</li>
+	<li>JSDK 2.5.0.kf3-2</li>
+	<li>Serial Port Device 2.0.1</li>
+      </ul>
+    </p>
+    <p>
+      API bundles with a single exported package are also affected and
+      will get the same  implicit import. However the bundle version of these bundles
+      have not been updated since this change has no real impact on
+      such bundles.
+    </p>
+    <p>
+      The "_all" bundles are also affected such that they get the same
+      version range on implicit imports. Previously they would get an
+      implicit import with exactly the same version as the export. 
+    </p>
+    <p>
+      The implementation versions of the bundles are not affected by
+      this change.
+    </p>
+  </td>
+</tr>
+
+<tr>
   <td class="newsdate">15 Jul 2011</td>
   <td class="newstext">
     Knopflerfish 3.2 released.<br>
