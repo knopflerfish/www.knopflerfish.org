@@ -505,3 +505,21 @@ DIV.break {
   clear: both;
   margin: 0px;
 }
+
+.infobox {
+    border:solid 1px #DEDEDE;
+    background:#EFEFEF;
+    color:#222222;
+    padding:4px;
+    text-align:center;
+    width: 200px;
+} 
+
+.infobox_title {
+    background:#CFCFCF;
+    background:#E1E1E1;
+    font-weight:bold;
+    padding: 2px;
+    margin: -4px -4px 2px -4px;
+    color:#222222;
+}

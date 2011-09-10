@@ -118,6 +118,23 @@
       <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
     
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/archive.html"/>
+      <param name="tofile"   value="${installdir}/archive.html"/>
+      <param name="title"    value="Knopflerfish Download Archive"/>
+      <param name="desc"     value="DOwnload Archive with older KF releases."/>
+      <param name="MENU_ID" value="menu_download"/>
+      <param name="DOWNLOAD_STATE" value="open"/>
+    </antcall>
+    
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/maven.html"/>
+      <param name="tofile"   value="${installdir}/maven.html"/>
+      <param name="title"    value="Knopflerfish Maven Repository"/>
+      <param name="desc"     value="Maven respository with Knopflerfish artifacts."/>
+      <param name="MENU_ID" value="menu_download"/>
+      <param name="DOWNLOAD_STATE" value="open"/>
+    </antcall>
 
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/release_notes_1.3.7.html"/>
