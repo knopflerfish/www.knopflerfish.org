@@ -1,7 +1,52 @@
-<h2>Changelog KF Eclipse plug-in</h2>
+<h1 class="kf">Changelog KF Eclipse plug-in</h1>
 
 
-<h3>Release notes for KF Eclipse Plugin 1.0.19 2010-11-10</h3>
+<h2 class="kf">Release notes for KF Eclipse Plugin 1.2.0 Released: 2012-03-16</h2>
+
+<div class="release_notes">
+  <dl>
+    <dt>General</dt>
+    <dd>
+      Clear Bundle Cache in run configuration did not work on eclipse 3.7.
+    </dd>
+    <dd>
+      In the Eclipse plugin, not enough info in IOException - ID:
+      3458368 : Missing file added toIOException's message 
+    </dd>
+    <dt>Launch Configuration</dt>
+    <dd>
+      Added arguments tab for setting program and VM arguments
+    </dd>
+    <dd>
+      Added source tab for editing source lookup path
+    </dd>
+    <dd>
+      Added possibility to import KF xargs files.
+    </dd>
+    <dd>
+      Added support for start_e, start_et and start_pt commands.
+    </dd>
+    <dd>
+      When selecting bundles in the bundles tab the selection is kept
+      in the selected bundles list. A context menu has been added,
+      allowing changing start level and/or mode for a selection of
+      bundles. 
+    </dd>
+    <dt>Launch Configuration</dt>
+    <dd>
+      When framework is added its init.xargs is parsed and the
+      org.knopflerfish.gosg.jars property is read to determine which
+      directories to scan for bundles.
+    </dd>
+    <dd>
+      Added new type of bundle repository, Directory Type. Which
+      will scan a specified directory for bundles every time the launch
+      configuration is opened.        
+    </dd>
+  </dl>
+
+<h1 class="kf">Changelogs for older releases</h1>
+<h2 class="kf">Release notes for KF Eclipse Plugin 1.0.19 2010-11-10</h2>
 
 <div class="release_notes">
   <dl>
@@ -12,7 +57,7 @@
   </dl>
 </div>      
 
-<h3>Release notes for KF Eclipse Plugin 1.0.18 2010-11-09</h3>
+<h2 class="kf">Release notes for KF Eclipse Plugin 1.0.18 2010-11-09</h2>
 
 <div class="release_notes">
   <dl>
@@ -46,7 +91,7 @@
   </dl>
 </div>
 
-<h3>Release notes for KF Eclipse Plugin 1.0.17 2010-09-20</h3>
+<h2 class="kf">Release notes for KF Eclipse Plugin 1.0.17 2010-09-20</h2>
 <div class="release_notes">
   <dl>
     <dt>General</dt>
