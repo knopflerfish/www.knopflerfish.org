@@ -99,6 +99,15 @@
       <param name="NEWS_STATE" value="open"/>
     </antcall>
 
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/news_archive.html"/>
+      <param name="tofile"   value="${installdir}/news_archive.html"/>
+      <param name="title"    value="Archived Knopflerfish News - news and announcements about the Knopflerfish OSGi Service Platform"/>
+      <param name="desc"     
+	     value="Archived news and announcements about the Knopflerfish OSGi Service Platform"/>
+      <param name="MENU_ID" value="menu_news"/>
+      <param name="NEWS_STATE" value="open"/>
+    </antcall>
 
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/desktop_main.html"/>
