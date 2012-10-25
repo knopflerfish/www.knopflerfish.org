@@ -4,6 +4,51 @@
 
 <table class="newstable">
 
+<a name="scr_3.1.9">
+<tr>
+  <td class="newsdate">24 Oct 2012</td>
+  <td class="newstext">
+    SCR (declarative services) 3.1.9 released. 
+    Corrected issue in SCR Admin API. Reference.getServiceReference()
+    returned all service candidates when cardinality was {0|1}..1,
+    not just the bound one. Changed so that kf allow bind methods to throw exceptions, but
+    still considered it bound. See 112.5.7 in Compendium specification.
+  </td>
+</tr>
+
+<a name="http_3.1.1">
+<tr>
+  <td class="newsdate">24 Oct 2012</td>
+  <td class="newstext">
+    HTTP 3.1.1 is released. 
+    Corrects bundle start issue when the KF Console is not present.
+  </td>
+</tr>
+
+<a name="desktop_3.2.0">
+<tr>
+  <td class="newsdate">22 Oct 2012</td>
+  <td class="newstext">
+    Desktop 3.2 is released.
+    <ul>
+      <li> 
+	New displayer that shows SCR components (a.k.a. declarative
+	services) defined by a bundle. The state of the component as well
+	as the state of its references are shown.
+      </li>
+      <li>
+	 Optimizations: When the bundle selection state changes off-screen
+	 displayer will not be updated.
+      </li>
+      <li>
+	The navigation buttons (back, forward) at the bottom of some
+	displayers now updates and remembers the links when clicking on a link in the
+	it. The navigation history is cleared when a displayer becomes visible.
+      </li>
+    </ul>
+  </td>
+</tr>
+
 <a name="http_3.1.0">
 <tr>
   <td class="newsdate">12 Oct 2012</td>
