@@ -523,3 +523,9 @@ DIV.break {
     margin: -4px -4px 2px -4px;
     color:#222222;
 }
+
+ul.fancy {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    padding-left: 30px;
+}
