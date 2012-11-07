@@ -4,11 +4,51 @@
 
 <table class="newstable">
 
+<a name="scr_3.1.11">
+<tr>
+  <td class="newsdate">7 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Release of SCR (declarative services), Desktop and
+      Framework Commands bundles
+    </div>
+    
+    SCR (declarative services) 3.1.11
+    <ul class="kf">
+      <li>Fixed so that delayed components that still was satisfied
+	re-registered after being deactivated
+	(This fixes the problem that scrcommands only works once).</li>
+      <li>Handle when trying to do newInstance on an unregistered
+	ComponentFactory.</li>
+      <li>Fix so that static service references is valid during
+	deactivate.</li>
+      <li>Fixed so that circular deactivate works, this by doing
+	unbind of dynamic optional references before deactivating
+	a component.</li>
+    </ul>
+    Desktop 3.2.5
+    <ul class="kf">
+      <li>
+	The Service-Component XML presentation in the manifest-tab
+	now  links to the list of SCR components by name also when an
+	XML-namespace prefix is present on the component-element.
+      </li> 
+    </ul>
+    Framework Commands 3.2.0
+    <ul class="kf">
+      <li>Added "-s" flag to "threads" command for printing a
+	stack trace for the thread (Only works on java 1.5 and later).</li>
+      <li> Added possibility to filter which threads to show.</li>
+    </ul>
+  </td>
+</tr>
+
+
 <a name="kf_3.3.0">
 <tr>
   <td class="newsdate">2 Nov 2012</td>
   <td class="newstext">
-    Knopflerfish 3.4 released.<br>
+    <div class="newshd">Knopflerfish 3.4 released</div>
     <a href="download.html">Knopflerfish 3.4</a> 
     is the next minor KF3 release and includes several fixes and improvement in the core
     OSGi framework, the OSGi compendium services and the Knopflerfish services.
