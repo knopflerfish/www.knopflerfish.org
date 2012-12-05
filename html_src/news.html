@@ -4,7 +4,43 @@
 
 <table class="newstable">
 
-<a name="framework_5.2.7">
+<a name="framework_5.2.8">
+<tr>
+  <td class="newsdate">5 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of KF framework and Declarative Services bundle
+    </div>
+    framework 5.2.8
+    <ul class="kf">
+      <li>
+	Fixed ServiceReference.isAssignableTo() so that correctly handles
+	exported packages from fragments and extensions.
+      </li>
+      <li>
+	Changed ServiceFactory handling so that it only sends a framework
+	warning event instead of a framework error event when the
+	ServiceFactory.getService() returns null.
+      </li>
+      <li>
+	Fixed permission problem when storing initial bundle start level.
+      </li>
+      <li>
+	Fixed race condition when doing refreshPackages on an uninstalling  bundle.
+      </li>
+    </ul>
+
+    SCR (Declarative Services) 3.1.14
+    <ul class="kf">
+      <li>
+	Fixed so that postponed binds are not rebinded to early.
+      </li>
+      <li>
+	Corrected unbind service reference count handling.
+      </li>
+    </ul>
+  </td>
+</tr>
 
 <a name="scr_3.1.13">
 <tr>
@@ -22,6 +58,7 @@
   </td>
 </tr>
 
+<a name="framework_5.2.7">
 <tr>
   <td class="newsdate">21 Nov 2012</td>
   <td class="newstext">
