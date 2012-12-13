@@ -542,6 +542,13 @@ p {
 }
 
 div.newshd {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5em; 
     font-weight: bold;
+}
+
+div.newssubhd {
+    margin-bottom: -2px;
+    font-style: italic;   
+    color: #8a8a8a;
+    color: #4a4a4a;
 }

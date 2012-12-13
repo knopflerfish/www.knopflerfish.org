@@ -4,7 +4,30 @@
 
 <table class="newstable">
 
-<a name="framework_5.2.8">
+<a name="httpclient_connector_3.1.2">
+<tr>
+  <td class="newsdate">13 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance Release of HttpClientConnector
+    </div>
+    <div class="newssubhd">
+      httpclient_connector 3.1.2
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed conflicting interpretation of the string form URL; the
+	http client connector expects non-escaped URLs (no %HH encoded
+	characters) but the internal proxy handler expected text URLs that
+	complied to RFC 2396 (all illegal chars %HH encoded). The internal
+	proxy class now also assumes non-escaped URLs when parsing.
+      </li>
+      <li>
+	The non-proxy hosts was parsed incorrectly.
+      </li>
+    </ul>
+  </td>
+</tr>
 
 <tr>
   <td class="newsdate">7 Dec 2012</td>
@@ -12,7 +35,9 @@
     <div class="newshd">
       Minor release of KF framework
     </div>
-    framework 5.3.0
+    <div class="newssubhd">
+      framework 5.3.0
+    </div>
     <ul class="kf">
       <li>
 	Added support for framework extensions that needs to register
@@ -29,7 +54,9 @@
     <div class="newshd">
       Maintenance release of KF framework and Declarative Services bundle
     </div>
-    framework 5.2.8
+    <div class="newssubhd">
+      framework 5.2.8
+    </div>
     <ul class="kf">
       <li>
 	Fixed ServiceReference.isAssignableTo() so that correctly handles
@@ -47,8 +74,10 @@
 	Fixed race condition when doing refreshPackages on an uninstalling  bundle.
       </li>
     </ul>
+    <div class="newssubhd">
 
     SCR (Declarative Services) 3.1.14
+    </div>    
     <ul class="kf">
       <li>
 	Fixed so that postponed binds are not rebinded to early.
@@ -67,7 +96,9 @@
     <div class="newshd">
       Maintenance release of Declarative Services bundle
     </div>
-    SCR (Declarative Services 3.1.13
+    <div class="newssubhd">
+      SCR (Declarative Services 3.1.13
+    </div>
     <ul class="kf">
       <li>
 	Fixed race condition in ComponentFactory.newInstance()
@@ -83,7 +114,9 @@
     <div class="newshd">
       Maintenance release of KF framework
     </div>
-    framework 5.2.7
+    <div class="newssubhd">
+      framework 5.2.7
+    </div>
     <ul class="kf">
       <li>
 	Fixed so that BundleURLConnection.getInputStream() throws IOException
@@ -100,15 +133,18 @@
     <div class="newshd">
       Maintenance release of KF framework and Declarative Services bundle
     </div>
-    framework 5.2.6
+    <div class="newssubhd">
+      framework 5.2.6
+    </div>
     <ul class="kf">
       <li>
 	Corrected race condition NPE when doing ServiceReference.(un)getService()
 	on an unregistering service.
       </li>
     </ul>
-
-    SCR (Declarative Serivces) 3.1.12
+    <div class="newssubhd">
+      SCR (Declarative Serivces) 3.1.12
+    </div>
     <ul class="kf">
       <li>
 	Fixed bind/unbind calls on a re-enabled component.
@@ -127,7 +163,9 @@
     <div class="newshd">
       Maintenance release of KF framework and SCR commands.
     </div>
+    <div class="newssubhd">
     framework 5.2.5
+    </div>
     <ul class="kf">
       <li>
 	Corrected issue with NPE when doing
@@ -135,8 +173,9 @@
 	unregistered service.
       </li>
     </ul>
-
-    SCR Commands (declarative services console commands) 1.1.0
+    <div class="newssubhd">
+      SCR Commands (declarative services console commands) 1.1.0
+    </div>
     <ul class="kf">
       <li>
 	Added "-s" and "-u" flag to the "list" command to 
@@ -155,8 +194,9 @@
       Maintenance releases of SCR (declarative services), Desktop and
       Framework Commands bundles
     </div>
-    
-    SCR (declarative services) 3.1.11
+    <div class="newssubhd">
+      SCR (declarative services) 3.1.11
+    </div>
     <ul class="kf">
       <li>Fixed so that delayed components that still was satisfied
 	re-registered after being deactivated
@@ -169,7 +209,9 @@
 	unbind of dynamic optional references before deactivating
 	a component.</li>
     </ul>
-    Desktop 3.2.5
+    <div class="newssubhd">
+      Desktop 3.2.5
+    </div>
     <ul class="kf">
       <li>
 	The Service-Component XML presentation in the manifest-tab
@@ -177,7 +219,10 @@
 	XML-namespace prefix is present on the component-element.
       </li> 
     </ul>
+    <div class="newssubhd">
+
     Framework Commands 3.2.0
+    </div>
     <ul class="kf">
       <li>Added "-s" flag to "threads" command for printing a
 	stack trace for the thread (Only works on java 1.5 and later).</li>
