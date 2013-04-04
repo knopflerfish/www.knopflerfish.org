@@ -4,6 +4,60 @@
 
 <table class="newstable">
 
+<a name="http_3.1.5">
+<tr>
+  <td class="newsdate">3 Apr 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of HTTP server
+    </div>
+    <div class="newssubhd">
+      HTTP 3.1.5 / (3.1.4)
+    </div>
+    <p>
+    </p>
+    <ul class="kf">
+      <li>
+	When all of the transaction threads can not be terminated on
+	shut-down of the http bundle, we can not destroy the transaction
+	manager thread group.
+      </li>
+      <li>
+	Fixed a resource leaks in the TransactionManager class.
+	See https://sourceforge.net/p/gatespace/bugs/175/ (HTTP 3.1.4)
+      </li>
+    </ul>
+  </td>
+
+<a name="http_3.1.3">
+</tr>
+  <td class="newsdate">21 Mar 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of HTTP server
+    </div>
+    <div class="newssubhd">
+      HTTP 3.1.3
+    </div>
+    <p>
+    </p>
+    <ul class="kf">
+      <li>
+	Date headers could be messed up since the SimpleDateFormat
+	instances used for the formating was shared without any
+	synchronization.  All usages of the shared date formatters are
+	now properly synchronized.
+	See https://sourceforge.net/p/gatespace/bugs/174/ 
+      </li>
+      <li>
+	The expires date in cookie headers is now in GMT (UTC) which is a
+	requirement in RFC 2616 section 3.3.1 and also in RFC 6265. 
+	(HTTP 3.1.3)
+      </li>
+    </ul>
+  </td>
+</tr>
+
 <a name="framework_5.3.5">
 <tr>
   <td class="newsdate">21 Mar 2013</td>
@@ -31,6 +85,26 @@
 	If a bundle's start() or stop() method has not returned and the
 	bundle gets uninstalled this property defines how to manage the
 	bundle's start/stop thread. 
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<a name="preferences_3.0.2">
+<tr>
+  <td class="newsdate">26 Feb 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of OSGi preference service
+    </div>
+    <div class="newssubhd">
+      preferences 3.0.2
+    </div>
+    <ul class="kf">
+      <li>
+	Code requiring permissions have been wrapped in do-privileged
+	constructions. Prefs should now work as expected with security
+	enabled.
       </li>
     </ul>
   </td>
