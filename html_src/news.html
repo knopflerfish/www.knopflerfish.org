@@ -4,6 +4,41 @@
 
 <table class="newstable">
 
+<a name="framework_5.3.7">
+<tr>
+  <td class="newsdate">15 Apr 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of OSGi framework, device manager, event,
+      HTTP, and Util
+    </div>
+    <div class="newssubhd">
+      framework 5.3.7
+    </div>
+    <div class="newssubhd">
+      device 3.0.2
+    </div>
+    <div class="newssubhd">
+      event 3.0.9
+    </div>
+    <div class="newssubhd">
+      http 3.1.5
+    </div>
+    <div class="newssubhd">
+     util 2.1.0
+    </div>
+    <p>
+      The use of System.currentTimeMillis() has been replaced with
+      System.namoTime() in the Knopflerfish OSGi framework as well as
+      all KF bundles to avoid
+      problems with timers when resetting
+      the system clock. If System.nanoTime() is not available, e.g
+      java 1.4 and older, the timers will default back to to
+      System.currentTimeMillis().
+    </p>
+  </td>
+</tr>
+
 <a name="kf_4.0.0.beta-1">
 <tr>
   <td class="newsdate">8 Apr 2013</td>
@@ -471,6 +506,7 @@
   <td class="newsdate">7 Nov 2012</td>
   <td class="newstext">
     <div class="newshd">
+
       Maintenance releases of SCR (declarative services), Desktop and
       Framework Commands bundles
     </div>
