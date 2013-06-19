@@ -4,9 +4,43 @@
 
 <table class="newstable">
 
+<a name="framework_5.3.10">
+<tr>
+  <td class="newsdate">19 Jun 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of Knopflerfish OSGi framework
+    </div>
+    <div class="newssubhd">
+      framework 5.3.10
+    </div>
+    <p>
+    </p>
+    <ul class="kf">
+      <li>
+	<p>
+	  Corrected issues regarding signed bundles being incorrectly marked as not 
+	  completely signed. Thera also seems to be a problem in the JarInputStream class
+	  implementation in Oracle JRE (Java 6 & 7). If there are user/non standard 
+	  jar related files in the META-INF directory in the bundle's JAR, 
+	  and they directly follow the standard META-INF signature related files,
+	  the Oracle JRE fails to find the certificates for the addtional files,
+	  and KF will mark the bundle as not completely signed. Setting the property 
+	  <tt>org.knopflerfish.framework.bundlestorage.file.jar_verifier_bug</tt> to true will
+	  instruct KF to assume they are properly signed. 
+	</p>
+	<p>
+	  The versions 5.3.8 and 5.3.9 of the framework shall be regarded as 
+	  intermediate releases and can be ignored as they didn't address all problems.
+	</p>
+      </li>
+    </ul>
+  </td>
+</tr>
+
 <a name="kf_4.0.0.beta-2">
 <tr>
-  <td class="newsdate">13 May 2013</td>
+  <td class="newsdate">13 Jun 2013</td>
   <td class="newstext">
     <div class="newshd">
       Knopflerfish 4 beta-2 released - full OSGi R4 v4.3 implementation
