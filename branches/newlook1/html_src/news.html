@@ -4,6 +4,51 @@
 
 <table class="newstable">
 
+<a name="kf_3.6.0">
+<tr>
+  <td class="newsdate">11 Jul 2013</td>
+  <td class="newstext">
+    <div class="newshd">Knopflerfish 3.6 released, KF3 moves to maintenance branch. 
+      Knopflerfish 4.0 release is imminent</div>
+    <p>
+      <a href="download.html">Knopflerfish 3.6</a> 
+      is the next minor KF3 release and includes several fixes and improvement in the core
+      OSGi framework, the OSGi compendium services, and the Knopflerfish services.
+    </p>
+    <p>
+      The 3.6 release also marks the end of KF3 as the main development version in the KF trunk.
+      With the 3.6 release the Knopflerfish SVN trunk is switched to KF4 / OSGi R4 v4.3, 
+      preparing for the imminent release of Knopflerfish 4.0.
+    </p>
+    <p>
+      The KF3 maintenance branch is available in SVN at: <br>
+      <a href="https://www.knopflerfish.org/svn/knopflerfish.org/branches/kf_3_support/">
+	https://www.knopflerfish.org/svn/knopflerfish.org/branches/kf_3_support/      
+      </a>
+    </p>
+    The most important changes are:
+    <ul class="kf">
+      <li>Stability issues corrected in the Knopflerfish OSGi
+      framework  </li>
+      <li>Several stability issues corrected in Declarative Services
+	(SCR), e.g. bind/unbind issues, filter properties
+      </li>
+      <li>
+	Switched to use System.nanoTime() in the framework and all bundles to avoid timer
+	problems when correcting system clocks. 
+      </li>
+      <li>
+	Corrected resource leaks in HTTP server and corrected Data header formats
+      </li>
+      <li>
+	Corrected issue in Preference service when running with security
+      </li>
+    </ul>
+    The <a href="/releases/3.6.0/release_notes.html">Release
+      Notes</a> includes the complete list of features and fixes.  
+  </td>
+</tr>
+
 <a name="scr_3.1.18">
 <tr>
   <td class="newsdate">9 Jul 2013</td>
