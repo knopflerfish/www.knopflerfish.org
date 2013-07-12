@@ -4,6 +4,89 @@
 
 <table class="newstable">
 
+<a name="kf_4.0.0">
+<tr>
+  <td class="newsdate">12 Jul 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Knopflerfish moves to new major version, Knopflerfish 4 is released
+    </div>
+    <p>
+      <a href="download.html">Knopflerfish 4</a> 
+      is the next major release of Knopflerfish. KF4 is designed to be compliant with the OSGi R4 v4.3 
+      specifications. 
+    </P>
+    <p>
+      The new KF4 relese support all core features as well as the the OSGi Services relevant 
+      for the embedded and desktop markets. The <a href="kf4_osgi_r4_v4.3.html"> 
+      KF4 overview page </a> 
+      presents a detailed overview of KF4 and OSGi R4 v4.3. A short
+      summary is presented below.
+    </p>
+    <ul>
+      <li> Generics - core API now uses generics</li>
+      <li> Capabilities - generic requirements and capabilities</li>
+      <li> Bundle Wiring API - provide information how requirements
+	and provided capabilities have been resolved by the
+	framework. Replaces PackageAdmin</li>
+      <li>Adapt pattern - new adapt method on the Bundle class </li>
+      <li> Framework hooks - mechanism to plug into the framework for
+	close interaction, Resolver Hooks, Bundle Hooks, Service
+	Hooks, Weaving Hooks.</li>
+      <li>Declarative Services updates</li>
+      <li> Knopflerfish bundles, e.g. desktop, console commands etc,
+	are all update to use and reflect the new 4.3 APIs.</li>
+    </ul>
+    <p>
+      In addition to the upgrade to OSGi R4 v4.3 KF4 includes several
+      new Knopflerfish features and fixes:
+      <ul>
+	<li>
+	  The class weaving using ASM has been been moved into a separatae 
+	  classpatcher bundle that implements a Weaving Hook.
+	</li>
+	<li>
+	  General change to to all timer / timer functions to
+	  System.nanoTime() instead of System.currentTimeMillis() to avoid
+	  timer problems when correcting system clock. 
+	<li>
+	  The Android support has been extended with functions for building an
+	  Android .apk containing Knopflerfish.
+	</li>
+	<li>
+	  The KF Directory Deployer bundle has been given an overhaul 
+	  and a new feature for deployment of XML-files with OSGi CM configurations 
+	  has been added.
+	</li>
+	<li>
+	  Several new features in the CM-Desktop plug-in, in particular functions
+	  for handling the CM Meta data XML document used by the Directory Deployer.
+	</li>
+	<li>
+	  The Desktop bundle fully support the new Wiring-API as well
+	  as several minor usability improvements
+	</li>
+	<li>
+	  The frameworkcommands bundle has been extended to support
+	  the new Wiring API and has several new commands,
+	  e.g. "wiring" and "capability".
+	</li>
+	<li>
+	  Maven source and javadoc attachments for all bundle artifacts
+	  are now generated.
+	</li>
+      </ul>
+    </p>	  
+    <p>
+      The <a href="/releases/4.0.0/docs/release_notes.html">Release
+	Notes</a> includes the complete list of features and fixes.  
+    </p>
+    <p>
+      
+    </p>
+  </td>
+</tr>
+
 <a name="kf_3.6.0">
 <tr>
   <td class="newsdate">11 Jul 2013</td>
@@ -208,7 +291,7 @@
       Knopflerfish, designed to be compliant with the OSGi R4 v4.3 
       specifications. 
 
-    </p>
+    </P>
     <p>
       Compared to the first beta-1 release of KF4 /  OSGi R4 v4.3, the second beta release
       includes several new features and fixes:
