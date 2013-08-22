@@ -4,6 +4,35 @@
 
 <table class="newstable">
 
+<a name="scr_4.0.3">
+<tr>
+  <td class="newsdate">22 Aug 2013</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of SCR / Declarative Services
+    </div>
+    <div class="newssubhd">
+      SCR 4.0.3
+    </div>
+    <p>
+    </p>
+    <ul class="kf">
+      <li>
+	Fixed bug that caused the instance properties to be ignored
+	for certain factory components.
+      </li>
+      <li>
+	Fixed dead-lock during component activation.
+      </li>
+      <li>
+	Widen the search for circular component activations to include
+	components that might be activated depending on CM and/or instance
+	properties.
+      </li>
+    </ul>
+  </td>
+</tr>
+
 <a name="framework_6.0.3">
 <tr>
   <td class="newsdate">25 Jul 2013</td>
@@ -36,7 +65,7 @@
       specifications. 
     </P>
     <p>
-      The new KF4 relese support all core features as well as the the OSGi Services relevant 
+      The new KF4 release support all core features as well as the the OSGi Services relevant 
       for the embedded and desktop markets. The <a href="kf4_osgi_r4_v4.3.html"> 
       KF4 overview page </a> 
       presents a detailed overview of KF4 and OSGi R4 v4.3. A short
@@ -61,7 +90,7 @@
       new Knopflerfish features and fixes:
       <ul>
 	<li>
-	  The class weaving using ASM has been been moved into a separatae 
+	  The class weaving using ASM has been been moved into a separate 
 	  classpatcher bundle that implements a Weaving Hook.
 	</li>
 	<li>
@@ -276,11 +305,11 @@
       <li>
 	<p>
 	  Corrected issues regarding signed bundles being incorrectly marked as not 
-	  completely signed. Thera also seems to be a problem in the JarInputStream class
+	  completely signed. There also seems to be a problem in the JarInputStream class
 	  implementation in Oracle JRE (Java 6 & 7). If there are user/non standard 
 	  jar related files in the META-INF directory in the bundle's JAR, 
 	  and they directly follow the standard META-INF signature related files,
-	  the Oracle JRE fails to find the certificates for the addtional files,
+	  the Oracle JRE fails to find the certificates for the additional files,
 	  and KF will mark the bundle as not completely signed. Setting the property 
 	  <tt>org.knopflerfish.framework.bundlestorage.file.jar_verifier_bug</tt> to true will
 	  instruct KF to assume they are properly signed. 
@@ -323,7 +352,7 @@
 	  Android .apk containing Knopflerfish has been added.
 	</li>
 	<li>
-	  The class weaving using ASM has been been moved into a separatae 
+	  The class weaving using ASM has been been moved into a separate 
 	  classpatcher bundle that implements a Weaving Hook.
 	</li>
 	<li>
