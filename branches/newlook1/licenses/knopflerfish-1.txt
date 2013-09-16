@@ -1,27 +1,4 @@
-<h1 class="kf">Knopflerfish License</h1>
-The Knopflerfish OSGi service platform is available under a 
-<a href="http://www.opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a>
-It is also known as "BSD New" or "BSD Simplified".
-<p>
-Content not  originating from the Knopflerfish Project is marked as
-such in a NOTICE.txt file in the distribution and belongs to
-respective copyright owners. 
-</p>
-<p>
-The most recent NOTICE.txt template is:<br>
-<a href="https://www.knopflerfish.org/svn/knopflerfish.org/trunk/NOTICE.txt">
-  https://www.knopflerfish.org/svn/knopflerfish.org/trunk/NOTICE.txt 
-</a>
-<p>
-  
-
-<h2 class="kf">Knopflerfish License Template</h2>
-Below is the license template used. 
-The &lt;YEAR&gt> is set or changed whenever new licensed material is added or updated. 
-
-<pre>
-
-  Copyright (c) &lt;YEAR&gt; KNOPFLERFISH project
+  Copyright (c) <YEAR>, KNOPFLERFISH project
   All rights reserved.
  
   Redistribution and use in source and binary forms, with or without
@@ -52,5 +29,3 @@ The &lt;YEAR&gt> is set or changed whenever new licensed material is added or up
   STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
   OF THE POSSIBILITY OF SUCH DAMAGE.
-
-</pre>
