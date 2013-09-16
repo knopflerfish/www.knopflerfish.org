@@ -24,14 +24,18 @@ install_htmlonly: prepare
 
 install_all: prepare
 	@echo "Installing kf web site at: ${INSTALLDIR}"
-	cd install; scp -r *.html images css scripts tutorials ${INSTALLDEST}
+	cd install; scp -r *.html images css scripts tutorials licenses ${INSTALLDEST}
+
+install_licenses: prepare
+	@echo "Installing kf web site at: ${INSTALLDIR}"
+	cd install; scp -r licenses ${INSTALLDEST}
 
 install_release:
 	@echo "Installing KF release files at: ${INSTALLDIR}"
 	cd install; scp -r releases ${INSTALLDEST}
 
 prepare:
-	chmod -R 775 install/*.html install/css install/images install/scripts
+	chmod -R 775 install/*.html install/css install/images install/scripts install/resources
 
 #prepare_release:
 #	mkdir -p install/releases
