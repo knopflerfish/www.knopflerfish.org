@@ -57,8 +57,8 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/index_main.html"/>
       <param name="tofile"   value="${installdir}/index.html"/>
-      <param name="title"    value="Knopflerfish OSGi - open source OSGi service platform"/>
-      <param name="desc"     value="The Knopflerfish OSGi is a complete, open source, OSGi R3 and OSGi R4 distribution"/>
+      <param name="title"    value="Knopflerfish OSGi - open source OSGi service platform. OSGi R5, R4 and R3"/>
+      <param name="desc"     value="Knopflerfish OSGi is an open source OSGi SDK and run-time of the OSGi specifications R5, R4 and R3"/>
       <param name="MENU_ID" value="menu_home"/>
       <param name="HOME_STATE" value="open"/>
     </antcall>
@@ -135,7 +135,7 @@
       <param name="fromfile" value="html_src/archive.html"/>
       <param name="tofile"   value="${installdir}/archive.html"/>
       <param name="title"    value="Knopflerfish Download Archive"/>
-      <param name="desc"     value="DOwnload Archive with older KF releases."/>
+      <param name="desc"     value="Download Archive with older KF releases."/>
       <param name="MENU_ID" value="menu_download"/>
       <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
@@ -143,8 +143,8 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/maven.html"/>
       <param name="tofile"   value="${installdir}/maven.html"/>
-      <param name="title"    value="Knopflerfish Maven Repository"/>
-      <param name="desc"     value="Maven respository with Knopflerfish artifacts."/>
+      <param name="title"    value="Knopflerfish Maven Repository - KF OSGi bundles"/>
+      <param name="desc"     value="Maven respository with Knopflerfish OSGi artifacts, i.e. OSGi bundles"/>
       <param name="MENU_ID" value="menu_download"/>
       <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
@@ -449,8 +449,8 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/docs.html"/>
       <param name="tofile"   value="${installdir}/docs.html"/>
-      <param name="title"    value="Documentation"/>
-      <param name="desc"     value=""/>
+      <param name="title"    value="Documentation on Knopflerfish OSGi - javadoc, OSGi tutorials and bundle documentation"/>
+      <param name="desc"     value="Documentation on Knopflerfish OSGi, javadoc, OSGi tutorials and bundle documentation"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
@@ -459,7 +459,7 @@
       <param name="fromfile" value="html_src/tutorials.html"/>
       <param name="tofile"   value="${installdir}/tutorials.html"/>
       <param name="title"    value="Tutorials"/>
-      <param name="desc"     value=""/>
+      <param name="desc"     value="Tutorials on Knopflerfish OSGi"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
@@ -479,7 +479,7 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/install.html"/>
       <param name="tofile"   value="${installdir}/install.html"/>
-      <param name="title"    value="Install Knopflerfish OSGi"/>
+      <param name="title"    value="Install and Configure Knopflerfish OSGi"/>
       <param name="desc"     value="How to install and configure Knopflerfish OSGi"/>
       <param name="template.html"	value="templates/template_redirect.html"/>
       <param name="redirect_time" value="0"/>
