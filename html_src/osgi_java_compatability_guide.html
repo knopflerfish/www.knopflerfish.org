@@ -1,0 +1,156 @@
+<h1 class="kf">Knopflerfish OSGi &amp; Java Compatability Guide</h1>
+<p>
+  Knopflerfish as well as Java has evolved over the years and it is
+  becoming more and more difficult to get an overview of what
+  different version of Knopferfish, OSGi specifications and Java
+  actually work together. This page attempts to make this a bit more clear.
+</p>
+<h2 class="kf">Knopflerfish Distribution Builds</h2>
+<p>
+  The table below describes the different Knopflerfish distribution
+  builds, what java run-time environments,
+  they support, the Java / JDK version the Knopflerfish source code is
+  compatible with, and which bytecode version the source code is
+  compiled into.
+</p>
+<p>
+  In general, the Knopflerfish distributions are always compiled into
+  the least Java/JDK version the source code supports. This is to
+  support the embedded market where many JVM:s are still on JDK1.4
+  level.
+</p>
+<p>
+  Since all code is upwards compatible Knopflerfish can easily be
+  compiled into a more recent version of Java, including Java7. Please
+  see the table later on this page presenting javac compatability issues.
+</p>
+<p>
+<table class="kf">
+  <tr>
+    <th colspan="6">Knopflerfish Major Distribution Builds, OSGi and Java Version Guide</th>
+  </tr>
+  <tr>
+    <td class="subhead">KF Version</td>
+    <td class="subhead">OSGi</td>
+    <td class="subhead">JDK</td>
+    <td class="subhead">Bytecode</td>
+    <td class="subhead">Supported Java Run-times</td>
+    <td class="subhead">EE</td>
+  </tr>
+
+  <tr>
+    <td>5.*</td>
+    <td>OSGi R5</td>
+    <td>1.4</td>
+    <td>48</td>
+    <td>
+      1.4+ (headless or AWT)<br>
+      1.5+ (when using swing based bundles, e.g. desktop)</td>
+    <td>OSGi min 1.2</td>
+  </tr>
+
+  <tr>
+    <td>4.*</td>
+    <td>OSGi R4 v4.3</td>
+    <td>1.4</td>
+    <td>48</td>
+    <td>
+      1.4+ (headless or AWT)<br>
+      1.5+ (when using swing based bundles, e.g. desktop)</td>
+    <td>OSGi min 1.2</td>
+  </tr>
+
+  <tr>
+    <td>3.*</td>
+    <td>OSGi R4 v4.2</td>
+    <td>1.2</td>
+    <td>45</td>
+    <td>
+      1.2+, PJava 1.2 (headless or AWT)<br>
+      1.5+ (when using swing based bundles, e.g. desktop)</td>
+    <td>OSGi min 1.2</td>
+  </tr>
+</table>
+</p>
+<p> 
+A plus-sign after a Java version indicates it supports that version and
+higher.
+</p>
+<p>
+  Please also note that some of Knopflerfish utility bundles that are
+  uses Swing, e.g. the desktop bundle, do require Java 1.5 or higher. 
+</p>
+
+<h2 class="kf">Compiling Knopflerfish</h2>
+<p>
+  The table below describes the different Knopflerfish versions and
+  which JDK versions can be used to build them.
+</p>
+<p>
+  For Java7 we need something better than this. JS/GE please add.
+</p>
+
+<p>
+<table class="kf">
+  <tr>
+    <th colspan="6">Knopflerfish Major Distribution Builds, javac and JDK Version Guide</th>
+  </tr>
+  <tr>
+    <td class="subhead">KF Version</td>
+    <td class="subhead">OSGi</td>
+    <td class="subhead">Supported JDKs</td>
+    <td class="subhead">Default version / bytecode version</td>
+    <td class="subhead">Default -target flag</td>
+    <td class="subhead">Comment</td>
+  </tr>
+
+  <tr>
+    <td>5.*</td>
+    <td>OSGi R5</td>
+    <td>1.4 - 1.6</td>
+    <td>JDK 1.4 (48)</td>
+    <td>jsr1.4</td>
+    <td>Default</td>
+  </tr>
+
+  <tr>
+    <td>5.*</td>
+    <td>OSGi R5</td>
+    <td>1.5+</td>
+    <td>JDK 1.5 (49)</td>
+    <td>1.5</td>
+    <td>Supported in ant build system</td>
+  </tr>
+
+  <tr>
+    <td>5.*</td>
+    <td>OSGi R5</td>
+    <td>1.7+</td>
+    <td>JDK 1.7 (51)</td>
+    <td>1.7</td>
+    <td>Not fully supported in build system</td>
+  </tr>
+
+  <tr>
+    <td>4.*</td>
+    <td>OSGi R4 v4.3</td>
+    <td>1.4-1.6</td>
+    <td>JDK 1.4 (48)</td>
+    <td>jsr1.4</td>
+    <td>Con not compile under Java7 (stämmer det?)</td>
+  </tr>
+
+  <tr>
+    <td>4.*</td>
+    <td>OSGi R4 v4.3</td>
+    <td>1.2+</td>
+    <td>JDK 1.2 (46)</td>
+    <td>1.2</td>
+    <td>Con not compile under Java7 (stämmer det?)</td>
+  </tr>
+
+
+</table>
+
+
+

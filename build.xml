@@ -464,6 +464,14 @@
       <param name="DOCS_STATE" value="open"/>
     </antcall>
 
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/osgi_java_compatability_guide.html"/>
+      <param name="tofile"   value="${installdir}/osgi_java_compatabilitu_guide.html"/>
+      <param name="title"    value="Knopflerfish OSGi &amp; Java Compatability Guide"/>
+      <param name="desc"     value="A compatability guide for the different versions of KF, Java and OSGi"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
 
     <antcall target="makehtml">
       <param name="fromfile"	value="html_src_jp/index_jp.html"/>
@@ -474,6 +482,8 @@
       <param name="endcoding"		value="UTF-8"/>
       <param name="outputendcoding"	value="UTF-8"/>
     </antcall>
+
+
 
     <!-- The following pages are now redirected -->
     <antcall target="makehtml">
@@ -525,6 +535,7 @@
       <param name="redirect_time" value="0"/>
       <param name="redirect_url" value="/releases/current/docs/programming.html"/>
     </antcall>
+
 
   </target>
 
