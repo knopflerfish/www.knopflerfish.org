@@ -35,7 +35,7 @@ install_release:
 	cd install; scp -r releases ${INSTALLDEST}
 
 prepare:
-	chmod -R 775 install/*.html install/css install/images install/scripts install/resources
+	chmod -R 775 install/*.html install/css install/images install/scripts install/licenses
 
 #prepare_release:
 #	mkdir -p install/releases
