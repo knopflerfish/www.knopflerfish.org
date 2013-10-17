@@ -87,10 +87,14 @@ higher.
   which JDK versions can be used to build them.
 </p>
 <p>
-  To support older Java run-time environments for KF5 and KF4 the javac flag -target
-  jsr14 is used to remove generics. This has the drawback that such
-  compiled .class files can not be used when building on JDK 1.7. To
-  use Knopflerfish artifacts in a JDK 1.7 based tool chain KF5 must be
+  KF5 and KF4 are both designed to run on Java 1.4 and
+  upwards. With OSGi R4 v4.3 Java 5 generics were introduced in the OSGi
+  APIs. To be able to build a KF distribution that is compatible JDK
+  1.4 the the javac flag -target jsr14 is used to remove generics. This has the drawback that such
+  compiled .class files can not be used when building on JDK 1.7 since
+  support for jsr14 has been removed in Java 7. To
+  use Knopflerfish artifacts in a JDK 1.7 based tool chain KF5 must
+  therefore be
   built using JDK 1.7. When building KF5 using JDK 1.7 the default is
   to generate Java bytecode for JDK 1.5 and upwards which is
   compatible with a JDK 1.7 tool chain.
@@ -107,7 +111,7 @@ higher.
     <td class="subhead">KF Source Code</td>
     <td class="subhead">Build Environment</td>
     <td class="subhead">Generates bytecode for</td>
-    <td class="subhead">Compiles against<sup>1</sup></td>
+    <td class="subhead">Tool Chains<sup>1</sup></td>
     <td class="subhead">Comment</td>
   </tr>
 
@@ -133,17 +137,20 @@ higher.
     <td class="optional">1.5 - 1.6</td>
     <td class="optional">JDK 1.5 (49)</td>
     <td class="optional">1.5+</td>
-    <td class="optional">Requires setup changes in the KF build system for this build,
-    e.g. modifying the -target flag</td>
+    <td class="optional">
+      Supported, but not out of the box. Requires setup changes in the
+      KF build system for this build, e.g. modifying the -target
+      flag</td>
   </tr>
 
   <tr>
     <td class="optional">1.7+</td>
     <td class="optional">JDK 1.7 (51)</td>
     <td class="optional">1.7+</td>
-    <td class="optional">Requires setup changes in the KF build system for this build,
-      e.g. modifying the
-      -target flag</td>
+    <td class="optional">
+      Supported, but not out of the box. Requires setup changes in the
+      KF build system for this build, e.g. modifying the -target flag
+    </td>
   </tr>
 
   <tr>
@@ -153,7 +160,10 @@ higher.
     <td>1.5 - 1.6</td>
     <td>JDK 1.4 (48)</td>
     <td>1.4 - 1.6</td>
-    <td>OSGi R4 v4.3 introduced generics in API classes. Generics are removed during compilation by using -jsr14 flag</td>
+    <td>
+      OSGi R4 v4.3 introduced generics in API classes. Generics are
+      removed during compilation by using -jsr14 flag
+    </td>
   </tr>
 
   <tr>
@@ -169,8 +179,8 @@ higher.
 </table>
 
 <p>
-  <sup>1</sup> Indicates which JDK version a built .jar or .class file
-  can be compiled against, i.e building third party code and using
+  <sup>1</sup> Indicates which version of the Java tool chain is
+  needed to build third party code and using
   Knopflerfish bundle jars on the build path. 
 </p>
 
