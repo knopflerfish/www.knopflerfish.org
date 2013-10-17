@@ -14,10 +14,16 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "5.0.0"/>
+              value    = "4.0.0"/>
+
+    <property name     = "version_short"
+              value    = "4.0"/>
+
+    <property name     = "version_major"
+              value    = "4"/>
 
     <property name     = "distrib_name"
-              value    = "KF 5.0"/>
+              value    = "Knopflerfish ${version}"/>
 
     <property name     = "template.html" 
               location = "templates/template2.html"/>
@@ -575,6 +581,8 @@
 	<replacefilter token="$(TSTAMP)"    value="${timestamp}"/>
 	<replacefilter token="$(USER)"      value="${env.USER}"/>
 	<replacefilter token="$(VERSION)"   value="${version}"/>
+	<replacefilter token="$(VERSION_SHORT)"   value="${version_short}"/>
+	<replacefilter token="$(VERSION_MAJOR)"   value="${version_major}"/>
 	<replacefilter token="$(DISTRIB_NAME)"   value="${distrib_name}"/>
 	<replacefilter token="$(MESSAGE)"   value="${message}"/>
 	<replacefilter token="$(JAVADOC)"       value="${JAVADOC}"/>
