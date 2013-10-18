@@ -17,6 +17,7 @@ BODY  {
 #header {
   background: #0B2229;
   margin-bottom: 40px;
+  border: 0px;
 }
 
 #header_logo {
@@ -33,13 +34,15 @@ BODY  {
 }
 
 #header_menu {
-    /* height: 25px; */
+    height: 15px;
     background-image: url('../images/fade_menu.png');
   background-repeat: repeat-x;
   padding: 8px 0px 4px 20px;
+  padding: 6px 0px 4px 20px;
   word-spacing: +15px;
-  margin-top: 10px;
-  line-height: 13px;
+  margin: 10px 0px -4px 0px;;
+  line-height: 15px;
+  border: 0px;
   /* background: #ddd; */
 
 }
@@ -177,7 +180,7 @@ H2, H2.kf  {
     /* background-image: url('../images/shortfadeout_20px.png'); */
     /* background-repeat: repeat-x; */
     padding: 0; /* 3px 0px 3px 6px; */
-    margin: 1.0em 0 0.4em 0;
+    margin: 0.8em 0 0.4em 0;
 }
 
 /*
@@ -453,7 +456,9 @@ A:hover {
  border-right-width:  1px;
  border-top-width:    1px;
  border-bottom-width: 1px;
+ border: 0px;
  font-weight: normal;
+ margin: 0px;
 }
 
 .button_open {
