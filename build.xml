@@ -14,7 +14,7 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "4.0.0"/>
+              value    = "4.0.1"/>
 
     <property name     = "version_short"
               value    = "4.0"/>
@@ -474,10 +474,10 @@
     </antcall>
 
     <antcall target="makehtml">
-      <param name="fromfile" value="html_src/osgi_java_compatability_guide.html"/>
-      <param name="tofile"   value="${installdir}/osgi_java_compatability_guide.html"/>
-      <param name="title"    value="Knopflerfish OSGi &amp; Java Compatability Guide"/>
-      <param name="desc"     value="A compatability guide for the different versions of KF, Java and OSGi"/>
+      <param name="fromfile" value="html_src/osgi_java_compatibility_guide.html"/>
+      <param name="tofile"   value="${installdir}/osgi_java_compatibility_guide.html"/>
+      <param name="title"    value="Knopflerfish OSGi &amp; Java Compatibility Guide"/>
+      <param name="desc"     value="A compatibility guide for the different versions of KF, Java and OSGi"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
