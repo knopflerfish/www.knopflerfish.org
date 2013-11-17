@@ -16,13 +16,19 @@ BODY  {
 
 #header {
   background: #0B2229;
-  margin-bottom: 40px;
+  margin: 0px 0px 40px 0px;
   border: 0px;
+  padding: 0px;
 }
 
 #header_logo {
   padding: 7px 0px 0px 20px;
   float:left;
+  border: 0px;
+  margin: 0px;
+  font-size: 0px;
+  /* height: 63px;
+  overflow: hidden; */
 }
 
 #header_ad {
@@ -34,17 +40,14 @@ BODY  {
 }
 
 #header_menu {
-    height: 15px;
+    height: 25px;
     background-image: url('../images/fade_menu.png');
-  background-repeat: repeat-x;
-  padding: 8px 0px 4px 20px;
-  padding: 6px 0px 4px 20px;
-  word-spacing: +15px;
-  margin: 10px 0px 0px 0px;;
-  line-height: 15px;
-  border: 0px;
-  /* background: #ddd; */
-
+    background-repeat: repeat-x;
+    padding: 0px 0px 0px 20px;
+    word-spacing: +15px;
+    margin: 10px 0px 0px 0px;;
+    line-height: 25px;
+    border: 0px;
 }
 
 #header_menu A {
@@ -514,6 +517,9 @@ A:hover {
 DIV.break {
   clear: both;
   margin: 0px;
+  border: 0px;
+  font-size:0px;
+  line-height:0px;
 }
 
 .infobox {
