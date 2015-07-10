@@ -4,6 +4,41 @@
 
 <table class="newstable">
 
+<tr id="kf_5.2.0">
+  <td class="newsdate">10 Jul 2015</td>
+  <td class="newstext">
+    <div class="newshd">
+      Knopflerfish 5.2 released, new minor release of KF5
+    </div>
+    <div class="newssubhd">
+      Knopflerfish 5.2.0
+    </div>
+    <p>
+      <a href="download.html">Knopflerfish 5.2</a> is released and includes several minor 
+      enhancements as well as all bug fixes made since KF 5.1 was released.
+    </p>
+    The new key features in Knopflerfish 5.2 are:
+    <ul>
+      <li>Bug fixes in the Knopflerfish OSGi framework: fixed NPR during package resolve,
+	correcting native code checking	when attaching a fragment,
+	and corrections related to start level handling. </li>
+      <li>Improved support for handling Android DEX files</li>
+      <li>ART (Android runtime), the Dalvik predecessor, is now fully supported</li>
+      <li>The Knopflerfish embedded HTTP server has been optimized to use less resources (threads &amp; memory)</li>
+      <li>The HTTP also has the following new features:</li>
+      <ul>
+	<li>Chunked transfer encoding responses</li>
+	<li>Automatic content compression for selected content types</li>
+	<li>Correct handling of certain HTTP/1.1 request and response headers</li>
+      </ul>
+      <li>Improvements to the build system to better support Android / OSGi DEX bundles. </li>
+    </ul>
+    <p>
+      The <a href="/releases/5.2.0/docs/release_notes.html">Release
+	Notes</a> include the complete list of features and fixes.  
+    </p>
+  </td>
+</tr>
 
 <tr id="framework_7.1.4">
   <td class="newsdate">29 Mar 2015</td>
@@ -34,7 +69,7 @@
 	<li>
 	  Improved the configuration handling the first time a 
 	  CM configuration is received to avoid unnecessary
-	  reconfigurations of the built-in default setings.
+	  reconfigurations of the built-in default settings.
 	  This could lead to a server socket close followed by new
 	  listen on the same port.
 	</li>
