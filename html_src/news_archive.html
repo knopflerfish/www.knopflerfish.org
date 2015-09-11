@@ -1,8 +1,743 @@
 <H1 class="kf">Knopflerfish News Archive</h1>
 
-<h2 class="kf">News posted before 2011-01-01</h2>
+<h2 class="kf">News posted before 2013-01-01</h2>
 
 <table class="newstable">
+
+<tr id="framework_5.3.1">
+  <td class="newsdate">13 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of Knopflerfish OSGi framework
+    </div>
+    <div class="newssubhd">
+      framework 5.3.1
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed a bug when calculating candidate objectClasses that can
+	match a given ldap-expression.
+      </li>
+      <li>
+	Fixed possible NullPointerException in ServiceListenerState.
+      </li>	
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="httpclient_connector_3.1.2">
+  <td class="newsdate">13 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of HttpClientConnector
+    </div>
+    <div class="newssubhd">
+      httpclient_connector 3.1.2
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed conflicting interpretation of the string form URL; the
+	http client connector expects non-escaped URLs (no %HH encoded
+	characters) but the internal proxy handler expected text URLs that
+	complied to RFC 2396 (all illegal chars %HH encoded). The internal
+	proxy class now also assumes non-escaped URLs when parsing.
+      </li>
+      <li>
+	The non-proxy hosts was parsed incorrectly.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">7 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Minor release of KF framework
+    </div>
+    <div class="newssubhd">
+      framework 5.3.0
+    </div>
+    <ul class="kf">
+      <li>
+	Added support for framework extensions that needs to register
+	services or keep track of the creation / termination of bundle
+	class loaders.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">5 Dec 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of KF framework and Declarative Services bundle
+    </div>
+    <div class="newssubhd">
+      framework 5.2.8
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed ServiceReference.isAssignableTo() so that correctly handles
+	exported packages from fragments and extensions.
+      </li>
+      <li>
+	Changed ServiceFactory handling so that it only sends a framework
+	warning event instead of a framework error event when the
+	ServiceFactory.getService() returns null.
+      </li>
+      <li>
+	Fixed permission problem when storing initial bundle start level.
+      </li>
+      <li>
+	Fixed race condition when doing refreshPackages on an uninstalling  bundle.
+      </li>
+    </ul>
+    <div class="newssubhd">
+
+    SCR (Declarative Services) 3.1.14
+    </div>    
+    <ul class="kf">
+      <li>
+	Fixed so that postponed binds are not rebinded to early.
+      </li>
+      <li>
+	Corrected unbind service reference count handling.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.13">
+  <td class="newsdate">26 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of Declarative Services bundle
+    </div>
+    <div class="newssubhd">
+      SCR (Declarative Services 3.1.13
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed race condition in ComponentFactory.newInstance()
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="framework_5.2.7">
+  <td class="newsdate">21 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of KF framework
+    </div>
+    <div class="newssubhd">
+      framework 5.2.7
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed so that BundleURLConnection.getInputStream() throws IOException
+	as it should, instead of returning null.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="framework_5.2.6">
+  <td class="newsdate">9 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of KF framework and Declarative Services bundle
+    </div>
+    <div class="newssubhd">
+      framework 5.2.6
+    </div>
+    <ul class="kf">
+      <li>
+	Corrected race condition NPE when doing ServiceReference.(un)getService()
+	on an unregistering service.
+      </li>
+    </ul>
+    <div class="newssubhd">
+      SCR (Declarative Serivces) 3.1.12
+    </div>
+    <ul class="kf">
+      <li>
+	Fixed bind/unbind calls on a re-enabled component.
+      </li>
+      <li>
+	Fixed NPE when logging to a component bundle.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="framework_5.2.5">
+  <td class="newsdate">8 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+      Maintenance release of KF framework and SCR commands.
+    </div>
+    <div class="newssubhd">
+    framework 5.2.5
+    </div>
+    <ul class="kf">
+      <li>
+	Corrected issue with NPE when doing
+	ServiceReference.isAssignableTo on a 
+	unregistered service.
+      </li>
+    </ul>
+    <div class="newssubhd">
+      SCR Commands (declarative services console commands) 1.1.0
+    </div>
+    <ul class="kf">
+      <li>
+	Added "-s" and "-u" flag to the "list" command to 
+	limit the components listed to
+	<em>satisified</em> or <em>unsatisifed</em>.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.11">
+  <td class="newsdate">7 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">
+
+      Maintenance releases of SCR (declarative services), Desktop and
+      Framework Commands bundles
+    </div>
+    <div class="newssubhd">
+      SCR (declarative services) 3.1.11
+    </div>
+    <ul class="kf">
+      <li>Fixed so that delayed components that still was satisfied
+	re-registered after being deactivated
+	(This fixes the problem that scrcommands only works once).</li>
+      <li>Handle when trying to do newInstance on an unregistered
+	ComponentFactory.</li>
+      <li>Fix so that static service references is valid during
+	deactivate.</li>
+      <li>Fixed so that circular deactivate works, this by doing
+	unbind of dynamic optional references before deactivating
+	a component.</li>
+    </ul>
+    <div class="newssubhd">
+      Desktop 3.2.5
+    </div>
+    <ul class="kf">
+      <li>
+	The Service-Component XML presentation in the manifest-tab
+	now  links to the list of SCR components by name also when an
+	XML-namespace prefix is present on the component-element.
+      </li> 
+    </ul>
+    <div class="newssubhd">
+
+    Framework Commands 3.2.0
+    </div>
+    <ul class="kf">
+      <li>Added "-s" flag to "threads" command for printing a
+	stack trace for the thread (Only works on java 1.5 and later).</li>
+      <li> Added possibility to filter which threads to show.</li>
+    </ul>
+  </td>
+</tr>
+
+
+
+<tr id="kf_3.4.0">
+  <td class="newsdate">2 Nov 2012</td>
+  <td class="newstext">
+    <div class="newshd">Knopflerfish 3.4 released </div>
+    <a href="download.html">Knopflerfish 3.4</a> 
+    is the next minor KF3 release and includes several fixes and improvement in the core
+    OSGi framework, the OSGi compendium services and the Knopflerfish services.
+    The most important changes are:
+    <ul class="kf">
+      <li>Several stability issues corrected in SCR (Declarative
+	Services), e.g. correcting potential deadlocks and improved
+	circular component reference handling.  </li>
+      <li>New SCR display in KF Desktop, showing information on SCR components.</li>
+      <li>Corrected potential race conditions in framwork.</li>
+      <li>Updated framework / system bundle symbolic name, version and other header values.</li>
+      <li>Corrected NPE in EventAdmin when handling unregistered services.</li>
+      <li>An http console command group has been added to the HTTP server for
+	inspecting the settings and status of the HTTP server.</li>
+    </ul>      
+    The <a href="/releases/3.4.0/release_notes.html">Release
+      Notes</a> includes the complete list of features and fixes.  
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.9">
+  <td class="newsdate">24 Oct 2012</td>
+  <td class="newstext">
+    SCR (declarative services) 3.1.9 released. 
+    Corrected issue in SCR Admin API. Reference.getServiceReference()
+    returned all service candidates when cardinality was {0|1}..1,
+    not just the bound one. Changed so that kf allow bind methods to throw exceptions, but
+    still considered it bound. See 112.5.7 in Compendium specification.
+  </td>
+</tr>
+
+
+<tr id="http_3.1.1">
+  <td class="newsdate">24 Oct 2012</td>
+  <td class="newstext">
+    HTTP 3.1.1 is released. 
+    Corrects bundle start issue when the KF Console is not present.
+  </td>
+</tr>
+
+
+<tr id="desktop_3.2.0">
+  <td class="newsdate">22 Oct 2012</td>
+  <td class="newstext">
+    Desktop 3.2 is released.
+    <ul class="kf">
+      <li> 
+	New displayer that shows SCR components (a.k.a. declarative
+	services) defined by a bundle. The state of the component as well
+	as the state of its references are shown.
+      </li>
+      <li>
+	 Optimizations: When the bundle selection state changes off-screen
+	 displayer will not be updated.
+      </li>
+      <li>
+	The navigation buttons (back, forward) at the bottom of some
+	displayers now updates and remembers the links when clicking on a link in the
+	it. The navigation history is cleared when a displayer becomes visible.
+      </li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr id="http_3.1.0">
+  <td class="newsdate">12 Oct 2012</td>
+  <td class="newstext">
+    HTTP 3.1.0 is released. Includes a new basic http console cmd group. 
+    Lists config, servlet and resource registrations, and transaction status of the HTTP server.
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.8">
+  <td class="newsdate">12 Oct 2012</td>
+  <td class="newstext">
+    SCR (component) 3.1.8 is released. Corrects issue
+    with error recovery when trying to re-activate a component that previously failed to start
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.7">
+  <td class="newsdate">5 Oct 2012</td>
+  <td class="newstext">
+    SCR (component) 3.1.7 is released. Corrects issues with
+    race condition concerning configurations (CM).
+  </td>
+</tr>
+
+
+<tr id="scr_3.1.6">
+  <td class="newsdate">25 Sep 2012</td>
+  <td class="newstext">
+    SCR (component) 3.1.6 and Event Admin 3.0.7 is released. Corrects issues with
+    dead lock and faulty component deactivation in SCR and NPE in
+    event admin.
+  </td>
+</tr>
+
+
+<tr id="framework_5.2.2">
+  <td class="newsdate">31 Aug 2012</td>
+  <td class="newstext">
+    Framework 5.2.2 is released. Fixes issue with race condition when doing
+    dynamic package import during resolve of bundles.
+  </td>
+</tr>
+
+
+<tr id="src_3.1.5">
+  <td class="newsdate">24 Aug 2012</td>
+  <td class="newstext">
+    SCR (component) bundle 3.1.5 is released. Corrects issues with
+    circular component reference handling that could cause  missing
+    optional bind and activation problems. Also corrects issue with
+    potential deadlock problem that could appear during component
+    activation. 
+  </td>
+</tr>
+
+
+<tr id="framework_5.2.1">
+  <td class="newsdate">24 Aug 2012</td>
+  <td class="newstext">
+    Framework 5.2.1 is released. Fixes potential race condition in service
+    unregister causing a NPE. 
+  </td>
+</tr>
+
+
+<tr id="kf_3.3.0">
+  <td class="newsdate">5 Jul 2012</td>
+  <td class="newstext">
+    Knopflerfish 3.3 released.<br>
+    <a href="download.html">Knopflerfish 3.3</a> 
+    is the third minor KF3 release. 
+    KF 3.3 includes several fixes and improvement in the framework, the
+    compendium services and the Knopflerfish services, resulting in a
+    faster and more robust Knopflerfish OSGi. The most important changes
+    are:
+    <ul class="kf">
+      <li>Corrected framework stability issues, e.g. detecting and abort recursive 
+	service factory calls, issue with deadlock in service listeners </li>
+      <li>SCR (component) now supports the Felix SCR API. 
+	This is used by the new SCR Commands bundle, see below</li>
+      <li>scrcommands - new console command group bundle for 
+	controlling and inspecting service components</li>
+      <li>Corrected stability issues in SCR, Event Admin, CM and HTTP</li>
+      <li>Enhanced support for Android, including support for Android 4 
+	and handling the crippled java security classes in Dalvik</li>
+      <li>Improved bundle sort order in desktop</li>
+      <li> HTTP PUT and DELETE supported by HttpClientConnector</li>
+    </ul>      
+    The <a href="/releases/3.3.0/release_notes.html">Release
+      Notes</a> includes the complete list of features and fixes.  
+  </td>
+</tr>
+
+
+<tr id="framework_5.1.17">
+  <td class="newsdate">7 Jun 2012</td>
+  <td class="newstext">
+    The KF framework 5.1.17 is released. Fixes a problem with import package for fragments and
+    an issue with the "-update &lt;bid&gt;" command in .xargs files.
+  </td>
+</tr>
+
+
+<tr id="plugin_1.2.1">
+  <td class="newsdate">25 May 2012</td>
+  <td class="newstext">
+    The KF Eclipse Plugin 1.2.1 is released. Fixes for setting start
+    level and declarative services. Please see the 
+    The <a href="eclipse_changelog.html"> Release Notes </a>for more info.
+    <p>
+      The new version is available from the KF 
+      Eclipse update site: <br>
+      http://www.knopflerfish.org/eclipse-update/
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">5 Apr 2012</td>
+  <td class="newstext">
+    Desktop 3.1.10 released. Default sort order of bundles saved as a user preference. 
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">28 Mar 2012</td>
+  <td class="newstext">
+    Desktop 3.1.9 released. Property added to control the 
+    default sort order in the bundles view.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">23 Mar 2012</td>
+  <td class="newstext">
+    CM 3.0.2 released. Uses synchronous bundle listeners when
+    updating location data. Calling update for new bundle when 
+    changing bundle location for a configuration.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">20 Mar 2012</td>
+  <td class="newstext">
+    Desktop 3.1.8 released. Added typecasts needed when compiling against version 1.6 of the
+    framework package. Also fixed minor issue with calling bundle stop right after start.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">16 Mar 2012</td>
+  <td class="newstext">
+    The KF Eclipse Plugin 1.2.0 is released. Lots of new useful functions including parsing of xargs files, 
+    finding bundle sources from a lookup path, and bundle jars directory scanning.
+    The <a href="eclipse_changelog.html"> Release Notes </a>has the full story. 
+    <p>
+      The new version is available from the KF 
+      Eclipse update site: <br>
+      http://www.knopflerfish.org/eclipse-update/
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">12 Mar 2012</td>
+  <td class="newstext">
+    KF framework 5.1.15 released. Closing bundle archive input streams 
+    more eagerly to avoid false positive CloseGuard warnings on Android. 
+    <p>
+      HTTP bundle 3.0.9 released. Closing input streams 
+      more eagerly to avoid false positive CloseGuard warnings on Android. 
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">8 Mar 2012</td>
+  <td class="newstext">
+    log bundle 3.1.2 released. 
+    CM metatype info updated to OSGi R4 format from old
+    KF-specific metatype format (pre-dates OSGi R3)
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">8 Mar 2012</td>
+  <td class="newstext">
+    HTTP client_connector bundle 3.1.1 released. 
+    Support for HTTP PUT added. 
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">29 Feb 2012</td>
+  <td class="newstext">
+    HTTP client_connector bundle 3.1.0 released. 
+    Support for HTTP DELETE added. 
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">21 Feb 2012</td>
+  <td class="newstext">
+    Bugfix release of HTTP server 3.0.8. Optional import of 
+    "javax.net.ssl" added. Without the import requesting SSL Client
+    Authentication on an SSLServerSocket by setting the 
+    "org.knopflerfish.http.req.client.auth" property failed. 
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">3 Feb 2012</td>
+  <td class="newstext">
+    The component-3.1.3 bundle (SCR) has been released in the KF
+    trunk. The new version fixes a problem that caused reference bind
+    methods to be called when service properties was changed. An
+    ordering problem is also corrected for services that changed service
+    ranking.  
+    <br>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">23 Dec 2011</td>
+  <td class="newstext">
+    Support for admin/inspection of SRC (component) has been added to
+    the component 3.1.0 bundle. The new
+    version implements the Felix defined ScrService which enables
+    inspection of service components status. A new bundle
+    <a href="/snapshots/current_trunk/docs/bundledoc/index.html?docpage=scrcommands/index.html">
+      scrcommands 1.0.0</a>  was also released in the KF trunk. It adds the KF console
+    command group <code>scr</code> and uses the SrcService in component 3.1.0
+    <br>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">16 Nov 2011</td>
+  <td class="newstext">
+    Bug fix releases of: Log Service 3.1.1, Log Commands 3.1.1 and
+    Console 3.0.2. Any directives or parameters in a bundle
+    symbolic name will be stripped away before using the name. See also 
+    <a href="https://sourceforge.net/tracker/?func=detail&aid=3438377&group_id=82798&atid=567241">
+      https://sourceforge.net/tracker/?func=detail&aid=3438377&group_id=82798&atid=567241</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">11 Nov 2011</td>
+  <td class="newstext">
+    The Event Admin 3.0.5 bundle has been releases in the KF trunk. 
+    The new version Removes three possible dead-locks between the Log-service and the
+    Event Admin service that could happen when DEBUG-level logging was
+    enabled. For details see
+    <a href="https://sourceforge.net/tracker/?func=detail&aid=3413792&group_id=82798&atid=567241">
+      https://sourceforge.net/tracker/?func=detail&aid=3413792&group_id=82798&atid=567241</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">10 Nov 2011</td>
+  <td class="newstext">
+    The component-3.0.4 bundle (SCR) has been released in the KF
+    trunk. The new version fixes a problem with components that weren't activated in the correct
+    order when we had immediate components with optional circular references.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">28 Oct 2011</td>
+  <td class="newstext">
+    The log-3.1.0 and logcommands-3.1.0 bundles have been released in
+    the KF trunk. The new versions add support for configuring the log entry
+    timestamp pattern by setting a format string  property. See
+    <a href="https://sourceforge.net/tracker/?func=detail&atid=567241&aid=3426947&group_id=82798">
+      https://sourceforge.net/tracker/?func=detail&atid=567241&aid=3426947&group_id=82798</a>.
+    The new versions also includes other minor fixes in CM handling,
+    file log handling and
+    threading issues.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">5 Sep 2011</td>
+  <td class="newstext">
+    Build system fix. API versions of several bundles updated.<br>
+    A fix has been made in the KF build system for issue 
+    <a href="http://sourceforge.net/tracker/?func=detail&aid=3402741&group_id=82798&atid=567241">
+      3402741 </a> 
+    by adding implicit imports to the API version of the bundle of all
+    packages exported  by the same bundle. The implicit import
+    will get a version range starting with the exported version up to
+    the next major version (excluded). This default setting is per
+    recommendation of the OSGi Specification. 
+    <p>
+      This fix affects primarily the API version of certain bundles which exports multiple
+      packages, and previously did not explicitly import their own exported packages. 
+      The bundles listed below are all such API bundles. They have been
+      updated to a new bug fix version (x.x.N) and are now corrected to
+      have an implicit import of their respective exported
+      packages. 
+      <ul class="kf">
+	<li>Blueprint (API) 1.0.1</li>
+	<li>Deployment Admin (API) 1.0.2</li>
+	<li>DMTree 1.0.2 </li>
+	<li>HTTP-Server 3.0.6  </li>
+	<li>IO (API) 3.0.1 </li>
+	<li>Log Service 3.0.6 </li>
+	<li>User Admin 3.0.2</li>
+	<li>Desktop 3.1.7</li>
+	<li>JSDK 2.5.0.kf3-2</li>
+	<li>Serial Port Device 2.0.1</li>
+      </ul>
+    </p>
+    <p>
+      API bundles with a single exported package are also affected and
+      will get the same  implicit import. However the bundle version of these bundles
+      have not been updated since this change has no real impact on
+      such bundles.
+    </p>
+    <p>
+      The "_all" bundles are also affected such that they get the same
+      version range on implicit imports. Previously they would get an
+      implicit import with exactly the same version as the export. 
+    </p>
+    <p>
+      The implementation versions of the bundles are not affected by
+      this change.
+    </p>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">15 Jul 2011</td>
+  <td class="newstext">
+    Knopflerfish 3.2 released.<br>
+    <a href="download.html">Knopflerfish 3.2</a> 
+    is the second minor KF3 release. 
+    KF 3.2 includes several improvement in the framework, the
+    compendium services and the Knopflerfish services, resulting in a
+    faster and more robust Knopflerfish OSGi. The most important new
+    feature are:
+    <ul class="kf">
+      <li>Refactored fragment handling and full support for dynamic fragment attachment</li>
+      <li>Improved handling of hanging bundle threads in start and stop methods,</li>
+      <li>Bugfixes in Conditional Permission Admin</li>
+      <li>Improved HTTP server, better handling persistent connections as well as handling DoS attacks</li>
+      <li>Fixed stability issues in Component (SCR)</li>
+      <li>Improved Android / Dalvik support</li>
+      <li>New tutorials for Security and Android</li>
+    </ul>      
+    The <a href="/releases/3.2.0/release_notes.html">Release
+      Notes</a> includes the complete list of features and fixes.  
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">8 Jul 2011</td>
+  <td class="newstext">
+    Component/SCR bundle updated to 3.0.2 Fixed bug that caused
+    immediate components only to be active when they were used.
+    See
+    <a href="http://sourceforge.net/tracker/?func=detail&aid=3285927&group_id=82798&atid=567241">
+       http://sourceforge.net/tracker/?func=detail&aid=3285927&group_id=82798&atid=567241
+    </a>
+  </td>
+</tr>
+
+
+<tr>
+  <td class="newsdate">8 Jul 2011</td>
+  <td class="newstext">
+    
+    The Knopflerfish framework has been updated to 5.1.14 in trunk. 
+    Fixes minor issue in CPA (Conditional Permission Admin)
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">13 Jun 2011</td>
+  <td class="newstext">
+    The HTTP server bundle has been updated to 3.0.5 in the SVN trunk.
+    Improved handling of persistent connections for GET and HEAD methods.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">13 Jun 2011</td>
+  <td class="newstext">
+    The HTTP server bundle has been updated to 3.0.4 in the SVN trunk.
+    New configurable limits introduced to better control and handle ill behaving HTTP clients.
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">10 Jun 2011</td>
+  <td class="newstext">
+    The KF framework has been updated to 5.1.13 in the SVN trunk. 
+    Fix issue with resolving bundles with optional resolution, see 
+    <a href="http://sourceforge.net/tracker/?func=detail&atid=567241&aid=3301526&group_id=82798">
+      http://sourceforge.net/tracker/?func=detail&atid=567241&aid=3301526&group_id=82798</a>
+  </td>
+</tr>
+
+<tr>
+  <td class="newsdate">15 Mar 2011</td>
+  <td class="newstext">
+    The Knopflerfish server is now up an running again. The problem
+    was a rodent attack on the optical-fibre cable to the Makewave
+    office. The cable is now replaced. We apologize for the inconvenience.
+  </td>
+</tr>
 
 <tr>
   <td class="newsdate">10 Nov 2010</td>

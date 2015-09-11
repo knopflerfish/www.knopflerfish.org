@@ -567,6 +567,10 @@ div.newssubhd {
     color: #4a4a4a;
 }
 
+td.newstext p.newsbody {
+    padding-left: 2em;
+}
+
 div.newkf4:after {
     content: " - (4.3)";
 }
