@@ -29,16 +29,16 @@
               location = "templates/template2.html"/>
 
     <property name     = "installdir" 
-              location = "install"/>
+              location = "${basedir}/../knopflerfish.github.io"/>
 
     <property name     = "installdir_jp" 
               location = "install/jp"/>
 
     <property name     = "encoding"
-	      value    = "ISO-8859-1"/>
+	      value    = "UTF-8"/>
 
     <property name     = "outputencoding"
-	      value    = "ISO-8859-1"/>
+	      value    = "UTF-8"/>
 
     <copy file = "images/favicon.ico"
         tofile = "${installdir}/favicon.ico"/>
@@ -558,6 +558,7 @@
     <copy file      = "${template.html}" 
           tofile    = "${tofile}" 
           overwrite = "true"
+	  encoding = "${encoding}"
 	  outputencoding = "${outputencoding}"/>
 
      <property name="JAVADOC"  
