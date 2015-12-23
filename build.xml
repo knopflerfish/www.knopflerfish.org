@@ -365,10 +365,10 @@
     </antcall>
 
     <antcall target="makehtml">
-      <param name="fromfile" value="html_src/svn_main.html"/>
-      <param name="tofile"   value="${installdir}/svn_info.html"/>
-      <param name="title"    value="Knopflerfish Subversion repository"/>
-      <param name="desc"     value="Using the Knopflerfish Subversion repository"/>
+      <param name="fromfile" value="html_src/git_main.html"/>
+      <param name="tofile"   value="${installdir}/git_info.html"/>
+      <param name="title"    value="Knopflerfish Git repository"/>
+      <param name="desc"     value="Using the Knopflerfish Git repository"/>
       <param name="MENU_ID" value="menu_download"/>
       <param name="DOWNLOAD_STATE" value="open"/>
     </antcall>
