@@ -51,7 +51,7 @@
       <param name="dir" value="css"/>
     </antcall>
 
-    <antcall target="copydirs">
+    <antcall target="copyreplacedirs">
       <param name="dir" value="scripts"/>
     </antcall>
 
@@ -608,6 +608,16 @@
      <echo message="Copying ${dir}"/>
      <copy todir = "${installdir}/${dir}">
        <fileset dir = "${dir}"/>
+     </copy>
+  </target>
+
+  <target name="copyreplacedirs">
+     <echo message="Copying ${dir}"/>
+     <copy todir = "${installdir}/${dir}" overwrite="true">
+       <fileset dir = "${dir}"/>
+       <filterset>
+	 <filter token="VERSION" value="${version}"/>
+       </filterset>
      </copy>
   </target>
 
