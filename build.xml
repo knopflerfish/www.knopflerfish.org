@@ -232,7 +232,16 @@
       <param name="fromfile" value="html_src/kf5_osgi_r5.html"/>
       <param name="tofile"   value="${installdir}/kf5_osgi_r5.html"/>
       <param name="title"    value="Knopflerfish 5 - OSGi R5"/>
-      <param name="desc"     value="Knopflerfish 5 - OSGi R5 - the next major release of Knopflerfish"/>
+      <param name="desc"     value="Knopflerfish 5 - OSGi R5 - the current major release of Knopflerfish"/>
+      <param name="MENU_ID" value="menu_docs"/>
+      <param name="DOCS_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
+      <param name="fromfile" value="html_src/kf6_osgi_r6.html"/>
+      <param name="tofile"   value="${installdir}/kf6_osgi_r6.html"/>
+      <param name="title"    value="Knopflerfish 6 - OSGi R6"/>
+      <param name="desc"     value="Knopflerfish 6 - OSGi R6 - the next major release of Knopflerfish"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
@@ -241,7 +250,7 @@
       <param name="fromfile" value="html_src/kf4_osgi_r4_v4.3.html"/>
       <param name="tofile"   value="${installdir}/kf4_osgi_r4_v4.3.html"/>
       <param name="title"    value="Knopflerfish 4 - OSGi R4 v4.3"/>
-      <param name="desc"     value="Knopflerfish 4 - OSGi R4 v4.3 - the next major release of Knopflerfish"/>
+      <param name="desc"     value="Knopflerfish 4 - OSGi R4 v4.3 - maintenance mode of a former major release of Knopflerfish"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
@@ -250,7 +259,7 @@
       <param name="fromfile" value="html_src/kf3_osgi_r4_v4.2.html"/>
       <param name="tofile"   value="${installdir}/kf3_osgi_r4_v4.2.html"/>
       <param name="title"    value="Knopflerfish 3 - OSGi R4 v4.2"/>
-      <param name="desc"     value="Knopflerfish 3 - OSGi R4 v4.2 - the current major release of Knopflerfish"/>
+      <param name="desc"     value="Knopflerfish 3 - OSGi R4 v4.2 - maintenance mode of a former major release of Knopflerfish"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
