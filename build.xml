@@ -14,13 +14,13 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "5.2.1"/>
+              value    = "6.0.0"/>
 
     <property name     = "version_short"
-              value    = "5.2"/>
+              value    = "6.0"/>
 
     <property name     = "version_major"
-              value    = "5"/>
+              value    = "6"/>
 
     <property name     = "distrib_name"
               value    = "Knopflerfish ${version}"/>
