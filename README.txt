@@ -13,39 +13,16 @@ o Structure
   tempplates	Template pages
   css		Style sheets
   images	All images files in the website (.gif etc)
-  install	Where the generated pages are placed  
+
+o Target
+  The Knopflerfish web site is running on GitHub in the repository
+  knopflerfish/knopflerfish.github.io. This then mapped via a CNAME
+  to www.knopflerfish.org
 
 o Building
   You build the website using ant,  build.xml is the build file
-  and the default target build the entire website.
+  and the default target build the entire website. The result
+  is placed in the adjacent directory knopflerfish.github.io
+  which is assumed to be checked out from GitHub so that the
+  result then can be pushed to the server.
 
-
-o Installing
-  The Knopflerfish web site is running on www.knopflerfish.org
-  
-  The KF www root is in:
-  ~knopflerfish/www/
-
-
-o Installing, alt 1
-  The Makefile in this dir contains targets to install the web site
-  
-  > make install_html	Installs all html pages, no images 
-
-  > make install_all	Installs the entire site
-
-  The target assumes you have the same uid on www.knopflerfish.org
-  and uses scp to copy the files
-
-o Installing, alt 2
-  Tar or zip the files in install from the install dir.
-  Copy the archive to www.knopflerfish.org
-
-  Unpack the arcive in this dir.
-  
-  Make sure to set 664 permissions on all files so other may change
-  it afterwards.
-
-
-
-  

@@ -9,19 +9,19 @@
 
 Welcome to the download page for the Knopflerfish OSGi Service
 Platform. Below are links for downloading the latest
-production releases of KF5.x. There are also links for downloading production version of KF4,  KF3, KF2, and KF1
+production releases of KF6.x. There are also links for downloading production version of KF5, KF4,  KF3, KF2, and KF1
 releases. Older releases are kept in 
 the <a href="archive.html">archive</a> section.
 <p>
   To get the latest development release of Knopflerfish either
    download a full distribution from the
   <a href="/snapshots">Nightly Builds</a> section, or
-  check out the <a href="svn_info.html">source code</a> and 
+  check out the <a href="git_info.html">source code</a> and 
   <a href="/releases/current/docs/building.html"> build it yourself.</a>
 </p>
 <p>
   Individual bundles can be downloaded from the 
-  <a href="/releases/current/osgi/jars/index.xml">Bundle repository</a>
+  <a href="/releases/$(VERSION)/osgi/jars/index.xml">Bundle repository</a>
 </p>
 <p>
   All bundles in the Knopflerfish releases are also available as
@@ -36,36 +36,49 @@ the <a href="archive.html">archive</a> section.
 <h2>Current Production, Beta, and Maintenance Releases</h2>
 <table class="kf">
   <tr>
-    <th colspan="6">Current Production Releases - KF5 / OSGi R5 </th>
+    <th colspan="7">Current Production Releases - KF6 / OSGi R6 </th>
   </tr>
   <tr>
     <td class="subhead">Version</td>
     <td class="subhead">Date</td>
     <td class="subhead">Release Notes</td>
     <td class="subhead">OSGi Release</td>
-    <td class="subhead">Maven Artifacts</td>
+    <td class="subhead">Maven<br>Artifacts</td>
+    <td class="subhead">Tag</td>
     <td class="subhead">Description</td>
   </tr>
 
   <tr>
-    <td><a href="/releases/5.2.0/">5.2.0</a></td>
-    <td>2015-07-10</td>
-    <td><a href="/releases/5.2.0/docs/release_notes.html">Release Notes</a></td>
-    <td>OSGi R5</td>
-    <td><a href="/releases/5.2.0/maven2/org/knopflerfish/KF-5.2.0_dependencyManagement.xml">KF-5.2.0</a></td>
+    <td><a href="/releases/6.0.0/">6.0.0</a></td>
+    <td>2016-10-21</td>
+    <td><a href="/releases/6.0.0/docs/release_notes.html">Release Notes</a></td>
+    <td>OSGi R6</td>
+    <td><a href="/releases/6.0.0/maven2/org/knopflerfish/KF-6.0.0_dependencyManagement.xml">KF-6.0.0</a></td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/6.0.0/">6.0.0</a></td>
     <td>Current production release of Knopflerfish</td>
   </tr>
 
   <tr> 
-    <th colspan="6">Former Production Releases (KF4 - KF1)</th>
+    <th colspan="7">Former Production Releases (KF5 - KF1)</th>
   </tr>
   
+  <tr>
+    <td><a href="/releases/5.2.1/">5.2.1</a></td>
+    <td>2016-10-20</td>
+    <td><a href="/releases/5.2.1/docs/release_notes.html">Release Notes</a></td>
+    <td>OSGi R5</td>
+    <td><a href="/releases/5.2.1/maven2/org/knopflerfish/KF-5.2.1_dependencyManagement.xml">KF-5.2.1</a></td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/5.2.1/">5.2.1</a></td>
+    <td>Latest production release of KF5</td>
+  </tr>
+
   <tr>
     <td><a href="/releases/4.0.1/">4.0.1</a></td>
     <td>2013-10-18</td>
     <td><a href="/releases/4.0.1/docs/release_notes.html">Release Notes</a></td>
     <td>OSGi R4 v4.3</td>
     <td><a href="/releases/4.0.1/maven2/org/knopflerfish/KF-4.0.1_dependencyManagement.xml">KF-4.0.1</a></td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/4.0.1/">4.0.1</a></td>
     <td>Latest production release of KF4</td>
   </tr>
 
@@ -75,6 +88,7 @@ the <a href="archive.html">archive</a> section.
     <td><a href="/releases/3.6.0/release_notes.html">Release Notes</a></td>
     <td>OSGi R4 v4.2</td>
     <td><a href="maven2/org/knopflerfish/KF-3.6.0_dependencyManagement.xml">KF-3.6.0</a></td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/3.6.0/">3.6.0</a></td>
     <td>Latest production release of KF3</td>
   </tr>
 
@@ -84,6 +98,7 @@ the <a href="archive.html">archive</a> section.
     <td><a href="/releases/2.4.0/release_notes.html">Release Notes</a></td>
     <td>OSGi R4 v4.01</td>
     <td><a href="maven2/org/knopflerfish/KF-3.2.0_dependencyManagement.xml">KF-2.4.0</a></td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/2.4.0/">2.4.0</a></td>
     <td>Latest production release of KF2</td>
   </tr>
 
@@ -92,7 +107,8 @@ the <a href="archive.html">archive</a> section.
     <td>2009-04-20</td>
     <td><a href="/releases/1.3.7/release_notes.html">Release Notes</a></td>
     <td>OSGi R3</td>
-    <td>Not Available</td>
+    <td>NA</td>
+    <td><a href="https://github.com/knopflerfish/knopflerfish.org/releases/tag/1.3.7/">1.3.7</a></td>
     <td>Maintenance release of KF1</td>
   </tr>
 
