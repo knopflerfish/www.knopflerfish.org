@@ -14,10 +14,10 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "6.0.0"/>
+              value    = "6.1.0"/>
 
     <property name     = "version_short"
-              value    = "6.0"/>
+              value    = "6.1"/>
 
     <property name     = "version_major"
               value    = "6"/>

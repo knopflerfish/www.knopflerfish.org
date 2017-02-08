@@ -4,6 +4,63 @@
 
 <table class="newstable">
 
+<tr id="kf_6.1.0">
+  <td class="newsdate">8 Feb 2017</td>
+  <td class="newstext"> 
+    <div class="newshd">Knopflerfish 6.1 released - bug fixes &amp; enhancements</div>
+    <p>
+      <a href="download.html">Knopflerfish 6.1</a>
+      is released and includes several minor enhancements and
+      bug fixes
+    </p>
+    <p>
+      The new features in Knopflerfish 6.1 include:</p>
+    
+    <div class="newssubhd">
+      Framework 8.0.4
+    </div>
+    <p class="newsbody">
+      Several bug fixes in the Knopflerfish OSGi framework including fixes
+      for Java 9.
+    </p>
+    <div class="newssubhd">
+      Component (SCR) 6.0.3
+    </div>
+    <p class="newsbody">
+      Several issues corrected, including fixes for factory
+      configuration and faulty re-register during deactivation of delayed
+      components.
+    </p>
+    <div class="newssubhd">
+      HTTP 5.2.1
+    </div>
+    <p class="newsbody">
+      <code>Servlet.setContentType</code> now resets the content type
+      to default value. Same behaviour as jetty.
+    </p>
+    <div class="newssubhd">
+      Log 6.0.0
+    </div>
+    <p class="newsbody">
+      Bundle Symbolic Name is changed
+      to <code>org.knopflerfish.bundle.log</code> to follow the naming
+      convention for Knopflerfish bundles.
+    </p>
+    <div class="newssubhd">
+      Maven group id change
+    </div>
+    <p class="newsbody">
+      The maven group id of all Knopflerfish artifacts has been changed to
+      include the Knopflerfish major version,
+      e.g. <code>org.knopflerfish.kf6</code>
+    </p>
+    <p>
+      The <a href="/releases/6.1.0/docs/release_notes.html">Release
+	Notes</a> includes the complete list of features and fixes.  
+    </p>
+  </td>
+</tr>
+
 <tr id="kf.org-site">
   <td class="newsdate">7 Feb 2017</td>
   <td class="newstext"> 
@@ -14,7 +71,7 @@
     <p>
       The Knopflerfish web site was moved today from github.io to its
       own site. The main reasons for the change are: more space for
-      releases and repositores, browsable file structure and support
+      releases and repositories, browsable file structure and support
       for soft links. DNS has been updated and files migrated. Please
       let us know if anything is broken or missing.
     </p>
@@ -28,7 +85,7 @@
 <tr id="kf_6.0.0">
   <td class="newsdate">21 Oct 2016</td>
   <td class="newstext"> 
-    <div class="newshd">Knopflerfish 6 is released - new major vesion - OSGi R6 supported</div>
+    <div class="newshd">Knopflerfish 6 is released - new major version - OSGi R6 supported</div>
     <div class="newssubhd">
       Knopflerfish 6.0.0
     </div>
@@ -105,7 +162,7 @@
       Major change since the last alpha are:<br>
       <ul>
 	<li>Support for security in Weaving Hooks (R6)</li>
-	<li>Bugfixes in CM</li>
+	<li>Bug fixes in CM</li>
 	<li>Metatype is now fully R6</li>
 	<li>Documentation updates</li>
 	<li>Several minor bug fixes</li>
@@ -240,7 +297,7 @@
       Website fixes
     </div>
     <p class="newsbody">
-      Several broken links have been corrected and links to the  bundle repository a mavene2
+      Several broken links have been corrected and links to the  bundle repository a maven2
       repositories should be working again. 
     </p>
   </td>
@@ -290,7 +347,7 @@
     </div>
     <p class="newsbody">
       Corrected issue where the resolver under certain conditions
-      couldo go into an infinite loop when a bundle wasn't resolvable.
+      could go into an infinite loop when a bundle wasn't resolvable.
     </p>
   </td>
 </tr>
