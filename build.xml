@@ -64,6 +64,10 @@
       <param name="dir" value="licenses"/>
     </antcall>
 
+    <copy todir = "${installdir}">
+      <fileset dir = "webtools"/>
+    </copy>
+    
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/index_main.html"/>
       <param name="tofile"   value="${installdir}/index.html"/>
