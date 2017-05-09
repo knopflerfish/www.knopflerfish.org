@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 
-<project name="htdocs" default="all">
+<project name="www.knopflerfish.org" default="all">
+
+  <dirname  property="root.dir"  file="${ant.file.www.knopflerfish.org}"/>
+
+  <property name = "out.dir" location="${root.dir}/out" />
+  <property name = "install.dir"	 location="${root.dir}/install" />
 
   <target name="all" 
 	  description="Create html pages from templates">
@@ -639,6 +644,47 @@
    <delete dir="install"    />
 
   </target>
+
+
+<!--|
+      | The program used to check for broken links is the W3C checklink program:
+      | http://validator.w3.org/docs/checklink.html
+      |
+      | It must be locally installed as it checks the generated docs on the local
+      | file system.
+      |
+      | The program is perl based. Please note the special step that needs to be
+      | taken to enable SSL/HTTPS support
+      |
+    -->
+  <target name="checklink.local"
+          description="Checks that all links are valid in the generated html documents">
+    <mkdir dir="${out.dir}" />
+    <exec executable="checklink"
+          output="${out.dir}/checklink.local.out">
+      <arg value="-qr"/>
+      <arg value="--exclude-docs"/>
+      <arg value="releases/*"/>
+      <arg value="--exclude-docs"/>
+      <arg value="/maven2/*"/>
+      <arg value="${install.dir}/index.html"/>
+    </exec>
+  </target>
+ 
+  <target name="checklink.site"
+          description="Checks that all links are valid in the uploaded html documents">
+    <mkdir dir="${out.dir}" />
+    <exec executable="checklink"
+          output="${out.dir}/checklink.site.out">
+      <arg value="-qr"/>
+      <arg value="--exclude-docs"/>
+      <arg value="\/maven2\/"/>
+      <arg value="--exclude-docs"/>
+      <arg value="\/releases\/"/>
+      <arg value="http://www.knopflerfish.org"/>
+    </exec>
+  </target>
+
 </project>
 
 
