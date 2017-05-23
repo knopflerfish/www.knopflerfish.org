@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="config" default="all">
+
+  <dirname  property="proj.dir"  file="${ant.file.config}"/>
+  
+  <property name="install.dir"	location="${proj.dir}/../install" />
+  <property name="resources.install.dir" location="${proj.dir}/../install-resources.knopflerfish.org" />
+  <property name="maven.release.dir" location="${resources.install.dir}/repo/maven2/release" />
+  <property name="maven.release.old.dir" location="${install.dir}/maven2" />
+
+  <property name="mavenrepo.root.htaccess" location="${proj.dir}/htaccess/mavenrepo.root.htaccess" />
+  <property name="mavenrepo.grouproot.htaccess" location="${proj.dir}/htaccess/mavenrepo.grouproot.htaccess" />
+
+  <macrodef name="mvnrepo_htaccess">
+    <attribute name="mvnrepo.dir"
+	       description="The root dir of the mvn repo" />
+    <sequential>
+      <mkdir dir="@{mvnrepo.dir}" />
+      <mkdir dir="@{mvnrepo.dir}/org" />
+      <copy tofile = "@{mvnrepo.dir}/.htaccess"
+	    file = "${mavenrepo.root.htaccess}"/>
+      <copy tofile = "@{mvnrepo.dir}/org/.htaccess"
+	    file = "${mavenrepo.grouproot.htaccess}"/>
+    </sequential>
+  </macrodef>
+
+
+  <target name="mavenrepo-config"> 
+    <mvnrepo_htaccess mvnrepo.dir="${maven.release.dir}" />
+    <mvnrepo_htaccess mvnrepo.dir="${maven.release.old.dir}" />
+  </target>
+
+  <target name="all"
+	  depends="mavenrepo-config" />
+
+</project>
+
+
+  

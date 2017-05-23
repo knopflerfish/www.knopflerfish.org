@@ -6,8 +6,12 @@
 
 #KFSITE_USER - set via command line or env variable
 KFSITE_INSTALLDIR=/home/${KFSITE_USER}/public_html-knopflerfish.org
+KFRESOURCES_INSTALLDIR=/home/${KFSITE_USER}/public_html-resources.knopflerfish.org
 KFSITE_HOST=isora.oderland.com
 INSTALLDEST = "${KFSITE_USER}@${KFSITE_HOST}:${KFSITE_INSTALLDIR}"
+RESOURCES_INSTALLDEST = "${KFSITE_USER}@${KFSITE_HOST}:${KFRESOURCES_INSTALLDIR}"
+
+RESOURCES_DIR=install-resources.knopflerfish.org/
 
 guard-%:
     @ if [ "${${*}}" = "" ]; then \
@@ -22,7 +26,8 @@ guard-%:
 
 install_html: prepare
 	@echo "Installing kf web pages at: ${KFSITE_INSTALLDIR}"
-	cd install; scp -r *.html css scripts ${INSTALLDEST}
+#	cd install; scp -r *.html css scripts ${INSTALLDEST}
+	rsync -r -a -v -i -e ssh install/*.html install/css install/scripts "${INSTALLDEST}"
 
 install_htmlonly: prepare
 	@echo "Installing kf html web pages at: ${KFSITE_INSTALLDIR}"
@@ -39,6 +44,16 @@ install_licenses: prepare
 install_release:
 	@echo "Installing KF release files at: ${KFSITE_INSTALLDIR}"
 	cd install; scp -r releases ${INSTALLDEST}
+
+install_config: prepare
+	@echo "Installing various config files at: ${KFSITE_INSTALLDIR}"
+	rsync -r -a -v -i -e ssh install/maven2/ "${INSTALLDEST}/maven2"
+
+
+install_resources: prepare
+	@echo "Installing KF resource files at: ${KFRESOURCES_INSTALLDIR}"
+#	cd config/htaccess/resources.knopflerfish.org/; scp -r ./* ${RESOURCES_INSTALLDEST}
+	rsync -r -a -v -i -e ssh ${RESOURCES_DIR} ${RESOURCES_INSTALLDEST}
 
 prepare: checkenv
 	chmod -R 775 install/*.html install/css install/images install/scripts install/licenses

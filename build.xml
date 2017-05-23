@@ -8,6 +8,7 @@
   <property name = "install.dir"	 location="${root.dir}/install" />
 
   <target name="all" 
+	  depends="config"
 	  description="Create html pages from templates">
 
     <property environment = "env"/>
@@ -641,10 +642,14 @@
   </target>
 
   <target name="clean">
-   <delete dir="install"    />
-
+   <delete dir="install" />
+   <delete dir="install-resources.knopflerfish.org" />
   </target>
 
+  <target name="config">
+    <ant dir="config" target="all" />
+  </target>
+  
 
 <!--|
       | The program used to check for broken links is the W3C checklink program:
