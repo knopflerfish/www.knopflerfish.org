@@ -1,0 +1,101 @@
+<h1 class="kf">OSGi Bundle Repositories</h1>
+
+<h2>OSGi Repositories</h2>
+
+<p>
+  Every release of Knopflerfish includes an OSGi bundle
+  repository. Since the release of Knopflerfish 5 the format used in
+  the OSGi specified XML-format as defined in section 132.5 of the
+  OSGi Compendium Specification. 
+  The namespace of the schema is: <code>http://www.osgi.org/xmlns/repository/v1.0.0</code>
+</p>
+<p>
+ Version 4 and older releases of Knopflerfish use the older OBR, or
+ OSGi Bundle Repository format, which is now deprecated.
+</p>
+<p>
+  All of the Knopflerfish OSGi Repositories are browsable and can be
+  used by build tools and development tools such as
+  <a href="http://bnd.bndtools.org/">bnd </a>and
+  <a href="http://bndtools.org/">bndtools</a>, or Knopflerfish's own
+  desktop bundle.
+</p>
+<p>
+  From the <a href="download.html">download</a> page of each
+  Knopflerfish release there is a link to its OSGi repository
+</p>
+  
+<h2>Bnd and bndtools</h2>
+<p>
+  To use Knopflerfish in bnd or bndtools one of the Knopflerfish OSGi
+  repositories must be defined.
+</p>
+<p>
+  Insert the following in the .bnd file,
+  e.g. <code>cnf/build.bnd </code> located in the bnd
+  workspace. 
+<pre class="shell">
+
+-plugin.org.knopflerfish.kf6: \
+	aQute.bnd.repository.osgi.OSGiRepository; \
+		locations=http://www.knopflerfish.org/releases/6.1.0/osgi/jars/index.xml; \
+		name=kf6
+
+</pre>
+<p>
+  Use the
+  <code>aQute.bnd.repository.osgi.OSGiRepository</code> type. The
+  locations must point to one of the Knopflerfish OSGi
+  repositories. The name can be chosen
+  arbitrarily.
+</p>
+
+<h2>Knopflerfish OSGi Repositories</h2>
+
+<p>
+  The URL
+  <a href="http://www.knopflerfish.org/releases/current/osgi/jars/index.xml">
+    http://www.knopflerfish.org/releases/current/osgi/jars/index.xml
+  </a>
+  always points to the latest Knopflerfish release. For a specific
+  release repository please see the table below.
+</p>
+<p>    
+  The table below contain the links to the repository index file for all
+  Knopflerfish releases since KF5.
+  <table class="kf">
+    <tr>
+      <th>OSGi Repository indexes</th>
+    </tr>
+    <tr>
+      <td><a href="http://www.knopflerfish.org/releases/6.1.0/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/6.1.0/osgi/jars/index.xml
+      </td>
+    </tr><tr>
+      <td><a href="http://www.knopflerfish.org/releases/6.0.0/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/6.0.0/osgi/jars/index.xml
+      </td>
+    </tr><tr>
+      <td><a href="http://www.knopflerfish.org/releases/5.2.1/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/5.2.1/osgi/jars/index.xml
+      </td>
+    </tr><tr>
+      <td><a href="http://www.knopflerfish.org/releases/5.2.0/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/5.2.0/osgi/jars/index.xml
+      </td>
+    </tr><tr>
+      <td><a href="http://www.knopflerfish.org/releases/5.1.0/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/5.1.0/osgi/jars/index.xml
+      </td>
+    </tr><tr>
+      <td><a href="http://www.knopflerfish.org/releases/5.0.0/osgi/jars/index.xml">
+	  http://www.knopflerfish.org/releases/5.0.0/osgi/jars/index.xml
+      </td>
+    </tr>
+  </table>
+<p>
+  In an installed Knopflerfish release the index file of the
+  repository is located at: <code>osgi/jars/index.xml</code> and may
+  be used as file URL for tools that can can work with OSGi
+  repositories
+</p>

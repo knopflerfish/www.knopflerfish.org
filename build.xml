@@ -170,6 +170,15 @@
     </antcall>
 
     <antcall target="makehtml">
+      <param name="fromfile" value="html_src/osgi_bundle_repository.html"/>
+      <param name="tofile"   value="${installdir}/osgi_bundle_repository.html"/>
+      <param name="title"    value="Knopflerfish OSGi Repository"/>
+      <param name="desc"     value="OSGi repositories in accordance with the OSGi specified repository format"/>
+      <param name="MENU_ID" value="menu_download"/>
+      <param name="DOWNLOAD_STATE" value="open"/>
+    </antcall>
+
+    <antcall target="makehtml">
       <param name="fromfile" value="html_src/release_notes_1.3.7.html"/>
       <param name="tofile"   value="${installdir}/release_notes_1.3.7.html"/>
       <param name="title"    value="Knopflerfish OSGi - Release Notes version 1.3.7"/>
