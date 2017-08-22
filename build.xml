@@ -20,7 +20,7 @@
     </tstamp>	     
 
     <property name     = "version"
-              value    = "6.1.0"/>
+              value    = "6.1.1"/>
 
     <property name     = "version_short"
               value    = "6.1"/>
