@@ -77,8 +77,8 @@
     <antcall target="makehtml">
       <param name="fromfile" value="html_src/index_main.html"/>
       <param name="tofile"   value="${installdir}/index.html"/>
-      <param name="title"    value="Knopflerfish OSGi - open source OSGi service platform. OSGi R5, R4 and R3"/>
-      <param name="desc"     value="Knopflerfish OSGi is an open source OSGi SDK and run-time of the OSGi specifications R5, R4 and R3"/>
+      <param name="title"    value="Knopflerfish OSGi - open source OSGi service platform. OSGi Release 6"/>
+      <param name="desc"     value="Knopflerfish OSGi is an open source OSGi SDK and run-time of the OSGi specifications R6, R5, R4 and R3"/>
       <param name="MENU_ID" value="menu_home"/>
       <param name="HOME_STATE" value="open"/>
     </antcall>
@@ -252,7 +252,7 @@
       <param name="fromfile" value="html_src/kf5_osgi_r5.html"/>
       <param name="tofile"   value="${installdir}/kf5_osgi_r5.html"/>
       <param name="title"    value="Knopflerfish 5 - OSGi R5"/>
-      <param name="desc"     value="Knopflerfish 5 - OSGi R5 - the current major release of Knopflerfish"/>
+      <param name="desc"     value="Knopflerfish 5 - OSGi R5 - maintenance mode of a former  major release of Knopflerfish"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
@@ -261,7 +261,7 @@
       <param name="fromfile" value="html_src/kf6_osgi_r6.html"/>
       <param name="tofile"   value="${installdir}/kf6_osgi_r6.html"/>
       <param name="title"    value="Knopflerfish 6 - OSGi R6"/>
-      <param name="desc"     value="Knopflerfish 6 - OSGi R6 - the next major release of Knopflerfish"/>
+      <param name="desc"     value="Knopflerfish 6 - OSGi R6 - the current major release of Knopflerfish"/>
       <param name="MENU_ID" value="menu_docs"/>
       <param name="DOCS_STATE" value="open"/>
     </antcall>
