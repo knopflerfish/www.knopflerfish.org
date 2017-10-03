@@ -9,6 +9,7 @@
   <property name="maven.release.dir" location="${resources.install.dir}/repo/maven2/release" />
   <property name="maven.release.old.dir" location="${install.dir}/maven2" />
 
+  <property name="kfsite.root.htaccess" location="${proj.dir}/htaccess/kfsite.root.htaccess" />
   <property name="mavenrepo.root.htaccess" location="${proj.dir}/htaccess/mavenrepo.root.htaccess" />
   <property name="mavenrepo.grouproot.htaccess" location="${proj.dir}/htaccess/mavenrepo.grouproot.htaccess" />
 
@@ -25,6 +26,11 @@
     </sequential>
   </macrodef>
 
+  <target name="kfsite-config">
+    <mkdir dir="${install.dir}" />
+    <copy tofile = "${install.dir}/.htaccess"
+	  file = "${kfsite.root.htaccess}" />
+  </target>
 
   <target name="mavenrepo-config"> 
     <mvnrepo_htaccess mvnrepo.dir="${maven.release.dir}" />
@@ -32,7 +38,8 @@
   </target>
 
   <target name="all"
-	  depends="mavenrepo-config" />
+	  depends="mavenrepo-config,
+		   kfsite-config" />
 
 </project>
 

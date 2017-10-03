@@ -47,6 +47,7 @@ install_release:
 
 install_config: prepare
 	@echo "Installing various config files at: ${KFSITE_INSTALLDIR}"
+	cd install; scp -r .htaccess ${INSTALLDEST}
 	rsync -r -a -v -i -e ssh install/maven2/ "${INSTALLDEST}/maven2"
 
 
