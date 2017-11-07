@@ -699,6 +699,24 @@
     </exec>
   </target>
 
+  <target name="checklink.release"
+          description="Checks that all links are valid in the uploaded html documents">
+    <mkdir dir="${out.dir}" />
+    <exec executable="checklink"
+          output="${out.dir}/checklink.release.out">
+      <arg value="-qr"/>
+      <arg value="--location"/>
+      <arg value="https://www.knopflerfish.org/"/>
+      <arg value="--exclude-docs"/>
+      <arg value="\/maven2\/"/>
+      <arg value="--exclude-docs"/>
+      <arg value="\*.jar"/>
+      <arg value="--depth"/>
+      <arg value="6"/>
+      <arg value="https://www.knopflerfish.org/releases/current/"/>
+    </exec>
+  </target>
+
 </project>
 
 
