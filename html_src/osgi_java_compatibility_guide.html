@@ -156,21 +156,27 @@ higher.
   </tr>
 
   <tr>
-    <td>7.*</td>
-    <td>R7</td>
-    <td>1.8</td>
-    <td>1.8+</td>
+    <td rowspan="2">7.*</td>
+    <td rowspan="2">R7</td>
+    <td rowspan="2">1.8</td>
+    <td>1.8 </td>
     <td>JDK used</td>
-    <td>1.8+</td>
+    <td>1.8 </td>
     <td>The default is to build for JDK used</td>
   </tr>
   <tr>
-    <td rowspan="3">6.*</td>
-    <td rowspan="3">R6</td>
-    <td rowspan="3">1.6</td>
+    <td class="optional">11</td>
+    <td class="optional">JDK 11 (55)</td>
+    <td class="optional">11++</td>
+    <td class="optional">Planned support</td>
+  </tr>
+  <tr>
+    <td rowspan="4">6.*</td>
+    <td rowspan="4">R6</td>
+    <td rowspan="4">1.6</td>
     <td>1.6</td>
     <td>JDK 1.6 (50)</td>
-    <td>1.6+</td>
+    <td>1.6 - 1.8 </td>
     <td>The default is to build for JDK used</td>
   </tr>
   <tr>
@@ -184,6 +190,12 @@ higher.
     <td>JDK 1.8 (52)</td>
     <td>1.8+</td>
     <td>The default is to build for JDK used</td>
+  </tr>
+  <tr>
+    <td class="optional">11</td>
+    <td class="optional">JDK 11 (55)</td>
+    <td class="optional">11++</td>
+    <td class="optional">Planned support</td>
   </tr>
 
   <tr>
@@ -260,20 +272,22 @@ higher.
   introduced. The source code still remain java 1.5 compatible.
 </p>
 
-<h2 class="kf">Java 9 / JDK 9 and  Knopflerfish</h2>
+<h2 class="kf">Java 11 / JDK 11 and  Knopflerfish</h2>
 <p>
   We have so far detected no major issues when running KF6 with a Java
-  9 run-time.
+  11 run-time.
 </p>
 <p>
   However the current released version of KF6 can not be built with
-  JDK9. The
+  JDK 11. The
   <a href="https://github.com/knopflerfish/knopflerfish.org/tree/develop">
     develop branch  </a>
   includes several minor fixes that enable support
-  for JDK9. A new KF6 release with full support can be expected in the
-  near future. This Knopflerfish
-  <a href="http://knopflerfish.blogspot.se/2017/09/knopflerfish-and-java-9.html">
-    blog post</a> provides additional information.
+  for JDK 11. A new KF6 release with full support can be expected in the
+  near future.
 </p>
-  
+<p>
+  It should be possible to build KF6 with JDK 10 or 9. However, since these two
+  versions are no longer officially supported, there will be no
+  official knopflerfish support for them.
+</p>
